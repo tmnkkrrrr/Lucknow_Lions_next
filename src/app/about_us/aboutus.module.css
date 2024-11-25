@@ -1,0 +1,177 @@
+.page {
+    margin-top: clamp(60px, 10vw, 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section {
+    margin-bottom: 60px;
+    width: 80vw;
+    max-width: 1300px;
+  }
+  
+  .hero {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    box-sizing: border-box;
+  }
+  
+  .hero > .heroleft {
+    flex: 1;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    align-items: start;
+    width: 45%;
+  }
+  
+  .hero > .heroright {
+    flex:1;
+    width: clamp(260px, 20vw, 100%);
+  }
+  
+  .bg1 {
+    width: 100%;
+    min-height: 50px;
+    height: 125px;
+    background-image: url('/aboutus/bg1.webp');
+    background-size: cover;
+    color: white;
+    font-weight: 500;
+    font-size:  clamp(19px, 2vw, 34px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  .card {
+    position: relative;
+    top: -20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 4px 4px 20px #247cff;
+    margin-bottom: 60px;
+    width: clamp(240px, 60vw, 1300px);
+    align-items: center;
+  }
+  
+  .card > .child {
+    flex: 1;
+    display: flex;
+    min-width: 200px;
+    gap: 10px;
+    flex-direction: column;
+  }
+  
+  .card > .child > .ch1 {
+    width: clamp(40px, 10vw ,74px);
+    aspect-ratio: 74/81;
+  }
+  
+  .card > .child > .innerChild {
+    margin-top: clamp( 4px, 2.5vw, 40px);
+    color: #0f7cbc;
+    font-size: clamp(16px, 1.4vw, 26px);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .card > .child > .innerChild > p {
+    margin-top: 10px;
+    color: black;
+    font-size: clamp(14px, 1vw, 19px);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  
+  .members {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .member {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .member:nth-child(even) {
+    flex-wrap: wrap-reverse;
+  }
+  
+  .member > .memCard {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
+  
+  .member > .memCard > hr {
+    width: 60%;
+    height: 8px;
+    border-radius: 12px;
+    background-color: #ffc91c;
+  }
+  
+  .member > .memImg {
+    width: clamp(200px, 25%, 600px);
+    aspect-ratio: 6/7;
+    border: 3px solid #0f7cbc;
+    border-radius: 12px;
+  }
+  
+  .member > .memCard > .memCard2 {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 4px 4px 10px rgb(155, 155, 155);
+  }
+  
+  .member > .memCard > .memCard2 > h2 {
+    font-size: clamp(20px, 1.6vw, 40px);
+    text-align: center;
+  }
+  
+  .member > .memCard > .memCard2 > h5 {
+    font-size: clamp(18px, 1.2vw, 40px);
+    text-align: center;
+  }
+  
+  .member > .memCard > .memCard2 > div > p {
+    font-size: clamp(16px, 1vw, 40px);
+    line-height: 1.1;
+  }
+  
+  .cardTn1{
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  .cardTn1:hover {
+    box-shadow: 4px 8px 14px #91c2f9, -4px -6px 14px #7ab0ef; 
+    transform: scale(1.05); 
+  }
+  
+  
+  .cardTn2{
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  .cardTn2:hover {
+    box-shadow: 4px 8px 14px #f2f493, -4px -6px 14px #f0f277 !important ; 
+    transform: scale(1.05); 
+  }

@@ -1,0 +1,395 @@
+.ul {
+  list-style-type: disc;
+  text-align: left;
+}
+
+.ul > li {
+  margin-bottom: 8px;
+}
+
+.horizontal_line {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, #05d2ff, #03a7cb, #05d2ff);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  animation: pulse 1.5s infinite alternate; /* Animation */
+}
+
+.content {
+  padding: 20px;
+  background-color: lightcoral;
+  color: white;
+  border-radius: 8px;
+  margin: 20px;
+  /* Ensure the element has a position if needed for animation */
+  position: relative; /* or absolute, depending on your layout */
+}
+
+@keyframes flyInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fly_bottom {
+  animation: flyInFromBottom 5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(80px);
+  }
+  80% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce_In {
+  animation: bounceIn 2s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes flipIn {
+  50% {
+    opacity: 0;
+    transform: rotateY(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+.flipIn {
+  animation: flipIn 4s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 0px 40px 20px 40px;
+  background-color: #fff;
+  margin: 20px;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px #5fb0df;
+}
+
+.styled_table {
+  width: 100%;
+  border-collapse: separate; /* Allows for more sophisticated border styling */
+  border-spacing: 0; /* Removes default spacing */
+  margin: 20px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.styled_table thead {
+  background-color: #004d99; /* Darker, elegant color */
+  color: white;
+}
+
+.styled_table th,
+.styled_table td {
+  padding: 12px 20px; /* Increased padding for better spacing */
+  text-align: left;
+  border: 1px solid #ccc; /* Softer border color */
+  border-radius: 4px; /* Rounded corners for a modern look */
+}
+
+.styled_table th {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.styled_table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled_table tr:hover {
+  background-color: #57b3ec;
+  color: white;
+
+  font-weight: bold;
+
+  box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
+    #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+
+.styled_table td {
+  font-size: 14px;
+}
+
+.styled_table thead th {
+  border-bottom: 2px solid #004d99; /* Bold bottom border for headers */
+  background-color: #6da71e;
+}
+
+.styled_table tbody tr {
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.styled_table tbody tr:first-child {
+  border-top: 2px solid #004d99; /* Bold top border for the first row */
+}
+
+.styled_table tbody tr:last-child td {
+  border-bottom: 2px solid #004d99; /* Bold bottom border for the last row */
+}
+
+.styled_table caption {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: left;
+  color: #004d99; /* Matches header color */
+}
+
+.flx {
+  display: flex;
+  align-items: center;
+}
+.im {
+  width: 64px;
+  height: 60px;
+}
+
+.brd {
+  border: 4px dashed rgb(0, 140, 255);
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift {
+  background-image: url("https://target.scene7.com/is/image/Target/GUEST_ec049ff2-e6c8-4ac9-9597-02ba9662b3ac?wid=668&qlt=80&fmt=pjpeg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.how_trade {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/013/257/156/non_2x/finance-and-business-background-bar-chart-and-candlestick-chart-show-stock-market-trading-price-vector.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.sgx {
+  color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXkryRwvqduSJK3IBx4JnsLuTkDidOzrumFg&s");
+  font-size: 20px;
+}
+
+.hed1 {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 97vw;
+  z-index: 10;
+
+ .img {
+    object-fit: cover;
+    height: 400px;
+    width: 400px;
+  }
+  &::before,
+  &::after {
+    border-radius: 20px;
+    background-image: linear-gradient(0deg, #a2d45c 0%, #93fb44 97%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s;
+    transition-delay: 0.2s;
+    transform: translateY(0px) translateX(0px);
+    width: 100%;
+    z-index: -1;
+  }
+  &::after {
+    background-image: linear-gradient(-180deg, #2194d2 0%, #5ea3db 97%);
+  }
+  & {
+    animation-name: hoverPop;
+    animation-duration: 0.4s;
+    .img {
+      box-shadow: 2px 2px 4px 0px rgba(10, 12, 15, 0.27);
+      box-shadow: 0px 0px 30px 0px rgba(10, 12, 15, 0.27);
+    }
+    &::before {
+      animation: slick-hover-2 3s 0.4s linear infinite;
+      transform: translateY(-20px) translateX(-20px);
+    }
+    &::after {
+      animation: slick-hover 3s 0.4s linear infinite reverse;
+      transform: translateY(20px) translateX(20px);
+    }
+  }
+}
+
+@keyframes hoverPop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.05);
+  }
+  66% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes slick-hover {
+  0.00% {
+    transform: translateY(20px) translateX(20px);
+  }
+  16.67% {
+    transform: translateY(-13px) translateX(-9px);
+  }
+  33.33% {
+    transform: translateY(4px) translateX(12px);
+  }
+  50.00% {
+    transform: translateY(20px) translateX(-20px);
+  }
+  66.67% {
+    transform: translateY(-3px) translateX(8px);
+  }
+  83.33% {
+    transform: translateY(-15px) translateX(-11px);
+  }
+  100.00% {
+    transform: translateY(20px) translateX(20px);
+  }
+}
+
+@keyframes slick-hover-2 {
+  0.00% {
+    transform: translateY(-20px) translateX(-20px);
+  }
+  16.67% {
+    transform: translateY(3px) translateX(-5px);
+  }
+  33.33% {
+    transform: translateY(18px) translateX(-10px);
+  }
+  50.00% {
+    transform: translateY(-20px) translateX(20px);
+  }
+  66.67% {
+    transform: translateY(15px) translateX(-4px);
+  }
+  83.33% {
+    transform: translateY(-1px) translateX(15px);
+  }
+  100.00% {
+    transform: translateY(-20px) translateX(-20px);
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 20px 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  background-color: rgb(14, 100, 211);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  animation: buttonBounce 0.8s ease infinite;
+}
+
+.btn:hover {
+  animation: none;
+  background-color: rgb(10, 70, 150);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.anm_btn {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes buttonBounce {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  500% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

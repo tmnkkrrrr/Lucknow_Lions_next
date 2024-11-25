@@ -1,0 +1,22 @@
+.choice-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.choice-chip.selected {
+  background-color: #a87d37;
+  color: white;
+}
+
+.choice-chip:hover {
+  background-color: #ddd;
+}

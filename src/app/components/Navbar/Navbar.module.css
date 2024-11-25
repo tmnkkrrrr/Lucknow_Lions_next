@@ -1,0 +1,156 @@
+.main_nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+  max-height: 60px;
+}
+
+.nav {
+  padding: 1.3vh 4vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  background-color: #b2e0ff;
+  position: relative;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menus {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.menus li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(10px, 1.4vw, 20px);
+  font-weight: 300;
+}
+
+.menus li a {
+  color: black;
+  text-decoration: none;
+}
+
+.menus li a:hover {
+  font-weight: 700;
+  color: red;
+}
+
+.nav > button {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav > button a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav > button:hover {
+  /* background-color: #72a824; */
+  transform: scale(1.05);
+}
+
+.active a {
+  color: #007bff !important;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: underline !important;
+}
+
+.disappear {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #0c6396;
+  transition: 0.4s;
+}
+
+/* Mobile Menu Button Styles */
+.loginButton {
+  background-color: #0875bd;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* .loginButton:hover {
+  background-color: #72a824;
+} */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .logo {
+    height: 30px;
+  }
+
+  .menus {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #b2e0ff;
+    align-items: center;
+    display: none;
+  }
+
+  .menus.open {
+    display: flex;
+  }
+
+  .menus li {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Adjust Login/Signup button position */
+  .menus li:last-child {
+    margin-top: 20px;
+  }
+}

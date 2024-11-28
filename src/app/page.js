@@ -1,5 +1,4 @@
-"use client"
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import Link from 'next/link';
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -10,13 +9,13 @@ export function generateMetadata() {
       title: 'Lucknow Lions - Zerodha Open Free Demat Account Opening',
       description: 'Our mission is to maximize wealth for our investors and traders through expert guidance and strategic investments in the stock market.',
       keywords: "Lucknow Lions,Lucknow Lions demat account, free demat account,free demat account, lucknowlions, Lucknow Lions Free Demat Account, Lucknow Lions Stock Broker, Lucknow Lions Brokerage Charges, Best Demat Account in Lucknow, लखनऊ लायंस",
-      robots: 'index',
+      robots: 'index'
   }
 }
 
 export default function Home() {
 
-  const [brokers, Brokers] = useState([]);
+  // const [brokers, Brokers] = useState([]);
 
   // useEffect(() => {
   // fetchBrokersLinks()

@@ -8,6 +8,7 @@ import Sidebar from '@/app/components/Sidebar/Sidebar';
 import paginateData from '@/app/utils'
 
 export default function Categories() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [categories, setCategories] = useState([]);
   const [newCategory, setNewCategory] = useState('');
   const [editingId, setEditingId] = useState(null);
@@ -154,9 +155,9 @@ export default function Categories() {
 // Update the JSX where you map through categories
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex bg-gray-50">
       <Sidebar />
-      <div className="ml-64 flex-1">
+      <div className="flex-1 transition-all duration-300 ease-in-out lg:ml-64 ml-0">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             {/* Header Section */}

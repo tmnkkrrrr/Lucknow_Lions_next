@@ -1,18 +1,16 @@
 "use client";
 import { useState } from 'react';
 import Sidebar from '@/app/components/Sidebar/Sidebar';
-import "trix/dist/trix";
-import { TrixEditor } from "react-trix";
+import RichTextEditor from '@/app/components/RichTextEditor/RichTextEditor';
+
 
 export default function Categories() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  function handleEditorReady(editor) {
-    editor.insertString("What is Interest?");
-  }
 
-  function handleChange(html, text) {
-  }
+  const handleChange = (content) => {
+    console.log('HTML content:', content);
+  };
 
   return (
     <div className="flex bg-gray-50">
@@ -29,11 +27,13 @@ export default function Categories() {
               <p className="mt-1 text-sm text-gray-500">Add, edit, or remove Blog Pages</p>
             </div>
 
-            <TrixEditor 
+            <RichTextEditor initialContent="<p>Initial text</p>" onChange={handleChange} />
+
+            {/* <TrixEditor 
               onChange={handleChange} 
               onEditorReady={handleEditorReady} 
               className="my-8 border-2 border-grey-400 p-4 min-h-[200px]" 
-            />
+            /> */}
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@
 }
 
 .nav {
-  padding: 1.3vh 4vw;
+  padding: 1vh 4vw;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -17,7 +17,7 @@
 }
 
 .logo {
-  height: 40px;
+  height: 45px;
 }
 
 .menus {

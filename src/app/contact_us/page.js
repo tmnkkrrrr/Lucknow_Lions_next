@@ -3,15 +3,8 @@ import { useState } from "react";
 import styles from "./ContactUs.module.css";
 import { sendContactUsEnquiry } from "@/helper/helper";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
-export function generateMetadata() {
-    return {
-        title: 'Lucknow Lions - Contact Us | Get in Touch for Trading Support',
-        description: "Have questions or need assistance? Contact Lucknow Lions for expert support on trading platforms, tools, and services. We're here to help you succeed in your trading journey. Reach out to us today!",
-        keywords: 'stock broker in lucknow, best stock broker in lucknow, 0 brokerage on delivery, free demat account',
-        robots: 'index',
-    }
-}
 
 export default function ContactUs() {
     const [firstName, FirstName] = useState("");
@@ -275,6 +268,8 @@ export default function ContactUs() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 };

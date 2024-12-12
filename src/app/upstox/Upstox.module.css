@@ -268,7 +268,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: url("/upstox_files/rocket.png");
+    background-image: url("/upstox_files/rocket.webp");
     background-repeat: no-repeat;
     background-position: center bottom; /* Initial position */
     animation: moveRocket 50s linear infinite;

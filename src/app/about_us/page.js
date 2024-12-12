@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import styles from "./aboutus.module.css";
 
@@ -7,8 +8,10 @@ export function generateMetadata() {
         description: "Learn more about Lucknow Lions, a leading platform in the trading world. We are committed to providing innovative solutions, expert insights, and top-notch tools for traders of all levels. Join us to elevate your trading journey.",
         keywords: 'stock broker in lucknow, best stock broker in lucknow, 0 brokerage on delivery, free demat account',
         robots: 'index',
+      alternates: { canonical: 'https://www.lucknowlions.com/about_us' },
     }
 }
+
 
 export default function AboutUs() {
     return (
@@ -150,7 +153,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <div style={{ height: "20px" }} />
+            <Footer />
         </main>
     );
 };

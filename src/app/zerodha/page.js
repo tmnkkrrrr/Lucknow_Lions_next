@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import styles from "./Zerodha.module.css";
 
@@ -6,6 +7,7 @@ export function generateMetadata() {
         title: 'Lucknow Lions - Zerodha Open Free Demat Account 0 Brokerage',
         description: "Open a Free Demat Account in Zerodha with Lucknow Lions. Access India's leading brokerage platform for smooth stock market trading, zero-cost investments, and expert financial tools. Get started today!",
         keywords: 'Zerodha, Zerodha Open Free Demat Account, zerodha demat account charges, zerodha demat account, saurabh kumar srivastava zerodha, stock broker in lucknow, best stock broker in lucknow, 0 brokerage on delivery, free demat account',
+        alternates: { canonical: 'https://www.lucknowlions.com/zerodha' },
         robots: 'index',
     }
 }
@@ -15,7 +17,7 @@ export default function Zerodha() {
         <>
             <Navbar />
 
-            <div style={{ height: "65px" }} />
+            <div style={{ height: "70px" }} />
             <div className={styles.mainContent}>
                 <img
                     src="/zerodha_files/aec6c5390ebe1ba2bed78950f8500096.svg"
@@ -33,7 +35,7 @@ export default function Zerodha() {
                             href="https://zerodha.com/open-account?c=ZMPIUR"
                             target="_blank"
                             rel="noreferrer"
-                            className={`${styles.btn2}  ${styles.up_down}`}
+                            className={`${styles.btns} ${styles.up_down}`}
                         >
                             <img
                                 src="/zerodha_files/28de5148ba11c27bf8aef82c87d44bc4.svg"
@@ -47,7 +49,7 @@ export default function Zerodha() {
                     <img
                         style={{ flex: 1, maxWidth: "36vw" }}
                         src="/zerodha_files/zerodha_hero.gif"
-                        alt=""
+                        alt="zerodha"
                     />
                 </div>
 
@@ -1356,6 +1358,8 @@ export default function Zerodha() {
                     OPEN Free Demat Account
                 </a>
             </div>
+
+            <Footer />
         </>
     );
 };

@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import styles from "./Upstox.module.css";
 
@@ -10,9 +11,10 @@ export function generateMetadata() {
       openGraph: {
           title: 'Lucknow Lions - Upstox Account Opening at No Cost',
           description: "Discover the power of Upstox at 0 cost through Lucknow Lions. Experience fast, cost-effective trading with innovative tools for stocks, derivatives, and mutual funds. Start trading today with a trusted partner in online brokerage!",
-          images: ['https://www.lucknowlions.com/upstox_files/otp1.jpg'],
+          images: ['https://www.lucknowlions.com/upstox_files/otp1.webp'],
           url : 'https://www.lucknowlions.com/upstox'
-      }
+      },
+      alternates: { canonical: 'https://www.lucknowlions.com/upstox' },
   }
 }
 
@@ -20,7 +22,7 @@ export default function Upstox() {
   const link = "https://upstox.com/open-account/?f=pzAl";
 
   return (
-    <>
+    <div >
       <Navbar />
      
       <div style={{ height: "65px" }} />
@@ -50,7 +52,7 @@ export default function Upstox() {
             ></a>
           </div>
           <div className="flex-1 min-w-[250px] flex justify-center">
-            <img className={styles.up_down} src="/upstox_files/rocket.png" />
+            <img className={styles.up_down} src="/upstox_files/rocket.webp" />
           </div>
         </div>
 
@@ -921,7 +923,7 @@ export default function Upstox() {
           <br />
           <img
             style={{ alignSelf: "center", display: "flex" }}
-            src="/upstox_files/otp1.jpg"
+            src="/upstox_files/otp1.webp"
           />
         </div>
         <div className={styles.el_card}>
@@ -1007,6 +1009,8 @@ export default function Upstox() {
           <img src="/upstox_files/btn.svg" />
         </a>
       </div>
-    </>
+
+      <Footer />
+    </div>
   );
 };

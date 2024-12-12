@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Home, List, Settings, LogOut, LayoutList, FileText, Palette, Menu, X } from 'lucide-react';
+import { Home, Settings, LogOut, LayoutList, FileText, Palette, Menu, X } from '  -react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -11,6 +11,7 @@ export default function Sidebar() {
   const navItems = [
     { name: 'Dashboard', icon: Home, href: '/admin/dashboard' },
     { name: 'Categories', icon: LayoutList, href: '/admin/dashboard/categories' },
+    { name: 'New Post', icon: FileText, href: '/admin/dashboard/new_pages' },
     { name: 'Pages', icon: FileText, href: '/admin/dashboard/pages' },
     { name: 'Themes', icon: Palette, href: '/admin/dashboard/themes' },
     { name: 'Settings', icon: Settings, href: '/admin/dashboard/settings' }
@@ -71,10 +72,10 @@ export default function Sidebar() {
         </nav>
 
         <div className="absolute bottom-0 w-full p-4 border-t border-gray-200">
-          <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">
+          <Link  href='/admin' className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">
             <LogOut className="h-5 w-5 mr-3" />
             Logout
-          </button>
+          </Link>
         </div>
       </div>
     </>

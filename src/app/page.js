@@ -1,29 +1,37 @@
-// import { useState, useEffect } from "react";
+"use client"
+import { useState, useEffect } from "react";
 import Link from 'next/link';
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import { HOST } from "@/config";
 
-
-export function generateMetadata() {
-  return {
-      title: 'Lucknow Lions - Zerodha Open Free Demat Account Opening',
-      description: 'Our mission is to maximize wealth for our investors and traders through expert guidance and strategic investments in the stock market.',
-      keywords: "Lucknow Lions,Lucknow Lions demat account, free demat account,free demat account, lucknowlions, Lucknow Lions Free Demat Account, Lucknow Lions Stock Broker, Lucknow Lions Brokerage Charges, Best Demat Account in Lucknow, लखनऊ लायंस",
-      robots: 'index'
-  }
-}
 
 export default function Home() {
 
-  // const [brokers, Brokers] = useState([]);
+  const [brokers, Brokers] = useState([]);
 
-  // useEffect(() => {
-  // fetchBrokersLinks()
-  //     .then((result) => {
-  //       Brokers(result);
-  //     })
-  //     .catch((error) => {});
-  // }, []);
+  const fetchBrokersLinks = () => {
+    return new Promise((resolve, reject) => {
+        fetch(`${HOST}/api/v1/website/brokersLing`)
+            .then(response => {
+                if (!response.ok) return [];
+
+                return response.json();
+            })
+            .then(data => resolve(data))
+            .catch(error => reject(error));
+    });
+};
+
+  useEffect(() => {
+  fetchBrokersLinks()
+      .then((result) => {
+        Brokers(result);
+        debugger
+      })
+      .catch((error) => {});
+  }, []);
 
   const testimonials = [
     {
@@ -61,13 +69,14 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
+  
 
   return (
     <div className={styles.page}>
-      <Navbar />  
+      <Navbar />
 
       <main className={styles.main}>
-        <section className={`${styles.hero} ${styles.m0}`}>
+        <section className={`${styles.hero} ${styles.m0} ${styles.section}`}>
           <div className={styles.heroleft}>
             <p className={styles.des}>Let’s start your journy with us!</p>
             <h1 className={styles.h5}>
@@ -78,7 +87,7 @@ export default function Home() {
               various Stock Brokers
             </p>
             <a
-              // href={brokers.length > 3 && brokers[3].link}
+              href={brokers.length > 0 ? brokers[1].link : ''}
               target="_blank"
               className={`${styles.openbtn}`}
             >
@@ -89,18 +98,17 @@ export default function Home() {
           <img src="/home/hero.webp" alt="hero" className={styles.heroright} />
         </section>
 
-        {/* {window.innerWidth > 1200 ? (
-          <a href="#main" style={{ display: "block", cursor: "pointer" }}>
-            <img
-              id="main"
-              src="/home/arrdown.webp"
-              alt="logo"
-              className={styles.arrdown}
-            />
-          </a>
-        ) : null} */}
 
-        <section>
+        <a href="#main" className="hidden lg:block cursor-pointer">
+          <img
+            id="main"
+            src="/home/arrdown.webp"
+            alt="logo"
+            className={styles.arrdown}
+          />
+        </a>
+
+        <section className={`${styles.section}`}>
           <div className={`${styles.qtext} ${styles.cardTn1}`}>
             <img
               className={styles.qtext1}
@@ -127,7 +135,7 @@ export default function Home() {
 
           <div className={styles.rocdiv}>
             <div>
-              <h1 className={styles.h2}>What We Offer </h1>
+              <h2 className={styles.h2}>What We Offer </h2>
               <p>
                 Lucknow Lions offers Free Demat Account Opening Services &
                 Educational Content. <br /> We have partnered with various Stock
@@ -137,7 +145,7 @@ export default function Home() {
                 right Broker for you
               </p>
             </div>
-            <div>
+            {/* <div>
               <img
                 src="/home/roc.gif"
                 alt="Lions Rocket"
@@ -148,11 +156,11 @@ export default function Home() {
                 alt="Lions Rocket"
                 className={styles.rocket}
               />
-            </div>
+            </div> */}
           </div>
         </section>
 
-        <section className={styles.features}>
+        <section className={`${styles.section} ${styles.features}`}>
           <h2 className={styles.h1}>
             Feature Brokers <span>@Lucknow Lions</span>
           </h2>
@@ -195,7 +203,7 @@ export default function Home() {
                   <Link href="/zerodha">Read More....</Link>
                 </p>
                 <a
-                  // href={brokers.length > 3 && brokers[3].link}
+                  href={brokers.length > 3 ? brokers[3].link : ''}
                   target="_blank"
                   className={styles.btn2}
                 >
@@ -247,7 +255,7 @@ export default function Home() {
                   <Link href="/fyers/fyers">Read More....</Link>
                 </p>
                 <a
-                  // href={brokers.length > 1 && brokers[1].link}
+                  href={brokers.length > 1 ? brokers[1].link : ''}
                   target="_blank"
                   className={styles.btn2}
                 >
@@ -299,7 +307,7 @@ export default function Home() {
                 </p>
 
                 <a
-                  // href={brokers.length > 2 && brokers[2].link}
+                  href={brokers.length > 2 ? brokers[2].link : ''}
                   target="_blank"
                   className={styles.btn2}
                 >
@@ -315,7 +323,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.wedo}>
+        <section className={`${styles.section} ${styles.wedo}`}>
           <h3 className={styles.h2}>See What we do</h3>
 
           <div className={styles.wedolist}>
@@ -362,7 +370,7 @@ export default function Home() {
         </section>
 
         <div className={styles.about}>
-          <section className={styles.aboutus}>
+          <section className={`${styles.section} ${styles.aboutus}`}>
             <div>
               <h3>About Us</h3>
               <p>
@@ -389,7 +397,7 @@ export default function Home() {
           </section>
         </div>
 
-        <section className={styles.education}>
+        <section className={`${styles.section} ${styles.education}`}>
           <img src="/home/blog.webp" alt="Lucknow Lions blogs" />
           <div className={styles.edu_left}>
             <h3 className={styles.h3}> FREE & Open Access </h3>
@@ -403,7 +411,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.portfolio}>
+        <section className={`${styles.section} ${styles.portfolio}`}>
           <div className={styles.portxt}>
             <h5 className={styles.h4}>Diversify your Portfolio Today</h5>
             <p>
@@ -420,7 +428,7 @@ export default function Home() {
           <img src="/home/port.webp" alt="Lucknow Lions Portfolio" />
         </section>
 
-        <section className={styles.testim}>
+        <section className={`${styles.section} ${styles.testim}`}>
           <h3>
             <img src="/home/menubar.png" alt="logo" className={styles.logo} />
             Our Website Users Speak For Us
@@ -451,9 +459,8 @@ export default function Home() {
             {Array.from({ length: testimonials.length / 2 }, (_, i) => (
               <span
                 key={i}
-                className={`${styles.dot} ${
-                  activeIndex === i * 2 ? styles.activeDot : ""
-                }`}
+                className={`${styles.dot} ${activeIndex === i * 2 ? styles.activeDot : ""
+                  }`}
                 onClick={() => setActiveIndex(i * 2)}
               ></span>
             ))}
@@ -461,7 +468,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

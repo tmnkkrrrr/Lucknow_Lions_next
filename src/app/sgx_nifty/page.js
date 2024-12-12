@@ -1,12 +1,21 @@
 import styles from "./SGX_Nifty.module.css";
 import Navbar from "../components/Navbar/Navbar";
 import ChoiceChip from "../components/ChoiceChip/ChoiceChip";
+import Footer from "../components/Footer/Footer";
 
 export function generateMetadata() {
     return {
-        title: 'Lucknow Lions - what is SGX Nifty',
+        title: 'Lucknow Lions - What is SGX Nifty',
         description: 'Access live SGX Nifty updates, market insights, and trading data with Lucknow Lions. Stay informed with real-time index performance and expert analysis to enhance your trading strategy.',
         keywords: 'Lucknow Lions, sgx nifty, sgx nifty live chart, what is sgt nifty, gift nifty, nifty future, sgx nifty in hindi, sgx nifty kya hai,what is gift nifty',
+
+        openGraph: {
+            title: 'Lucknow Lions - What is SGX Nifty',
+            description: 'Access live SGX Nifty updates, market insights, and trading data with Lucknow Lions. Stay informed with real-time index performance and expert analysis to enhance your trading strategy.',
+        },
+
+        alternates: { canonical: 'https://www.lucknowlions.com/sgx_nifty' },
+
         robots: 'index'
     }
 }
@@ -93,7 +102,7 @@ export default function SGX_Nifty() {
                     6:30 AM TO 11:30 PM (As per Indain Standard Time)
                 </strong>
                 <br /> <br />
-                <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                     <button className={styles.btn}>Open Free Demat Account</button>
                 </a>
                 <div id="english" />
@@ -186,7 +195,7 @@ export default function SGX_Nifty() {
                     </div>
                     <br />
                     <br />
-                    <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                         <button className={styles.btn}>Open Free Demat Account</button>
                     </a>
                     <div className={`${styles.card} ${styles.bounce_In} ${styles.gift}`}>
@@ -235,7 +244,7 @@ export default function SGX_Nifty() {
                             </table>
                         </center>
                     </p>
-                    <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                         <button className={styles.btn}>Open Free Demat Account</button>
                     </a>
                     <p>
@@ -285,7 +294,7 @@ export default function SGX_Nifty() {
                             </li>
                         </ul>
                     </div>
-                    <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                         <button className={styles.btn}>Open Free Demat Account</button>
                     </a>
                     <div className={`${styles.card} ${styles.flipIn}`}>
@@ -335,7 +344,7 @@ export default function SGX_Nifty() {
                         </ul>
                     </div>
                     <br />
-                    <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                         <button className={styles.btn}>Open Free Demat Account</button>
                     </a>
                     <div
@@ -396,7 +405,7 @@ export default function SGX_Nifty() {
                         </ul>
                     </div>
                     <br />
-                    <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                         <button className={styles.btn}>Open Free Demat Account</button>
                     </a>
                     <br />
@@ -465,7 +474,7 @@ export default function SGX_Nifty() {
                             एसजीएक्स निफ्टी भारतीय निफ्टी 50 इंडेक्स से अधिक अस्थिर है।
                         </p>
                     </div>
-                    <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                         <button style={{ maxWidth: "400px" }} className={styles.btn}>
                             Open Free Demat Account
                         </button>
@@ -551,7 +560,7 @@ export default function SGX_Nifty() {
                         </p>
                     </div>
                     <br />
-                    <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                         <button style={{ maxWidth: "400px" }} className={styles.btn}>
                             Open Free Demat Account
                         </button>
@@ -603,7 +612,7 @@ export default function SGX_Nifty() {
                             <br />
                             <a
                                 target="_blank"
-                                href="https://zerodha.com/open-account?c=ZMPIUR"
+                                href="https://upstox.com/open-account/?f=pzAl"
                             >
                                 <button style={{ maxWidth: "400px" }} className={styles.btn}>
                                     Open Free Demat Account
@@ -652,7 +661,7 @@ export default function SGX_Nifty() {
                             <br />
                             <a
                                 target="_blank"
-                                href="https://zerodha.com/open-account?c=ZMPIUR"
+                                href="https://upstox.com/open-account/?f=pzAl"
                             >
                                 <button style={{ maxWidth: "400px" }} className={styles.btn}>
                                     Open Free Demat Account
@@ -709,7 +718,7 @@ export default function SGX_Nifty() {
                             <br />
                             <a
                                 target="_blank"
-                                href="https://zerodha.com/open-account?c=ZMPIUR"
+                                href="https://upstox.com/open-account/?f=pzAl"
                             >
                                 <button style={{ maxWidth: "400px" }} className={styles.btn}>
                                     Open Free Demat Account
@@ -820,11 +829,13 @@ export default function SGX_Nifty() {
                 <br />
                 <br />
                 <br />
-                <a target="_blank" href="https://zerodha.com/open-account?c=ZMPIUR">
+                <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
                     <button className={styles.btn}>Open Free Demat Account</button>
                 </a>
                 <div style={{ height: "200px" }} />
             </div>
+
+            <Footer />
         </>
     );
 };

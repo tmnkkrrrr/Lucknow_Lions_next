@@ -1,11 +1,9 @@
 "use client"
-import { useState } from "react";
-import { useRouter } from "next/router";
 import Link from 'next/link';
 import styles from "./Navbar.module.css";
+import { useState } from 'react';
 
 const Navbar = () => {
-  // const router = useRouter();
   const { pathname } = {};
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,17 +14,16 @@ const Navbar = () => {
   return (
     <nav className={styles.main_nav}>
       <div className={styles.nav}>
-        {/* <Link href="/"> */}
+        <Link href='https://www.lucknowlions.com' >
           <img
             src="/logo.png"
             className={styles.logo}
-            alt="Your Logo"
-            height="50"
+            alt="Lucknow Lions Logo"
           />
-        {/* </Link> */}
+        </Link>
 
         {/* Hamburger Icon */}
-        <button className={styles.hamburger} onClick={toggleMenu}>
+        <button title='Lucknow Lions Menu Button' className={styles.hamburger} onClick={toggleMenu}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
@@ -57,17 +54,18 @@ const Navbar = () => {
           </li>
 
           {/* Login/Signup Button - Inside Hamburger menu for mobile */}
-          <li
+          {/* <li
             className={pathname === "/getin" ? styles.disappear : ""}
             style={{ marginTop: "15px" }} // Added margin for spacing in the mobile menu
           >
             <Link href="/getin">
               <button className={styles.loginButton}>Login / Signup</button>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
+
   );
 };
 

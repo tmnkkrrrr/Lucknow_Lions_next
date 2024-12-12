@@ -1,0 +1,249 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  background-color: #2d2d2d;
+  color: #c2c2c2;
+  flex-grow: 1;
+}
+
+.footleft {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  width: 40%;
+}
+
+.footleft > .logo {
+  width: 40%;
+  aspect-ratio: 5/1;
+}
+
+.footleft address {
+  padding: 20px;
+  text-align: start;
+}
+
+.footleft h3 {
+  font-size: 2rem;
+}
+
+.footright {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-self: center;
+  justify-content: start;
+}
+
+.footright > ul {
+  text-align: start;
+}
+
+.footrtxt {
+  color: #c2c2c2;
+  text-align: start;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footredtxt {
+  color: red;
+  text-align: start;
+}
+
+.footredtxt > a {
+  color: red;
+  text-decoration: none;
+}
+
+.footmenu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.footmenu li {
+  cursor: pointer;
+}
+
+.footmenu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(10px, 1.4vw, 20px);
+  font-weight: 700;
+}
+
+.footSubMenu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+.footSubMenu > li > a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: clamp(12px, 4vw, 16px);
+}
+
+.footright > p {
+  margin: 0;
+}
+
+.play {
+  width: 50%;
+  border: 3px solid #3588b9;
+  border-radius: 12px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address > div {
+  display: flex;
+  gap: 4px;
+}
+
+.address > div > img {
+  height: 26px;
+}
+
+.address > div > a {
+  color: #c2c2c2;
+  text-decoration: none;
+}
+
+.bar {
+  height: 14px;
+  width: 100%;
+  background-color: #3a95ca;
+}
+
+/* Media Queries for Smaller Screens (Mobile/Tablet) */
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footleft,
+  .footright {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footmenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footmenu li {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+  }
+
+  .footleft > .logo {
+    width: 50%; /* Make the logo smaller on smaller screens */
+  }
+
+  .footleft h3 {
+    font-size: 1.5rem; /* Make the heading smaller */
+  }
+
+  .play {
+    width: 60%; /* Adjust the app banner image width */
+  }
+
+  .footrtxt,
+  .footredtxt {
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  .address > div {
+    gap: 8px; /* Reduce gap between address items */
+  }
+
+  .address > div > img {
+    height: 20px; /* Adjust icon size */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .footleft,
+  .footright {
+    width: 100%;
+  }
+
+  .footmenu {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footmenu li {
+    font-size: 1rem;
+  }
+
+  .footleft h3 {
+    font-size: 1.2rem;
+  }
+
+  .footright > p {
+    font-size: 0.9rem; /* Reduce paragraph text size */
+  }
+
+  .bar {
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footleft {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .footright {
+    gap: 15px;
+  }
+
+  .footmenu {
+    gap: 6px;
+  }
+
+  .footmenu li a {
+    font-size: 1rem;
+  }
+
+  .play {
+    width: 80%;
+  }
+
+  .footleft > .logo {
+    width: 60%;
+  }
+
+  .bar {
+    height: 8px;
+  }
+}

@@ -44,7 +44,7 @@ export default function AboutUs() {
                 <img
                     className={styles.heroright}
                     src="/aboutus/hero.webp"
-                    alt="hero"
+                    alt="About Lucknow Lions"
                 />
             </section>
 
@@ -88,7 +88,7 @@ export default function AboutUs() {
                 <div className={styles.member}>
                     <img
                         src="/aboutus/founder1.webp"
-                        alt="Saurabh Kumar Srivastava"
+                        alt="Founder of Lucknow Lions Saurabh Kumar Srivastava"
                         className={`${styles.memImg} ${styles.cardTn1}`}
                     />
                     <div className={styles.memCard}>

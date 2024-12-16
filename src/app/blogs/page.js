@@ -86,31 +86,32 @@ const BlogHomepage = async () => {
             id: 1,
             title: "What is the Interest, Simple Interest and compound interest?",
             description: "Finance में इंटरेस्ट एक पेमेंट है जो कर्ज लेने वाले को देना पड़ता है...",
-            image: "/blogs_files/stock.png",
+            image: "/blogs_files/stock.webp",
         },
         {
             id: 2,
             title: "जीरोधा का अलर्ट पैरामीटर्स ऑर्डर (ATO)",
             description: "जीरोधा, भारत का अग्रणी डिस्काउंट ब्रोकर...",
-            image: "/blogs_files/stock.png",
+            image: "/blogs_files/stock.webp",
         },
         {
             id: 3,
             title: "How to reach zerodha head office in bangalore",
             description: "Lucknow to bangalore (by Flight)",
-            image: "/blogs_files/stock.png",
+            image: "/blogs_files/stock.webp",
         },
         {
             id: 4,
             title: "10 Learning Game Ideas",
             description: "10 ideas for learning with for your kids to have fun.",
-            image: "/blogs_files/stock.png",
+            image: "/blogs_files/stock.webp",
         }
     ];
 
     // Component for Category Card
     const CategoryCard = ({ category }) => (
         <Link
+            // onClick={() => setIsLoading(true)}
             className="flex flex-col bg-white h-[411px] rounded-lg border-2 border-blue-200 shadow-md hover:shadow-lg duration-300 group cursor-pointer hover:scale-105 transition-transform"
             href={`/blogs/${category.slug}`}
         >
@@ -141,7 +142,7 @@ const BlogHomepage = async () => {
     // Component for Featured Topic
     const FeaturedTopic = ({ topic }) => (
         <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <img src='/blogs_files/bull.png' alt='Hot Topic' className="w-full h-full object-cover" />
+            <img src='/blogs_files/bull.webp' alt='Hot Topic' className="w-full h-full object-cover" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent text-white">
                 <h3 className="text-xl font-bold mb-2">What is stock market?</h3>
                 <p className="text-sm mb-4">Personalized articles and blogs curated to match your unique preferences.</p>
@@ -179,7 +180,7 @@ const BlogHomepage = async () => {
             {/* Hero Section */}
             <div className="relative rounded-lg max-w-[1800px] w-full mt-[66px] mx-8 p-8 border-purple-300 border-2 shadow-lg"
                 style={{
-                    backgroundImage: 'url("/blogs_files/bg.png")',
+                    backgroundImage: 'url("/blogs_files/bg.webp")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}

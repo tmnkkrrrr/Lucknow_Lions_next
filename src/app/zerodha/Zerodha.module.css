@@ -1,25 +1,20 @@
-/* :root {
- #4297cc: #4297cc;
-  #40b6ff: #40b6ff;
-} */
-
 @font-face {
   font-family: "The Seasons";
-  /* src: url("../../Fonts/TheSeasons.woff2") format("woff2"); */
+  src: url("/zerodha_files/TheSeasons.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Olive";
-  /* src: url("../../Fonts/Olive.woff2") format("woff2"); */
+  src: url("/zerodha_files/Olive.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Cur Nums";
-  /* src: url("../../Fonts/curnums.woff2") format("woff2"); */
+  src: url("/zerodha_files/cumums.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,8 +26,8 @@
   align-items: self-start;
   text-align: left;
   padding: 10px 10vw;
-  box-sizing: border-box;
-  /* background-color: red; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .logo {
@@ -54,18 +49,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  line-height: 1.2;
 }
 
-.hero h1 {
+.hero > h1 {
   font-size: 4em;
 }
 
-.hero h3 {
+.hero > h3 {
   font-size: 1.5em;
 }
 
-.hero span {
-  color: var(--primary-color);
+.hero > h1 > span {
+  color: #4297cc;
 }
 
 .tbody {
@@ -151,18 +147,20 @@
 }
 
 .btn2 {
-  margin: 60px 0;
-  /* width: 700px; */
-  text-decoration: none;
-  padding: 16px 40px;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
-  align-self: flex-start;
+  border: 4px solid #40b6ff;
+  background-color: #4297cc;
+  animation: moveUpDown 2s ease-in-out infinite;
+  align-items: center;
   border-radius: 44px;
-  display: block;
-  border: 4px solid var(#40b6ff);
-  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  font-weight: 600;
+  gap: 6px;
+  margin: 60px 0;
+  text-decoration: none;
+  align-self: flex-start;
+  font-size: 1rem;
+  padding: 16px 40px;
 }
 
 /* section 2 */
@@ -317,6 +315,7 @@
   align-items: center;
   text-align: center;
   gap: 10px;
+  width: 50%;
 }
 
 .founderss {
@@ -349,7 +348,7 @@
   transform: rotateY(180deg);
 }
 
-.founderItem img {
+.founderItem > img {
   width: 20vw;
   height: 20vw;
   border-radius: 50%;
@@ -674,7 +673,7 @@
   font-size: 3.6em;
   font-family: "Cur Nums";
   color: #ffffff;
-  background-color: var(--primary-color);
+  background-color: #40b6ff;
   padding: 30px 40px;
   text-align: center;
   border-radius: 50%;
@@ -742,7 +741,7 @@
   text-align: justify;
   font-weight: 500;
   border-radius: 12px;
-  background-color: var(#40b6ff);
+  background-color: #40b6ff;
   color: white;
 }
 
@@ -790,20 +789,20 @@
 
 /* section 11 */
 .section11 {
-  /* padding: 80px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
-.section11 h3 {
+.section11 > h3 {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
   text-align: center;
   font-family: "allura", cursive;
   font-weight: 700;
   font-size: 4rem;
   margin: 20px 0 0 0;
-  /* padding: 30px; */
 }
 
 .section11 h3 img:first-child {

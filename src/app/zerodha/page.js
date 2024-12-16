@@ -35,21 +35,21 @@ export default function Zerodha() {
                             href="https://zerodha.com/open-account?c=ZMPIUR"
                             target="_blank"
                             rel="noreferrer"
-                            className={`${styles.btns} ${styles.up_down}`}
+                            className={`${styles.btn2} ${styles.up_down}`}
                         >
+                            OPEN Free Demat Account
                             <img
                                 src="/zerodha_files/28de5148ba11c27bf8aef82c87d44bc4.svg"
                                 alt="icon"
                                 width="50"
                             />
-                            OPEN Free Demat Account
                         </a>
                         <h3>Empower Your Investments with Zero Brokerage</h3>
                     </div>
                     <img
                         style={{ flex: 1, maxWidth: "36vw" }}
                         src="/zerodha_files/zerodha_hero.gif"
-                        alt="zerodha"
+                        alt="Lucknow Lions Zerodha home"
                     />
                 </div>
 
@@ -134,7 +134,7 @@ export default function Zerodha() {
                         <div className={styles.section2Img}>
                             <img
                                 src="/zerodha_files/d58e19d93f5eccf6d792c191cf3e17bb.jpg"
-                                alt="icon"
+                                alt="Lucknow Lions about Zerodha"
                                 width="100"
                             />
                             <p>

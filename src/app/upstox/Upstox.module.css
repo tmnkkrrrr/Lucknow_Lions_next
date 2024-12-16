@@ -4,6 +4,8 @@
     align-items: self-start;
     text-align: left;
     padding: 10px 10vw;
+    max-width: 100%;
+    overflow-x: scroll;
     box-sizing: border-box;
   }
   
@@ -185,6 +187,8 @@
     list-style-type: none; /* Remove default bullet points */
     padding-left: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
+    max-width: 100%;
+    word-wrap: break-word;
   }
   
   .docList > li {
@@ -195,6 +199,7 @@
     margin-bottom: 5px; /* Space between items */
     background-color: #e6f7ff; /* Light blue background */
     border-radius: 4px; /* Rounded corners */
+
   }
   
   /* Highlighting the second level */
@@ -226,7 +231,8 @@
   }
   
   .tbl {
-    width: 100%;
+    max-width: 100%;
+    overflow-x: scroll;
     border-collapse: separate;
     margin: 20px 0;
     font-family: Arial, sans-serif;

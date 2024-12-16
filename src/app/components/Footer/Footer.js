@@ -21,22 +21,22 @@ const Footer = () => {
             height={50}
           />
           <p>
-            We don't provide any kind of paid tips, advisory nor paid training
+            We don't provide any kind of paid tips,<br />advisory nor paid training
             courses.
           </p>
 
           <address className={styles.address}>
             <div>
-              <Image 
+              <img 
                 src="/home/location.png" 
                 alt="address" 
                 width={20}
                 height={20}
               /> 
-              8A, Vrindavan Vihar, Gaushala Road, Balaganj, Lucknow: 226003
+              8A, Vrindavan Vihar, Gaushala Road,<br />Balaganj, Lucknow: 226003
             </div>
             <div>
-              <Image 
+              <img 
                 src="/home/mail.png" 
                 alt="mailing"
                 width={20}
@@ -105,7 +105,7 @@ const Footer = () => {
             .
           </p>
           <p className={styles.footrtxt}>Points to be remember</p>
-          <ul>
+          <ul className="list-disc pl-5">
             <li>
               Investments in the securities market are subject to market risks;
               read all the related documents carefully before investing.
@@ -125,7 +125,7 @@ const Footer = () => {
             </li>
           </ul>
           <p className={styles.footrtxt}>Capital Gain Tax</p>
-          <ul>
+          <ul className="list-disc pl-5">
             <li>
               LTCG increased to 12.5% (from 10%) with a revised exempt limit of
               ₹125,000 for holdings over 2 years. Indexation benefits on assets

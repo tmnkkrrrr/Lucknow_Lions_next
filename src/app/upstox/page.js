@@ -27,6 +27,8 @@ export default function Upstox() {
      
       <div style={{ height: "65px" }} />
 
+{/* <div className="flex w-full justify-center"> */}
+  
       <div className={styles.page}>
         <img
           className={styles.logo}
@@ -34,7 +36,7 @@ export default function Upstox() {
           alt="Logo"
         />
 
-        <div className="flex flex-wrap items-center justify-between w-100">
+        <div className="flex flex-wrap items-center justify-between w-full">
           <div style={{ flex: 1 }}>
             <div className={styles.main_hed1}>
               Trade Smart, Invest Better with
@@ -52,7 +54,7 @@ export default function Upstox() {
             ></a>
           </div>
           <div className="flex-1 min-w-[250px] flex justify-center">
-            <img className={styles.up_down} src="/upstox_files/rocket.webp" />
+            <img className={styles.up_down} alt="Lucknow Lions flying Rocket" src="/upstox_files/rocket.webp" />
           </div>
         </div>
 
@@ -923,6 +925,7 @@ export default function Upstox() {
           <br />
           <img
             style={{ alignSelf: "center", display: "flex" }}
+            alt="Lucknow Lions Upstox trading platform"
             src="/upstox_files/otp1.webp"
           />
         </div>
@@ -1009,6 +1012,7 @@ export default function Upstox() {
           <img src="/upstox_files/btn.svg" />
         </a>
       </div>
+      {/* </div> */}
 
       <Footer />
     </div>

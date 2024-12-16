@@ -69,14 +69,14 @@ export default function SGX_Nifty() {
                 >
                     <div style={{ height: "20px" }} />
 
-                    <div style={{ display: "flex", alignSelf: "center" }}>
+                    <div style={{ display: "flex", alignSelf: "center", alignItems:'Center' }}>
                         <img
-                            src="/sgx_files/ques.png"
+                            src="/sgx_files/ques.webp"
                             style={{ width: "50px", height: "50px" }}
                         />
-                        <h1 style={{ margin: 0 }}> About SGX Nifty</h1>
+                        <h1 style={{ margin: 0, fontWeight:'700' }}> About SGX Nifty</h1>
                         <img
-                            src="/sgx_files/ques.png"
+                          src="/sgx_files/ques.webp"
                             style={{ width: "50px", height: "50px" }}
                         />
                     </div>
@@ -364,12 +364,12 @@ export default function SGX_Nifty() {
                             }}
                         >
                             <img
-                                src="/sgx_files/caution.png"
+                                src="/sgx_files/caution.webp"
                                 style={{ width: "40px", height: "40px", marginRight: "12px" }}
                             />
                             <h3>SEBI Risk Disclosure on Derivatives</h3>
                             <img
-                                src="/sgx_files/caution.png"
+                                src="/sgx_files/caution.webp"
                                 style={{ width: "40px", height: "40px", marginLeft: "12px" }}
                             />
                         </div>
@@ -447,12 +447,12 @@ export default function SGX_Nifty() {
                         <div style={{ height: "20px" }} />
                         <div style={{ display: "flex", alignSelf: "center" }}>
                             <img
-                                src="/sgx_files/ques.png"
+                                src="/sgx_files/ques.webp"
                                 style={{ width: "50px", height: "50px" }}
                             />
                             <h1>SGX Nifty क्या है?</h1>
                             <img
-                                src="/sgx_files/ques.png"
+                                src="/sgx_files/ques.webp"
                                 style={{ width: "50px", height: "50px" }}
                             />
                         </div>
@@ -684,7 +684,7 @@ export default function SGX_Nifty() {
                                     }}
                                 >
                                     <img
-                                        src={process.env.PUBLIC_URL + "/sgx_files/gift.png"}
+                                        src= "/sgx_files/gift.webp"
                                         style={{
                                             width: "40px",
                                             height: "40px",
@@ -693,7 +693,7 @@ export default function SGX_Nifty() {
                                     />
                                     <h3>GIFT Nifty 50 </h3>
                                     <img
-                                        src={process.env.PUBLIC_URL + "/sgx_files/gift.png"}
+                                        src="/sgx_files/gift.webp"
                                         style={{
                                             width: "40px",
                                             height: "40px",
@@ -742,7 +742,7 @@ export default function SGX_Nifty() {
                                     }}
                                 >
                                     <img
-                                        src="/sgx_files/caution.png"
+                                        src="/sgx_files/caution.webp"
                                         style={{
                                             width: "40px",
                                             height: "40px",
@@ -751,7 +751,7 @@ export default function SGX_Nifty() {
                                     />
                                     <h3>डेरिवेटिव पर सेबी जोखिम प्रकटीकरण</h3>
                                     <img
-                                        src="/sgx_files/caution.png"
+                                        src="/sgx_files/caution.webp"
                                         style={{
                                             width: "40px",
                                             height: "40px",

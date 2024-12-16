@@ -11,7 +11,7 @@ export function generateMetadata() {
         openGraph: {
             title: 'Fyers Free Demat Account Opening Lifetime Free AMC',
             description: 'Open a Free Demat Account in Fyers with Lucknow Lions. No Annual Maintenance charge Lifetime Free, lowest brokerage, real-time market insight, and a user-friendly platform to grow your wealth.',
-            images: ['https://i.ibb.co/G3zHr1N/fyers.png'],
+            images: ['https://www.lucknowlions.com/OG_images/fyers.webp'],
             url: 'https://www.lucknowlions.com/fyers'
         },
       alternates: { canonical: 'https://www.lucknowlions.com/fyers' },
@@ -59,7 +59,7 @@ export default function Fyers() {
                             </a>
                         </div>
                         <div className="w-full md:w-1/2">
-                            <img src="/fyers_files/down.webp" alt="hero" className="w-full" />
+                            <img src="/fyers_files/down.webp" alt="Lucknow Lions Fyers" className="w-full" />
                         </div>
                     </section>
 
@@ -75,7 +75,7 @@ export default function Fyers() {
                         <div className="w-full md:w-2/5">
                             <img
                                 src="/fyers_files/about.webp"
-                                alt="about"
+                                alt="Lucknow Lions about Fyers"
                                 className="w-full"
                             />
                         </div>
@@ -183,7 +183,7 @@ export default function Fyers() {
                                 <div className={`${styles.plancard} ${styles.plancard1}`}>
                                     <img
                                         src="/fyers_files/Group 1321314127.png"
-                                        alt="product"
+                                        alt="Fyers IPO"
                                         className={styles.planimg}
                                     />
                                     <h4>Fyers IPO</h4>
@@ -195,7 +195,7 @@ export default function Fyers() {
                                 <div className={`${styles.plancard} ${styles.plancard2}`}>
                                     <img
                                         src="/fyers_files/Group1321314127d.png"
-                                        alt="product"
+                                        alt="Fyers Direct"
                                         className={styles.planimg}
                                     />
                                     <h4>Fyers Direct</h4>
@@ -205,21 +205,21 @@ export default function Fyers() {
                                     </p>
                                 </div>
                                 <img
-                                    src="/fyers_files/dot.png"
-                                    alt="icon"
+                                    src="/fyers_files/dotsbg.webp"
+                                    alt="Lucknow Lions dots"
                                     className={styles.dot_bg}
                                 />
                             </div>
                             <div className={styles.plancards}>
                                 <img
-                                    src="/fyers_files/dot.png"
+                                    src="/fyers_files/dotsbg.webp"
                                     alt="icon"
                                     className={styles.dot_bg}
                                 />
                                 <div className={`${styles.plancard} ${styles.plancard3}`}>
                                     <img
                                         src="/fyers_files/Group 1321314127s.png"
-                                        alt="product"
+                                        alt="Government Securities"
                                         className={styles.planimg}
                                     />
                                     <h4>Government Securities</h4>
@@ -231,7 +231,7 @@ export default function Fyers() {
                                 <div className={`${styles.plancard} ${styles.plancard4}`}>
                                     <img
                                         src="/fyers_files/Group 1321314127r.png"
-                                        alt="product"
+                                        alt="Fyers OFS"
                                         className={styles.planimg}
                                     />
                                     <h4>Fyers OFS</h4>
@@ -316,23 +316,20 @@ export default function Fyers() {
                                 {/* matches .ideacard & .ideacard1 */}
                                 <img
                                     src="/fyers_files/Groupa.png"
-                                    alt="icon"
+                                    alt="Fyers API bridge"
                                     className="w-[60%] p-4 rounded-xl" // matches .ideacard img
                                 />
                                 <h4 className="text-2xl md:text-[26px] font-bold text-black text-center">
-                                    {/* matches .ideacard h4 */}
                                     Fyers API bridge
                                 </h4>
                                 <p className="text-base text-[#000000e8] text-center">
-                                    {/* matches .ideacard p */}
                                     Customize and test your trading strategies seamlessly.
                                 </p>
                             </div>
                             <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[27%] aspect-[7/6] flex flex-col justify-around items-center p-5 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.1)] font-medium border-[3px] border-[#e94656] bg-[#FFAEB6]">
-                                {/* matches .ideacard & .ideacard2 */}
                                 <img
                                     src="/fyers_files/Groupapi.png"
-                                    alt="icon"
+                                    alt="Fyers API"
                                     className="w-[60%] p-4 rounded-xl"
                                 />
                                 <h4 className="text-2xl md:text-[26px] font-bold text-black text-center">
@@ -344,11 +341,9 @@ export default function Fyers() {
                                 </p>
                             </div>
                             <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[27%] aspect-[7/6] flex flex-col justify-around items-center p-5 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.1)] font-medium border-[3px] border-[#3b65ff] bg-[#a1b4f9]">
-                                {" "}
-                                {/* matches .ideacard & .ideacard3 */}
                                 <img
                                     src="/fyers_files/Groupalogo.png"
-                                    alt="icon"
+                                    alt="Algo Fox"
                                     className="w-[60%] p-4 rounded-xl"
                                 />
                                 <h4 className="text-2xl md:text-[26px] font-bold text-black text-center">
@@ -393,7 +388,7 @@ export default function Fyers() {
                             <div className="w-full md:w-[46%] flex justify-center">
                                 <img
                                     src="/fyers_files/download2.webp"
-                                    alt="icon"
+                                    alt="Fyers my account Lucknow Lions"
                                     className="md:w-full"
                                 />
                             </div>
@@ -471,7 +466,7 @@ export default function Fyers() {
                             </h3>
                             <img
                                 src="/fyers_files/dematacc1.webp"
-                                alt="icon"
+                                alt="Fyers instant account opening with Lucknow lions"
                                 className="max-w-[800px] w-full md:w-[46vw] min-w-[100px] order-1 md:order-2"
                             />
                         </div>
@@ -975,7 +970,7 @@ export default function Fyers() {
                                 </h3>
                                 <img
                                     src="/fyers_files/Rectangle60.webp"
-                                    alt="icon"
+                                    alt="Lucknow Lions charges explanations"
                                     className="max-w-[600px] w-full md:w-[30vw] min-w-[200px]"
                                 />
                             </div>
@@ -1193,7 +1188,7 @@ export default function Fyers() {
                         <div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
                             <img
                                 src="/fyers_files/disclosure.webp"
-                                alt="SEBI Disclosure"
+                                alt="derivatives Risk disclosures Lucknow Lions"
                                 className="w-full max-w-[300px] lg:max-w-full object-contain transition-transform hover:scale-105"
                             />
                         </div>
@@ -1262,7 +1257,7 @@ export default function Fyers() {
                             </div>
 
                             <div className={styles.rihimg}>
-                                <img src="/fyers_files/buy.webp" alt="icon" />
+                                <img src="/fyers_files/buy.webp" alt="Lucknow Lions buy sell" />
                             </div>
                         </div>
                     </section>

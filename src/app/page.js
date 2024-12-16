@@ -28,7 +28,6 @@ export default function Home() {
   fetchBrokersLinks()
       .then((result) => {
         Brokers(result);
-        debugger
       })
       .catch((error) => {});
   }, []);
@@ -145,7 +144,7 @@ export default function Home() {
                 right Broker for you
               </p>
             </div>
-            {/* <div>
+            <div2>
               <img
                 src="/home/roc.gif"
                 alt="Lions Rocket"
@@ -156,7 +155,7 @@ export default function Home() {
                 alt="Lions Rocket"
                 className={styles.rocket}
               />
-            </div> */}
+            </div2>
           </div>
         </section>
 
@@ -444,6 +443,7 @@ export default function Home() {
                     <img
                       src={testimonial.profile}
                       alt={testimonial.name}
+                      title={testimonial.name}
                       className={styles.profileImg}
                     />
                   </div>

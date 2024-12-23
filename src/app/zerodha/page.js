@@ -7,6 +7,11 @@ export function generateMetadata() {
         title: 'Lucknow Lions - Zerodha Open Free Demat Account 0 Brokerage',
         description: "Open a Free Demat Account in Zerodha with Lucknow Lions. Access India's leading brokerage platform for smooth stock market trading, zero-cost investments, and expert financial tools. Get started today!",
         keywords: 'Zerodha, Zerodha Open Free Demat Account, zerodha demat account charges, zerodha demat account, saurabh kumar srivastava zerodha, stock broker in lucknow, best stock broker in lucknow, 0 brokerage on delivery, free demat account',
+        openGraph: {
+            title: 'Lucknow Lions - Zerodha Open Free Demat Account 0 Brokerageu',
+            description: "Open a Free Demat Account in Zerodha with Lucknow Lions. Access India's leading brokerage platform for smooth stock market trading, zero-cost investments, and expert financial tools. Get started today!",
+            images: ['https://www.lucknowlions.com/zerodha_files/d58e19d93f5eccf6d792c191cf3e17bb.jpg'],
+        },
         alternates: { canonical: 'https://www.lucknowlions.com/zerodha' },
         robots: 'index',
     }

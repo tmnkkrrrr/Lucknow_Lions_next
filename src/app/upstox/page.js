@@ -4,17 +4,17 @@ import styles from "./Upstox.module.css";
 
 export function generateMetadata() {
   return {
+    title: 'Lucknow Lions - Upstox Account Opening at No Cost',
+    description: 'Discover the power of Upstox at 0 cost through Lucknow Lions. Experience fast, cost-effective trading with innovative tools for stocks, derivatives, and mutual funds. Start trading today with a trusted partner in online brokerage!',
+    keywords: 'Upstox, Upstox charges, Upstox review, Upstox brokerage, Upstox open demat account, Upstox account opening, Upstox registration number',
+    robots: 'index',
+    openGraph: {
       title: 'Lucknow Lions - Upstox Account Opening at No Cost',
-      description: 'Discover the power of Upstox at 0 cost through Lucknow Lions. Experience fast, cost-effective trading with innovative tools for stocks, derivatives, and mutual funds. Start trading today with a trusted partner in online brokerage!',
-      keywords: 'Upstox, Upstox charges, Upstox review, Upstox brokerage, Upstox open demat account, Upstox account opening, Upstox registration number',
-      robots: 'index',
-      openGraph: {
-          title: 'Lucknow Lions - Upstox Account Opening at No Cost',
-          description: "Discover the power of Upstox at 0 cost through Lucknow Lions. Experience fast, cost-effective trading with innovative tools for stocks, derivatives, and mutual funds. Start trading today with a trusted partner in online brokerage!",
-          images: ['https://www.lucknowlions.com/upstox_files/otp1.webp'],
-          url : 'https://www.lucknowlions.com/upstox'
-      },
-      alternates: { canonical: 'https://www.lucknowlions.com/upstox' },
+      description: "Discover the power of Upstox at 0 cost through Lucknow Lions. Experience fast, cost-effective trading with innovative tools for stocks, derivatives, and mutual funds. Start trading today with a trusted partner in online brokerage!",
+      images: ['https://www.lucknowlions.com/upstox_files/otp1.webp'],
+      url: 'https://www.lucknowlions.com/upstox'
+    },
+    alternates: { canonical: 'https://www.lucknowlions.com/upstox' },
   }
 }
 
@@ -24,11 +24,11 @@ export default function Upstox() {
   return (
     <div >
       <Navbar />
-     
+
       <div style={{ height: "65px" }} />
 
-{/* <div className="flex w-full justify-center"> */}
-  
+      {/* <div className="flex w-full justify-center"> */}
+
       <div className={styles.page}>
         <img
           className={styles.logo}
@@ -59,13 +59,13 @@ export default function Upstox() {
         </div>
 
         <a
-            href={link}
-            target="blank"
-            style={{ margin: "20px 0" }}
-            className={styles.trn}
-          >
-            <img src="/upstox_files/btn.svg" />
-          </a>
+          href={link}
+          target="blank"
+          style={{ margin: "20px 0" }}
+          className={styles.trn}
+        >
+          <img src="/upstox_files/btn.svg" />
+        </a>
 
         <img className={styles.hl} src="/zerodha_files/highlights.svg" />
 
@@ -102,8 +102,7 @@ export default function Upstox() {
               <div
                 className={styles.avatar}
                 style={{
-                  backgroundImage:
-                    'url("https://lucknowlions.com/upstox_files/ratan.png")',
+                  backgroundImage: 'url("/upstox_files/ratan.png")',
                 }}
               />
               Ratan Tata
@@ -114,7 +113,7 @@ export default function Upstox() {
                 className={styles.avatar}
                 style={{
                   backgroundImage:
-                    'url("https://media.licdn.com/dms/image/v2/C560BAQE8U2bfXM1eWA/company-logo_200_200/company-logo_200_200/0/1669275040929/kalaari_capital_logo?e=2147483647&v=beta&t=qIZ6B8WJPbysrrlX81qrRLASwdCjh1DyukgqayS4Jic")',
+                    'url("/upstox_files/kalaari_capital_logo.jpg")',
                 }}
               />
               Kalari Capital
@@ -125,7 +124,7 @@ export default function Upstox() {
                 className={styles.avatar}
                 style={{
                   backgroundImage:
-                    'url("https://lucknowlions.com/upstox_files/tg.png")',
+                    'url("/upstox_files/tg.png")',
                 }}
               />
               Tiger Gold
@@ -915,9 +914,9 @@ export default function Upstox() {
             <img
               src="/upstox_files/warning.png"
             />
-       <span>
-           Attention: Don’t share login credentials or OTP to anyone even the
-            Upstox team also. </span>  
+            <span>
+              Attention: Don’t share login credentials or OTP to anyone even the
+              Upstox team also. </span>
             <img
               src="/upstox_files/warning.png"
             />

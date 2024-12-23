@@ -4,8 +4,8 @@ import Navbar from '@/app/components/Navbar/Navbar';
 import RelatedBlogsSection from './RelatedBlogs';
 import styles from './page.module.css';
 
-function getPageData(slug) {
-  return fetch(`${HOST}/api/v1/visitor/blogData/${slug}`)
+function getPageData(category, pageUrl) {
+  return fetch(`${HOST}/api/v1/visitor/blogData/${category}/${pageUrl}`)
     .then(res => {
       if (!res.ok) throw new Error('Failed to fetch page data');
       return res.json();
@@ -20,7 +20,8 @@ async function Page({ params }) {
   const { category, pageUrl } = await params;
 
 
-  const pageData = await getPageData(pageUrl);
+  const pageData = await getPageData(category, pageUrl);
+  console.log(pageData)
   if (!pageData) return (<h1>Article does not Exist</h1>)
 
 
@@ -89,7 +90,7 @@ async function Page({ params }) {
                 <div className="space-y-3">
                   <div>
                     <span className="font-semibold text-gray-600">Last Update: </span>
-                    <span className="font-medium">{new Date(pageData.createdAt).toLocaleDateString('en-US', {
+                    <span className="font-medium">{new Date(pageData.updatedAt).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'short',
                       day: 'numeric'

@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Lucknow Lions - Zerodha Open Free Demat Account Opening',
     description: 'Our mission is to maximize wealth for our investors and traders through expert guidance and strategic investments in the stock market.',
-    images: ['/home/hero.webp'],
+    images: ['https://www.lucknowlions.com/home/hero.webp'],
   },
 
   icons: {

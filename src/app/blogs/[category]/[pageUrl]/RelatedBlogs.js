@@ -53,7 +53,7 @@ export default function RelatedBlogsSection({ category, pageUrl }) {
                 <div className="grid gap-4">
 
                     {relatedBlogs.map((blog) => (
-                        <ClientLink key={blog.id} href={`/blogs/${category}/${pageUrl}`} className='w-full bg-white rounded-xl border border-gray-200 p-6  shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-400 hover:-translate-y-1 mb-2'>
+                        <ClientLink key={blog.id} href={`/blogs/${category}/${blog.pageUrl}`} className='w-full bg-white rounded-xl border border-gray-200 p-6  shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-400 hover:-translate-y-1 mb-2'>
                             <article className="flex flex-col text-left h-full">
                                 <div className="flex-1 space-y-4">
                                     <h3 className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 line-clamp-2 transition-colors duration-200">

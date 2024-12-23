@@ -1,0 +1,27 @@
+export default function Home() {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="text-center p-8 bg-white rounded-lg shadow-lg max-w-md w-full">
+          <div className="text-6xl text-yellow-500 mb-6">
+            🚧
+          </div>
+          <h1 className="text-4xl font-semibold text-gray-800 mb-4">
+            Site Under Maintenance
+          </h1>
+          <p className="text-lg text-gray-600 mb-6">
+            We're currently undergoing scheduled maintenance. We will be back online shortly.
+          </p>
+          <p className="text-md text-gray-500 mb-8">
+            Apologies for the inconvenience.
+          </p>
+          {/* <p className="text-xl font-bold text-red-500 mb-6">
+            Estimated time remaining: 2h 15m
+          </p> */}
+          <footer className="text-sm text-gray-400">
+            <p>Thank you for your patience.</p>
+          </footer>
+        </div>
+      </div>
+    )
+  }
+  

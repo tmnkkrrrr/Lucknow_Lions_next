@@ -1,9 +1,9 @@
 import { headers } from 'next/headers';
 const { HOST } = require("@/config");
 
-async function getPageData(slug) {
+async function getPageData( category, pageUrl) {
   try {
-    const res = await fetch(`${HOST}/api/v1/visitor/blogData/${slug}`, {
+    const res = await fetch(`${HOST}/api/v1/visitor/blogData/${category}/${pageUrl}`, {
       next: { revalidate: 5 /* Cache for 60 seconds */ }
     });
 
@@ -17,8 +17,8 @@ async function getPageData(slug) {
 }
 
 export async function generateMetadata({ params }) {
-  const { pageUrl, category } = await params;
-  const pageData = await getPageData(pageUrl);
+  const {  category, pageUrl } = await params;
+  const pageData = await getPageData( category, pageUrl);
 
   // const pageData = blogsData.find(blog => blog.pageUrl === pageUrl);
 

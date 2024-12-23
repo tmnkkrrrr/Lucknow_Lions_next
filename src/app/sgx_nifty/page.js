@@ -12,6 +12,7 @@ export function generateMetadata() {
         openGraph: {
             title: 'Lucknow Lions - What is SGX Nifty',
             description: 'Access live SGX Nifty updates, market insights, and trading data with Lucknow Lions. Stay informed with real-time index performance and expert analysis to enhance your trading strategy.',
+            images: ['https://www.lucknowlions.com/home/hero.webp'],
         },
 
         alternates: { canonical: 'https://www.lucknowlions.com/sgx_nifty' },
@@ -69,14 +70,14 @@ export default function SGX_Nifty() {
                 >
                     <div style={{ height: "20px" }} />
 
-                    <div style={{ display: "flex", alignSelf: "center", alignItems:'Center' }}>
+                    <div style={{ display: "flex", alignSelf: "center", alignItems: 'Center' }}>
                         <img
                             src="/sgx_files/ques.webp"
                             style={{ width: "50px", height: "50px" }}
                         />
-                        <h1 style={{ margin: 0, fontWeight:'700' }}> About SGX Nifty</h1>
+                        <h1 style={{ margin: 0, fontWeight: '700' }}> About SGX Nifty</h1>
                         <img
-                          src="/sgx_files/ques.webp"
+                            src="/sgx_files/ques.webp"
                             style={{ width: "50px", height: "50px" }}
                         />
                     </div>
@@ -311,12 +312,12 @@ export default function SGX_Nifty() {
                             }}
                         >
                             <img
-                                src={process.env.PUBLIC_URL + "/sgx_files/gift.png"}
+                                src="/sgx_files/gift.webp"
                                 style={{ width: "40px", height: "40px", marginRight: "12px" }}
                             />
                             <h3>GIFT Nifty 50 </h3>
                             <img
-                                src={process.env.PUBLIC_URL + "/sgx_files/gift.png"}
+                                src="/sgx_files/gift.webp"
                                 style={{ width: "40px", height: "40px", marginLeft: "12px" }}
                             />
                         </div>
@@ -684,7 +685,7 @@ export default function SGX_Nifty() {
                                     }}
                                 >
                                     <img
-                                        src= "/sgx_files/gift.webp"
+                                        src="/sgx_files/gift.webp"
                                         style={{
                                             width: "40px",
                                             height: "40px",

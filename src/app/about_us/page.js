@@ -7,8 +7,14 @@ export function generateMetadata() {
         title: 'Lucknow Lions - About Us | Your Trusted Trading Partner',
         description: "Learn more about Lucknow Lions, a leading platform in the trading world. We are committed to providing innovative solutions, expert insights, and top-notch tools for traders of all levels. Join us to elevate your trading journey.",
         keywords: 'stock broker in lucknow, best stock broker in lucknow, 0 brokerage on delivery, free demat account',
+        openGraph: {
+            title: 'Lucknow Lions - About Us | Your Trusted Trading Partner',
+            description: "Learn more about Lucknow Lions, a leading platform in the trading world. We are committed to providing innovative solutions, expert insights, and top-notch tools for traders of all levels. Join us to elevate your trading journey.",
+            images: ['https://www.lucknowlions.com/contactus_files/contactus_img.webp'],
+            url: 'https://www.lucknowlions.com/about_us'
+        },
         robots: 'index',
-      alternates: { canonical: 'https://www.lucknowlions.com/about_us' },
+        alternates: { canonical: 'https://www.lucknowlions.com/about_us' },
     }
 }
 

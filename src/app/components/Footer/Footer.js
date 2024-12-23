@@ -152,7 +152,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/Terms_and_conditions" onClick={scrollToTop}>
+              <Link href="/terms_and_conditions" onClick={scrollToTop}>
                 Terms & Conditions
               </Link>
             </li>

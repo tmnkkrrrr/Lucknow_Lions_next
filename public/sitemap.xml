@@ -5,64 +5,116 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
- <url>
-   <loc>https://www.lucknowlions.com/</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
- </url>
- 
- <url>
-   <loc>https://www.lucknowlions.com/zerodha</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
- </url>
- 
-  <url>
-   <loc>https://www.lucknowlions.com/sgx_nifty</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
- </url>
- 
- 
-  <url>
-   <loc>https://www.lucknowlions.com/upstox</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
- </url>
- 
- 
-  <url>
-   <loc>https://www.lucknowlions.com/fyers/fyers</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
- </url>
- 
-   <url>
-   <loc>https://www.lucknowlions.com/contact_us</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
- </url>
- 
- <url>
-   <loc>https://www.lucknowlions.com/about_us</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
- </url>
- 
-  <url>
-   <loc>https://www.lucknowlions.com/blogs</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
- </url>
- 
- 
-   <url>
-   <loc>https://www.lucknowlions.com/ato</loc>
-    <lastmod>2024-10-12T13:59:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
- </url>
- 
 
+<url>
+  <loc>https://www.lucknowlions.com/</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/sgx_nifty</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/zerodha</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/upstox</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/fyers</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/contact_us</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/about_us</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/privacy_policy</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/terms_and_conditions</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/disclaimer</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/latest</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/fyers</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/upstox</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/technical-analysis</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/fundamental-analysis</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/latest/compare-nri-accounts-fyers_securities-vs-zerodha</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/latest/how-to-reach-zerodha-head-office-in-bangalore</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/fyers/how-to-transfer-shares-to-fyers-demat-account-online</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://www.lucknowlions.com/blogs/fyers/ddpi-charges-at-fyers</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/fundamental-analysis/What-is-the-Interest-Simple-Interest-and-compound-interest</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.lucknowlions.com/blogs/latest/ato</loc>
+  <lastmod>2024-12-20T16:19:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 </urlset>

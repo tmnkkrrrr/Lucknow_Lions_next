@@ -615,7 +615,7 @@ export default function Fyers() {
                             </tr>
                             <tr>
                                 <td>Intraday</td>
-                                <td>0.01% or Rs 20 per order which is lower.</td>
+                                <td>0.03% or Rs 20 per order which is lower.</td>
                             </tr>
                             <tr>
                                 <td>Delivery</td>
@@ -625,7 +625,7 @@ export default function Fyers() {
                             </tr>
                             <tr>
                                 <td>Future</td>
-                                <td>0.01% or Rs 20 per order which is lower.</td>
+                                <td>0.03% or Rs 20 per order which is lower.</td>
                             </tr>
                             <tr>
                                 <td>Option</td>
@@ -633,11 +633,11 @@ export default function Fyers() {
                             </tr>
                             <tr>
                                 <td>Currency</td>
-                                <td>0.01% or Rs 20 per order which is lower.</td>
+                                <td>0.03% or Rs 20 per order which is lower.</td>
                             </tr>
                             <tr>
                                 <td>MCX (Future)</td>
-                                <td>0.01% or Rs 20 per order which is lower.</td>
+                                <td>0.03% or Rs 20 per order which is lower.</td>
                             </tr>
                             <tr>
                                 <td>MCX (Option)</td>

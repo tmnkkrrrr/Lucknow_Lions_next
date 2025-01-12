@@ -10,7 +10,7 @@ export function generateMetadata() {
         openGraph: {
             title: 'Lucknow Lions - About Us | Your Trusted Trading Partner',
             description: "Learn more about Lucknow Lions, a leading platform in the trading world. We are committed to providing innovative solutions, expert insights, and top-notch tools for traders of all levels. Join us to elevate your trading journey.",
-            images: ['https://www.lucknowlions.com/contactus_files/contactus_img.webp'],
+            images: ['https://www.lucknowlions.com/aboutus/hero.webp'],
             url: 'https://www.lucknowlions.com/about_us'
         },
         robots: 'index',

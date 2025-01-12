@@ -14,9 +14,7 @@ export function generateMetadata() {
             description: 'Access live SGX Nifty updates, market insights, and trading data with Lucknow Lions. Stay informed with real-time index performance and expert analysis to enhance your trading strategy.',
             images: ['https://www.lucknowlions.com/home/hero.webp'],
         },
-
         alternates: { canonical: 'https://www.lucknowlions.com/sgx_nifty' },
-
         robots: 'index'
     }
 }
@@ -27,15 +25,8 @@ export default function SGX_Nifty() {
             <Navbar />
 
             <div style={{ height: "65px" }} />
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    textAlign: "center",
-                    padding: "10px",
-                }}
-            >
+            <div className={styles.container}>
+            <div className={styles.mainContent}>
                 <div className={styles.hed1}>
                     <div
                         style={{
@@ -94,6 +85,7 @@ export default function SGX_Nifty() {
                 <iframe
                     height="480"
                     width="650"
+                    maxWidth="100%"
                     src="https://ssltvc.forexprostools.com/?pair_ID=8985&height=480&width=650&interval=300&plotStyle=area&domain_ID=56&lang_ID=56&timezone_ID=20"
                 />
                 <br />
@@ -834,6 +826,7 @@ export default function SGX_Nifty() {
                     <button className={styles.btn}>Open Free Demat Account</button>
                 </a>
                 <div style={{ height: "200px" }} />
+            </div>
             </div>
 
             <Footer />

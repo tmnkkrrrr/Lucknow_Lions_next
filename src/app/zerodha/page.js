@@ -22,7 +22,7 @@ export default function Zerodha() {
         <>
             <Navbar />
 
-            <div style={{ height: "70px" }} />
+            <div style={{ height: "76px" }} />
             <div className={styles.mainContent}>
                 <img
                     src="/zerodha_files/aec6c5390ebe1ba2bed78950f8500096.svg"
@@ -52,7 +52,7 @@ export default function Zerodha() {
                         <h3>Empower Your Investments with Zero Brokerage</h3>
                     </div>
                     <img
-                        style={{ flex: 1, maxWidth: "36vw" }}
+                        className="flex-1 w-[36vw] m-w-full"
                         src="/zerodha_files/zerodha_hero.gif"
                         alt="Lucknow Lions Zerodha home"
                     />
@@ -62,7 +62,7 @@ export default function Zerodha() {
 
                 {/* section 1 */}
 
-                <div className={styles.section1}>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div className={styles.boxs}>
                         <div className={styles.flx}>
                             <h4>₹</h4>

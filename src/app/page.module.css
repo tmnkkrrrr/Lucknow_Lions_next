@@ -544,13 +544,13 @@
   object-fit: cover;
 }
 .testimitem h4 {
-  font-size: clamp(18px, 1.6vw, 42px);
+  font-size: clamp(18px, 1.3vw, 30px);
 }
 .testimitem h6 {
   font-size: 1.2rem;
 }
 .testimitem p {
-  font-size: clamp(12px, 1vw, 1.2rem);
+  font-size: clamp(12px, 0.9vw, 1.1rem);
   max-width: 60%;
   text-align: center;
   overflow-wrap: break-word;

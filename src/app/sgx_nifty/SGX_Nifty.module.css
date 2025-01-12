@@ -1,6 +1,7 @@
 .ul {
   list-style-type: disc;
   text-align: left;
+  padding: 0 20px;
 }
 
 .ul > li {
@@ -8,22 +9,94 @@
 }
 
 .horizontal_line {
-  width: 60%;
+  width: 90%;
+  max-width: 800px;
   height: 2px;
   background: linear-gradient(to right, #05d2ff, #03a7cb, #05d2ff);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-  animation: pulse 1.5s infinite alternate; /* Animation */
+  margin: 20px auto;
+  animation: pulse 1.5s infinite alternate;
 }
 
-.content {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mainContent {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.iframe {
+  width: 100%;
+  max-width: 650px;
+  height: 480px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   padding: 20px;
-  background-color: lightcoral;
-  color: white;
-  border-radius: 8px;
-  margin: 20px;
-  /* Ensure the element has a position if needed for animation */
-  position: relative; /* or absolute, depending on your layout */
+  background-color: #fff;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 900px;
+}
+
+.hed1 {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  z-index: 10;
+}
+
+.styled_table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+.styled_table table {
+  min-width: 500px;
+  width: 100%;
+}
+
+.flx {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.brd {
+  border: 4px dashed rgb(0, 140, 255);
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: clamp(16px, 4vw, 24px);
 }
 
 @keyframes flyInFromBottom {

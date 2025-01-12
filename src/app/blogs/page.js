@@ -21,9 +21,6 @@ export function generateMetadata() {
 }
 
 
-
-
-
 async function getCategories() {
     try {
         const response = await fetch(`${HOST}/api/v1/visitor/categories`);
@@ -91,27 +88,31 @@ const BlogHomepage = async () => {
     const hotTopics = [
         {
             id: 1,
-            title: "What is the Interest, Simple Interest and compound interest?",
-            description: "Finance में इंटरेस्ट एक पेमेंट है जो कर्ज लेने वाले को देना पड़ता है...",
-            image: "/blogs_files/stock.webp",
+            title: "What is Metropolitan Stock Exchange of India (MSEI)",
+            description: "One More new stock exchange has been introduced for trading or investing purposes. A Market Regulator SEBI has allowed weekly option expiry on one more exchange.",
+            image: "https://assets.demtaccount.in/demt_images/dmt_featured/lucknow-lions-msei.webp",
+            url: 'https://www.lucknowlions.com/blogs/latest/about-metropolitan-stock-exchange-msei'
         },
         {
             id: 2,
-            title: "जीरोधा का अलर्ट पैरामीटर्स ऑर्डर (ATO)",
-            description: "जीरोधा, भारत का अग्रणी डिस्काउंट ब्रोकर...",
-            image: "/blogs_files/stock.webp",
+            title: "How to Transfer shares from Another demat to Fyers Demat Account Online",
+            description: "यदि आपके पास में किसी भी स्टॉक ब्रोकर का अकाउंट है और आप उस से फयेर्स में शेयर्स ट्रांसफर करना चाहते हैं तो आप इस आर्टिकल को पढ़ कर शेयर्स आप ट्रांसफर कर सकते हैं।",
+            image: "https://assets.lucknowlions.com/lions_images/article_images/cdsl-easiest/lucknow-lions-share-transfer-from-another-to-fyers-demat-account.webp",
+            url: 'https://www.lucknowlions.com/'
         },
         {
             id: 3,
-            title: "How to reach zerodha head office in bangalore",
-            description: "Lucknow to bangalore (by Flight)",
-            image: "/blogs_files/stock.webp",
+            title: "What is the DDPI charges and how to activate the DDPI in Fyers",
+            description: "DDPI Stands for Demat Debit Pledge Instruction. In the old times when we submitted Power of attorney to our broker to debit securities from our demat account, sometimes some broker could misuse our POWER OF ATTORNY.",
+            image: "https://tribe-s3-production.imgix.net/AdOZu30LHmhP4aWc6KVB5?fit=max&w=1000&auto=compress,formatp",
+            url: 'https://www.lucknowlions.com/blogs/fyers/ddpi-charges-at-fyers'
         },
         {
             id: 4,
-            title: "10 Learning Game Ideas",
-            description: "10 ideas for learning with for your kids to have fun.",
-            image: "/blogs_files/stock.webp",
+            title: "What is the Interest, Simple Interest and compound interest?",
+            description: "में इंटरेस्ट एक पेमेंट है जो कर्ज लेने वाले को देना पड़ता है और अगर किस ने बैंक में डिपॉज़िट किया है तो उसे डिपॉज़िट यानि मूलधन पर जो पैसा मिलता है उसे इंटरेस्ट या ब्याज कहते हैं ।",
+            image: "https://assets.demtaccount.in/demt_images/albert-einstein.webp",
+            url: 'https://www.lucknowlions.com/blogs/fundamental-analysis/What-is-the-Interest-Simple-Interest-and-compound-interest'
         }
     ];
 
@@ -147,37 +148,38 @@ const BlogHomepage = async () => {
     );
 
     // Component for Featured Topic
-    const FeaturedTopic = ({ topic }) => (
-        <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <img src='/blogs_files/bull.webp' alt='Hot Topic' className="w-full h-full object-cover" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent text-white">
-                <h3 className="text-xl font-bold mb-2">What is stock market?</h3>
-                <p className="text-sm mb-4">Personalized articles and blogs curated to match your unique preferences.</p>
-                <ClientLink
-                    href="/featured-topic"
-                    className="text-[#6D4AFF] bg-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm"
-                >
-                    <span>View Now</span>
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                </ClientLink>
+    const FeaturedTopic = () => (
+        <div>
+            <div className="p-1 bg-gray-100 rounded-lg">
+                <img src='/blogs_files/bull.webp' alt='Hot Topic' className="w-full object-cover" />
+                <div className="mt-4 p-4">
+                    <h3 className="text-2xl font-bold mb-2">What is stock market?</h3>
+                    <p className="text-xl text-gray-600 mb-4">Personalized articles and blogs curated to match your unique preferences.</p>
+                    <ClientLink
+                        href="/featured-topic"
+                        className="text-[#6D4AFF] bg-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm"
+                    >
+                        <span className='text-xl'>View Now</span>
+                        <img className='max-w-8' src='https://i.ibb.co/dWmQNjH/arrow.png' />
+                    </ClientLink>
+                </div>
             </div>
         </div>
+
     );
 
     // Component for Topic Card
     const TopicCard = ({ topic }) => (
-        <div className="flex gap-4 bg-gray-50 p-4 rounded-lg">
-            <img src={topic.image} alt={topic.title} className="w-24 h-24 rounded-lg object-cover" />
+        <Link className="flex gap-3 bg-gray-50 border p-2 rounded-lg" href={topic.url}    >
+            <img src={topic.image} alt={topic.title} className="w-40 h-24 r-1 shadow-lg rounded-lg object-cover" />
             <div>
-                <h3 className="font-semibold mb-1">{topic.title}</h3>
-                <p className="text-sm text-gray-600 mb-2">{topic.description}</p>
+                <h3 className="font-semibold">{topic.title}</h3>
+                <p className="text-sm text-gray-600 line-clamp-2 mb-1">{topic.description}</p>
                 <ClientLink href={`/topic/${topic.id}`} className="text-[#6D4AFF] text-sm font-medium">
                     Learn more →
                 </ClientLink>
             </div>
-        </div>
+        </Link>
     );
 
     return (
@@ -219,7 +221,7 @@ const BlogHomepage = async () => {
             <div className='max-w-7xl mx-2'>
                 {/* Category Section */}
                 <div className="mt-8">
-                    <h2 className="text-2xl font-bold text-[#3A0FD4] mb-6">Category</h2>
+                    <h2 className="text-3xl font-bold text-[#3A0FD4] mb-6">Category</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {categories.map(category => (
                             <CategoryCard key={category.id} category={category} />
@@ -228,10 +230,10 @@ const BlogHomepage = async () => {
                 </div>
 
                 {/* Hot Topics Section */}
-                <div className="px-4 py-8">
+                <div className="mt-20 px-4 py-8">
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-2xl font-bold text-[#6D4AFF]">Hot Topics</h2>
-                        <span className="text-gray-600">Most Viewed Blogs</span>
+                        <h2 className="text-4xl font-bold italic text-[#6D4AFF]">Hot Topics</h2>
+                        <span className="font-bold text-gray-700">Most Viewed Blogs</span>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

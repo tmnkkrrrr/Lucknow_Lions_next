@@ -66,7 +66,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/zerodha" onClick={scrollToTop}>
-                Zerodha
+              Zerodha
               </Link>
             </li>
             <li>
@@ -82,6 +82,11 @@ const Footer = () => {
             <li>
               <Link href="/sgx_nifty" onClick={scrollToTop}>
                 SGX Nifty
+              </Link>
+            </li>
+            <li>
+              <Link href="/aliceblue-demat-account" onClick={scrollToTop}>
+              Alice Blue
               </Link>
             </li>
             <li>

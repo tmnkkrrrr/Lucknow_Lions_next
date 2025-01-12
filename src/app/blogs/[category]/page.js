@@ -5,12 +5,16 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { HOST } from '@/config';
 import { ClientLink } from '../clientFunctions';
 import { slugToText } from '@/app/utils';
+import { useParams } from 'next/navigation'
 import Navbar from '@/app/components/Navbar/Navbar';
+import Link from 'next/link';
 
-function BlogCategoryPage({ params }) {
+function BlogCategoryPage() {
     const [blogs, setBlogs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const params = useParams();
     const { category } = params;
+
 
     useEffect(() => {
         async function fetchBlogs() {
@@ -39,7 +43,7 @@ function BlogCategoryPage({ params }) {
                         <div className="h-12 bg-blue-500/50 rounded animate-pulse" />
                     </div>
                 </div>
-                
+
                 <main className="-mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -64,9 +68,16 @@ function BlogCategoryPage({ params }) {
     return (
         <div className="min-h-screen bg-gray-50">
             <Navbar />
-           
-            <div className="mt-12 bg-blue-600 overflow-hidden">
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
+
+            <div className="mt-14 bg-blue-600 overflow-hidden">
+
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-24">
+                    <div className="grid grid-cols-12">
+                        <div className="col-start-10 col-span-3 text-white mb-14">
+                            <Link href="/">Home</Link> &gt; <Link href='/blogs'>Blogs</Link>
+                        </div>
+                    </div>
+
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center">
                         {slugToText(category)}
                     </h1>
@@ -80,7 +91,7 @@ function BlogCategoryPage({ params }) {
                     </div>
                 ) : (
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {blogs.map(blog => (
+                        {[...blogs].reverse().map(blog => (
                             <ClientLink key={blog.id} href={`/blogs/${category}/${blog.pageUrl}`} className="group">
                                 <article className="h-full bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
                                     <div className="h-1 bg-gradient-to-r from-blue-500 to-indigo-500" />
@@ -101,10 +112,6 @@ function BlogCategoryPage({ params }) {
                                                     month: 'short',
                                                     day: 'numeric'
                                                 })}
-                                            </div>
-                                            <div className="flex items-center gap-1.5">
-                                                <Clock className="w-4 h-4" />
-                                                {blog.readTime}
                                             </div>
                                         </div>
 

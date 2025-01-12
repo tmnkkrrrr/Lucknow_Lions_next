@@ -50,10 +50,110 @@ export const metadata = {
 
 
 
-export default function RootLayout({ children }) {
+
+export default async function RootLayout({ children, params }) {
+
+
+
+  // const headerList =await headers()
+  // const headerEntries = Array.from(headerList.entries())
+  // // console.log('Headers:', headerEntries)
+
+  // let url = headerList.get('referer') ?? 'j/d';
+  // url = url.split('/');
+  // let slug = url[url.length-1] ?? 'null';
+  // console.log(url, slug === "about-metropolitan-stock-exchange-msei");
+  const slug = 'hjk'
+
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-MSXSKG58" />
+      <head>
+        {slug === "about-metropolitan-stock-exchange-msei" &&
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: `{
+            "@context": "https://schema.org",
+            "@type": "FAQPage", 
+            "mainEntity": [{
+              "@type": "Question",
+              "name": "When will Trading start on the Metropolitan Stock Exchange of India?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEBI and exchange have confirmed from 01-January-2025 trading will be start on the Metropolitan Stock Exchange of India."
+              }
+            },{
+              "@type": "Question", 
+              "name": "Can we buy or sell equity stocks for the long term from the Metropolitan Stock Exchange?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we can also sell or purchase stocks for the long time or short time."
+              }
+            },{
+              "@type": "Question",
+              "name": "What makes MSEI different from NSE and BSE?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "While it offers similar services such as equity trading, derivatives, and corporate bonds, it is smaller in size and scope compared to the National Stock Exchange (NSE) and Bombay Stock Exchange (BSE)."
+              }
+            },{
+              "@type": "Question",
+              "name": "How does MSEI support new companies?", 
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MSEI provides a marketplace for equity trading, making it accessible for new businesses and enterprises to raise capital."
+              }
+            },{
+              "@type": "Question",
+              "name": "What steps should investors take to prevent unauthorized transactions?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Investors should update their mobile numbers and email IDs with their brokers and ensure they receive daily transaction information directly from the exchange."
+              }
+            },{
+              "@type": "Question", 
+              "name": "Which brokers support trading on MSEI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Brokers authorized by SEBI and registered with MSEI provide trading and Demat account services for this exchange."
+              }
+            },{
+              "@type": "Question",
+              "name": "Can I hold multiple Demat accounts for trading on MSEI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can hold multiple Demat accounts, but each must be linked to a broker authorized to trade on MSEI."
+              }
+            }]
+          }`
+          }} /> &&
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: `{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.lucknowlions.com/blogs/latest/about-metropolitan-stock-exchange-msei"
+  },
+  "headline": "What is Metropolitan Stock Exchange of India (MSEI)",
+  "description": "MSEI stands for Metropolitan Stock Exchange of India, previously known as the MCX Stock Exchange (MCX-SX), is a securities exchange in India, founded on 07-October-2008 and many of less people are aware.",
+  "image": "https://assets.demtaccount.in/demt_images/dmt_featured/lucknow-lions-msei.webp",  
+  "author": {
+    "@type": "Organization",
+    "name": "Saurabh Kumar Srivastava"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lucknow Lions",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.lucknowlions.com/logo.png"
+    }
+  },
+  "datePublished": "2024-12-27",
+  "dateModified": "2024-12-29"
+}`
+          }} />
+        }
+      </head>
       <body className={`antialiased`}>
         {children}
       </body>

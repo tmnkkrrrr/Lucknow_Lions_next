@@ -14,7 +14,7 @@ export function generateMetadata() {
             images: ['https://www.lucknowlions.com/OG_images/fyers.webp'],
             url: 'https://www.lucknowlions.com/fyers'
         },
-      alternates: { canonical: 'https://www.lucknowlions.com/fyers' },
+        alternates: { canonical: 'https://www.lucknowlions.com/fyers' },
     }
 }
 
@@ -29,11 +29,13 @@ export default function Fyers() {
 
                 <main className={styles.mainContent}>
                     <div className="h-16" />
-                    <img
-                        className={styles.logo}
-                        src="https://assets.fyers.in/images/logo.svg"
-                        alt="Fyers"
-                    />
+                    <a href={link} target="_blank" className="mx-auto mt-10">
+                        <img
+                            className={styles.logo}
+                            src="https://assets.fyers.in/images/logo.svg"
+                            alt="Fyers"
+                        />
+                    </a>
 
                     {/* section1 */}
                     <section className="w-full flex flex-col md:flex-row justify-between items-center gap-8 my-12">
@@ -58,9 +60,9 @@ export default function Fyers() {
                                 <span>Open Your Demat Account</span>
                             </a>
                         </div>
-                        <div className="w-full md:w-1/2">
+                        <a href={link} target="_blank" className="w-full md:w-1/2">
                             <img src="/fyers_files/down.webp" alt="Lucknow Lions Fyers" className="w-full" />
-                        </div>
+                        </a>
                     </section>
 
                     <p className={styles.focus}>

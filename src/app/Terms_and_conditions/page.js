@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 export const metadata = {
   title: "Lucknow Lions - Terms & Conditions",
+  alternates: { canonical: 'https://www.lucknowlions.com/terms_and_conditions' },
   robots: "index",
 };
 

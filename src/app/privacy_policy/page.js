@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 export const metadata = {
   title: "Lucknow Lions - Privacy Policy",
+  alternates: { canonical: 'https://www.lucknowlions.com/privacy_policy' },
   robots: "index",
 };
 

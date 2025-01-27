@@ -13,13 +13,15 @@ const Footer = () => {
       <div className={styles.bar} />
       <footer className={styles.footer}>
         <div className={styles.footleft}>
-          <Image 
-            src="/logo.png" 
-            alt="logo" 
-            className={styles.logo}
+        <Link className={styles.logo} href="https://www.lucknowlions.com/">
+          <Image
+            src="/logo.png"
+            alt="logo"
+            className='w-full'
             width={150}
             height={50}
           />
+        </Link>
           <p>
             We don't provide any kind of paid tips,<br />advisory nor paid training
             courses.
@@ -27,17 +29,17 @@ const Footer = () => {
 
           <address className={styles.address}>
             <div>
-              <img 
-                src="/home/location.png" 
-                alt="address" 
+              <img
+                src="/home/location.png"
+                alt="address"
                 width={20}
                 height={20}
-              /> 
+              />
               8A, Vrindavan Vihar, Gaushala Road,<br />Balaganj, Lucknow: 226003
             </div>
             <div>
-              <img 
-                src="/home/mail.png" 
+              <img
+                src="/home/mail.png"
                 alt="mailing"
                 width={20}
                 height={20}
@@ -48,13 +50,15 @@ const Footer = () => {
             </div>
           </address>
 
-          <Image
-            src="/home/playstore.webp"
-            alt="play store app"
-            className={styles.play}
-            width={200}
-            height={60}
-          />
+          <a target='_blank' className={styles.play} href="https://play.google.com/store/apps/details?id=com.lucknowlions.lucknowlions">
+            <Image
+              src="/home/playstore.webp"
+              alt="play store app"
+              className='w-full'
+              width={200}
+              height={60}
+            />
+          </a>
           <h3>Get the App Today</h3>
         </div>
         <div className={styles.footright}>
@@ -66,7 +70,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/zerodha" onClick={scrollToTop}>
-              Zerodha
+                Zerodha
               </Link>
             </li>
             <li>
@@ -86,7 +90,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/aliceblue-demat-account" onClick={scrollToTop}>
-              Alice Blue
+                Alice Blue
               </Link>
             </li>
             <li>

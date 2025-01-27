@@ -55,6 +55,11 @@ const AliceBlue = () => {
             </p>
             <a href={url} target='_blank' className="w-fit bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
               Open a Free Account Now
+              <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+                <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
           </div>
           <div>
@@ -110,6 +115,11 @@ const AliceBlue = () => {
           <p className='w-full text-center text-gray-400 mt-16'>Join Alice Blue today and experience a partnership that is built on trust, innovation and your success!</p>
           <a href={url} target='_blank' className="mx-auto  mt-8 w-fit  bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
             Open a Free Account Now
+            <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+              <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </a>
         </section>
 
@@ -232,6 +242,11 @@ const AliceBlue = () => {
             <div className="text-center mt-12">
               <a href={url} target='_blank' className="w-fit mx-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
                 Open a Free Account Now
+                <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+                  <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </a>
             </div>
           </div>
@@ -342,8 +357,10 @@ const AliceBlue = () => {
 
               <a href='https://ekyc.aliceblueonline.com/?source=SSP157A' target='_blank' className="w-fit bg-indigo-600 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-indigo-700 transition-colors">
                 Open a Free Account Now
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M5 12h14m-7-7l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+                  <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
             </div>
@@ -421,10 +438,17 @@ const AliceBlue = () => {
               </thead>
               <tbody>
                 {[
-                  { service: 'Equity Delivery', fee: '0.05% or ₹20 per order' },
-                  { service: 'Equity Intraday', fee: '0.03% or ₹20 per order' },
-                  { service: 'Futures Trading', fee: '0.02% or ₹20 per order' },
-                  { service: 'Options Trading', fee: '₹20 per lot' }
+                  { service: 'Intraday', fee: '0.05% or ₹20 per order (whichever is lower)' },
+                  { service: 'Delivery', fee: '2.50% or ₹20 per Transaction (whichever is lower)' },
+                  { service: 'Futures', fee: '0.05% or ₹20 per order (whichever is lower)' },
+                  { service: 'Options', fee: 'Flat ₹20 per order' },
+                  { service: 'Currency Futures', fee: '0.05% or ₹20 per order (whichever is lower)' },
+                  { service: 'Currency Options', fee: 'Flat ₹20 per order' },
+                  { service: 'MCX (Futures)', fee: '0.05% or ₹20 per order(whichever is lower)' },
+                  { service: 'MCX (Options)', fee: 'Flat ₹20 per order' },
+                  { service: 'Mutual Fund Investments', fee: 'FREE' },
+                  { service: 'Call and Trade', fee: 'Flat ₹20 per order' },
+                  { service: 'Admin Square Off', fee: '₹50 per executed order' },
                 ].map((item, index) => (
                   <tr key={index} className={index % 2 === 1 ? 'bg-blue-50 border-b' : 'border-b'}>
                     <td className="p-4">{item.service}</td>
@@ -433,6 +457,7 @@ const AliceBlue = () => {
                 ))}
               </tbody>
             </table>
+            *<b>Please note that brokerage fees will apply if your order is successfully executed.</b>
           </div>
 
           <p className={`text-center mt-8 text-3xl font-medium `}>
@@ -452,236 +477,266 @@ const AliceBlue = () => {
             Alice Blue ensures transparency and affordability by breaking down statutory and additional charges into clear categories. Here's a detailed overview of the costs associated with trading and investing through Alice Blue.
           </p>
 
-          <div className="flex gap-2 mb-6 justify-center overflow-x-auto">
+          <div className="flex gap-2 mb-6 justify-center overflow-x-auto text-xs sm:text-sm">
             <button
-              className={`px-6 py-2 rounded-lg ${table2Toggle === 'statutoryCharges' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
+              className={`px-2 py-1 sm:px-6 sm:py-2 rounded-lg ${table2Toggle === 'statutoryCharges' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
               onClick={() => setTable2Toggle('statutoryCharges')}
             >
               Statutory Charges
             </button>
             <button
-              className={`px-6 py-2 rounded-lg ${table2Toggle === 'sebiCharges' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
+              className={`px-2 py-1 sm:px-6 sm:py-2 rounded-lg ${table2Toggle === 'sebiCharges' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
               onClick={() => setTable2Toggle('sebiCharges')}
             >
               SEBI Charges
             </button>
 
             <button
-              className={`px-6 py-2 rounded-lg ${table2Toggle === 'otherCharges' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
+              className={`px-2 py-1 sm:px-6 sm:py-2 rounded-lg ${table2Toggle === 'otherCharges' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
               onClick={() => setTable2Toggle('otherCharges')}
             >
               Other Charges
             </button>
 
             <button
-              className={`px-6 py-2 rounded-lg ${table2Toggle === 'marginRequirements' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
-              onClick={() => setTable2Toggle('marginRequirements')}
+              className={`px-2 py-1 sm:px-6 sm:py-2 rounded-lg ${table2Toggle === 'margin' ? 'bg-blue-500 text-white' : 'bg-white border border-gray-200'}`}
+              onClick={() => setTable2Toggle('margin')}
             >
-              Margin Requirements
+              Margin
             </button>
           </div>
 
           <div className={`border rounded-lg overflow-hidden ${table2Toggle === 'statutoryCharges' ? 'block' : 'hidden'}`}>
-            <table className="w-full">
-              <thead>
-                <tr className="bg-blue-500 text-white">
-                  <th className="p-4 text-left">Charge Type</th>
-                  <th className="p-4 text-left">Equity Delivery</th>
-                  <th className="p-4 text-left">Equity Intraday</th>
-                  <th className="p-4 text-left">Equity Futures</th>
-                  <th className="p-4 text-left">Equity Options</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  {
-                    type: 'STT/CTT (Up to March 31, 2023)',
-                    delivery: '0.1% on both buy & sell',
-                    intraday: '0.025% on sell-side',
-                    futures: '0.01% on sell-side',
-                    options: '0.05% on sell-side (on premium)'
-                  },
-                  {
-                    type: 'STT/CTT (From April 1, 2023)',
-                    delivery: '0.1% on both buy & sell',
-                    intraday: '0.025% on sell-side',
-                    futures: '0.0125% on sell-side',
-                    options: '0.0625% on sell-side (on premium)'
-                  },
-                  {
-                    type: 'GST',
-                    delivery: '18% (on brokerage + transaction + Demat charges)',
-                    intraday: '18% (on brokerage + transaction charges)',
-                    futures: '18% (on brokerage + transaction charges)',
-                    options: '18% (on brokerage + transaction charges)'
-                  },
-                  {
-                    type: 'Stamp Duty',
-                    delivery: '0.015% or ₹1500/crore on buy-side',
-                    intraday: '0.003% or ₹300/crore on buy-side',
-                    futures: '0.002% or ₹200/crore on buy-side',
-                    options: '0.003% or ₹300/crore on buy-side'
-                  },
-                  {
-                    type: 'Exchange Transaction Charges (From April 1, 2024)',
-                    delivery: 'NSE: 0.00322% per trade on buy & sell',
-                    intraday: 'BSE: Charges vary by scrip group',
-                    futures: ['NSE: 0.00188% exchange turnover charge', 'BSE: Nil'],
-                    options: ['NSE: 0.0495% on premium', 'BSE: 0.0495% on premium']
-                  }
-                ].map((item, index) => (
-                  <tr key={index} className={index % 2 === 1 ? 'bg-blue-50' : ''}>
-                    <td className="p-4 border-b font-medium">{item.type}</td>
-                    <td className="p-4 border-b">{item.delivery}</td>
-                    <td className="p-4 border-b">{item.intraday}</td>
-                    <td className="p-4 border-b">
-                      {Array.isArray(item.futures) ? (
-                        item.futures.map((text, i) => (
-                          <div key={i}>{text}</div>
-                        ))
-                      ) : (
-                        item.futures
-                      )}
-                    </td>
-                    <td className="p-4 border-b">
-                      {Array.isArray(item.options) ? (
-                        item.options.map((text, i) => (
-                          <div key={i}>{text}</div>
-                        ))
-                      ) : (
-                        item.options
-                      )}
-                    </td>
+            <div className="overflow-x-auto">
+            <table className="min-w-full text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-blue-500 text-white">
+                    <th className="p-1.5 sm:p-3 text-left">Charge Type</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Delivery</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Intraday</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Futures</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Options</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {[
+                    {
+                      type: 'STT/CTT (Up to March 31, 2023)',
+                      delivery: '0.1% on both buy & sell',
+                      intraday: '0.025% on sell-side',
+                      futures: '0.01% on sell-side',
+                      options: '0.05% on sell-side (on premium)'
+                    },
+                    {
+                      type: 'STT/CTT (From April 1, 2023)',
+                      delivery: '0.1% on both buy & sell',
+                      intraday: '0.025% on sell-side',
+                      futures: '0.0125% on sell-side',
+                      options: '0.0625% on sell-side (on premium)'
+                    },
+                    {
+                      type: 'STT/CTT (From October 1, 2024)',
+                      delivery: '0.1% on both buy & sell',
+                      intraday: '0.025% on sell-side',
+                      futures: '0.02% on sell-side',
+                      options: '0.01% on sell-side (on premium)'
+                    },
+                    {
+                      type: 'GST',
+                      delivery: '18% (on brokerage + transaction + Demat charges)',
+                      intraday: '18% (on brokerage + transaction charges)',
+                      futures: '18% (on brokerage + transaction charges)',
+                      options: '18% (on brokerage + transaction charges)'
+                    },
+                    {
+                      type: 'Stamp Duty',
+                      delivery: '0.015% or ₹1500/crore on buy-side',
+                      intraday: '0.003% or ₹300/crore on buy-side',
+                      futures: '0.002% or ₹200/crore on buy-side',
+                      options: '0.003% or ₹300/crore on buy-side'
+                    },
+                    {
+                      type: 'Exchange Transaction Charges (From October 1, 2024)',
+                      delivery: ['NSE: 0.00297%', 'BSE: 0.00375%'],
+                      intraday: ['NSE: 0.00297%', 'BSE: 0.00375%'],
+                      futures: ['NSE:0.00173%', 'BSE: Nil'],
+                      options: ['NSE: 0.03503%  (On Premium)', 'BSE: 0.0325% (On Premium)']
+                    }
+                  ].map((item, index) => (
+                    <tr key={index} className={index % 2 === 1 ? 'bg-blue-50' : ''}>
+                      <td className="p-1.5 sm:p-3 border-b text-sm sm:text-base font-medium">{item.type}</td>
+                      <td className="p-1.5 sm:p-3 border-b text-sm sm:text-base">
+                        {Array.isArray(item.delivery) ? (
+                          item.delivery.map((text, i) => (
+                            <div key={i} className="whitespace-nowrap">{text}</div>
+                          ))
+                        ) : (
+                          <div className="whitespace-normal">{item.delivery}</div>
+                        )}
+                      </td>
+                      <td className="p-1.5 sm:p-3 border-b text-sm sm:text-base">
+                        {Array.isArray(item.intraday) ? (
+                          item.intraday.map((text, i) => (
+                            <div key={i} className="whitespace-nowrap">{text}</div>
+                          ))
+                        ) : (
+                          <div className="whitespace-normal">{item.intraday}</div>
+                        )}
+                      </td>
+                      <td className="p-1.5 sm:p-3 border-b text-sm sm:text-base">
+                        {Array.isArray(item.futures) ? (
+                          item.futures.map((text, i) => (
+                            <div key={i} className="whitespace-nowrap">{text}</div>
+                          ))
+                        ) : (
+                          <div className="whitespace-normal">{item.futures}</div>
+                        )}
+                      </td>
+                      <td className="p-1.5 sm:p-3 border-b text-sm sm:text-base">
+                        {Array.isArray(item.options) ? (
+                          item.options.map((text, i) => (
+                            <div key={i} className="whitespace-nowrap">{text}</div>
+                          ))
+                        ) : (
+                          <div className="whitespace-normal">{item.options}</div>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
-
           <div className={`border rounded-lg overflow-hidden ${table2Toggle === 'sebiCharges' ? 'block' : 'hidden'}`}>
-            <table className="w-full">
-              <thead>
-                <tr className="bg-blue-500 text-white">
-                  <th className="p-4 text-left">Charge Type</th>
-                  <th className="p-4 text-left">Equity Delivery</th>
-                  <th className="p-4 text-left">Equity Intraday</th>
-                  <th className="p-4 text-left">Equity Futures</th>
-                  <th className="p-4 text-left">Equity Options</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="p-4 border-b font-medium">SEBI Charges</td>
-                  <td className="p-4 border-b">₹10/crore</td>
-                  <td className="p-4 border-b">₹10/crore</td>
-                  <td className="p-4 border-b">₹10/crore</td>
-                  <td className="p-4 border-b">₹10/crore</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+            <table className="min-w-full text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-blue-500 text-white">
+                    <th className="p-1.5 sm:p-3 text-left">Charge Type</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Delivery</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Intraday</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Futures</th>
+                    <th className="p-1.5 sm:p-3 text-left">Equity Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-1.5 sm:p-3 border-b break-words">SEBI Charges</td>
+                    <td className="p-1.5 sm:p-3 border-b break-words">₹10/crore</td>
+                    <td className="p-1.5 sm:p-3 border-b break-words">₹10/crore</td>
+                    <td className="p-1.5 sm:p-3 border-b break-words">₹10/crore</td>
+                    <td className="p-1.5 sm:p-3 border-b break-words">₹10/crore</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div className={`border rounded-lg overflow-hidden ${table2Toggle === 'otherCharges' ? 'block' : 'hidden'}`}>
-            <table className="w-full">
-              <thead>
-                <tr className="bg-blue-500 text-white">
-                  <th className="w-1/2 p-4 text-left">Service</th>
-                  <th className="w-1/2 p-4 text-left">Fee</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { service: 'Demat (Per Certificate)', fee: '₹10 per certificate + ₹50 per request' },
-                  { service: 'Remat (Per ISIN)', fee: '₹30 per certificate + CDSL charges' },
-                  { service: 'Courier Charges', fee: '₹100 per Demat/Remat Request' },
-                  { service: 'Pledge Per ISIN', fee: '₹15 + GST per scrip' },
-                  { service: 'Unpledge Per ISIN', fee: '₹15 + GST per scrip' },
-                  { service: 'Delivery Instructions', fee: '₹100 for 10 leaves' }
-                ].map((item, index) => (
-                  <tr key={index} className={index % 2 === 1 ? 'bg-blue-50' : ''}>
-                    <td className="p-4 border-b">{item.service}</td>
-                    <td className="p-4 border-b">{item.fee}</td>
+            <div className="overflow-x-auto">
+            <table className="min-w-full text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-blue-500 text-white">
+                    <th className="w-1/2 p-2 sm:p-4 text-left text-sm sm:text-base">Service</th>
+                    <th className="w-1/2 p-2 sm:p-4 text-left text-sm sm:text-base">Fee</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {[
+                    { service: 'Demat (Per Certificate)', fee: '₹10 per certificate + ₹50 per request' },
+                    { service: 'Remat (Per ISIN)', fee: '₹30 per certificate + CDSL charges' },
+                    { service: 'Courier Charges', fee: '₹100 per Demat/Remat Request' },
+                    { service: 'Pledge Per ISIN', fee: '₹15 + GST per scrip' },
+                    { service: 'Unpledge Per ISIN', fee: '₹15 + GST per scrip' },
+                    { service: 'Delivery Instructions', fee: '₹100 for 10 leaves' }
+                  ].map((item, index) => (
+                    <tr key={index} className={index % 2 === 1 ? 'bg-blue-50' : ''}>
+                      <td className="p-2 sm:p-4 border-b text-sm sm:text-base">{item.service}</td>
+                      <td className="p-2 sm:p-4 border-b text-sm sm:text-base">{item.fee}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div className={`border rounded-lg overflow-hidden ${table2Toggle === 'marginRequirements' ? 'block' : 'hidden'}`}>
+          <div className={`border rounded-lg overflow-hidden ${table2Toggle === 'margin' ? 'block' : 'hidden'}`}>
             <div className="p-4 bg-blue-100 text-center">
               Alice Blue provides flexible margin options to maximize your trading potential across various trading segments.
             </div>
-            <table className="w-full">
-              <thead>
-                <tr className="bg-blue-500 text-white">
-                  <th className="p-4 text-left">Segment</th>
-                  <th className="p-4 text-left">CNC/NRML</th>
-                  <th className="p-4 text-left">MIS</th>
-                  <th className="p-4 text-left">Cover Order</th>
-                  <th className="p-4 text-left">Bracket Order</th>
-                  <th className="p-4 text-left">Brokerage</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  {
-                    segment: 'Cash',
-                    cnc: 'UPTO 4X CASH',
-                    mis: 'UPTO 5X CASH',
-                    cover: 'NA',
-                    bracket: 'UPTO 5X CASH',
-                    brokerage: 'A group share'
-                  },
-                  {
-                    segment: 'NSE Futures',
-                    cnc: '1X',
-                    mis: '1X',
-                    cover: '1X',
-                    bracket: '1X',
-                    brokerage: 'As per margin'
-                  },
-                  {
-                    segment: 'NSE Options',
-                    cnc: '1X',
-                    mis: '1X (sell only)',
-                    cover: 'NA',
-                    bracket: 'NA',
-                    brokerage: 'As per margin premium'
-                  },
-                  {
-                    segment: 'MCX',
-                    cnc: '1X',
-                    mis: '1X',
-                    cover: '1X',
-                    bracket: '1X',
-                    brokerage: 'As per margin'
-                  },
-                  {
-                    segment: 'Currency Derivatives (CDS)',
-                    cnc: '1X',
-                    mis: '1X',
-                    cover: '1X',
-                    bracket: '1X',
-                    brokerage: 'As per margin'
-                  }
-                ].map((item, index) => (
-                  <tr key={index} className={index % 2 === 1 ? 'bg-blue-50' : ''}>
-                    <td className="p-4 border-b font-medium">{item.segment}</td>
-                    <td className="p-4 border-b">{item.cnc}</td>
-                    <td className="p-4 border-b">{item.mis}</td>
-                    <td className="p-4 border-b">{item.cover}</td>
-                    <td className="p-4 border-b">{item.bracket}</td>
-                    <td className="p-4 border-b">{item.brokerage}</td>
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-blue-500 text-white">
+                    <th className="p-1.5 sm:p-3 text-left">Segment</th>
+                    <th className="p-1.5 sm:p-3 text-left">CNC/NRML</th>
+                    <th className="p-1.5 sm:p-3 text-left">MIS</th>
+                    <th className="p-1.5 sm:p-3 text-left">Cover Order</th>
+                    <th className="p-1.5 sm:p-3 text-left">Bracket Order</th>
+                    <th className="p-1.5 sm:p-3 text-left">Brokerage</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {[
+                    {
+                      segment: 'Cash',
+                      cnc: 'UPTO 4X CASH',
+                      mis: 'UPTO 5X CASH',
+                      cover: 'NA',
+                      bracket: 'UPTO 5X CASH',
+                      brokerage: 'A group share'
+                    },
+                    {
+                      segment: 'NSE Futures',
+                      cnc: '1X',
+                      mis: '1X',
+                      cover: '1X',
+                      bracket: '1X',
+                      brokerage: 'As per margin'
+                    },
+                    {
+                      segment: 'NSE Options',
+                      cnc: '1X',
+                      mis: '1X (sell only)',
+                      cover: 'NA',
+                      bracket: 'NA',
+                      brokerage: 'As per margin premium'
+                    },
+                    {
+                      segment: 'MCX',
+                      cnc: '1X',
+                      mis: '1X',
+                      cover: '1X',
+                      bracket: '1X',
+                      brokerage: 'As per margin'
+                    },
+                    {
+                      segment: 'Currency Derivatives (CDS)',
+                      cnc: '1X',
+                      mis: '1X',
+                      cover: '1X',
+                      bracket: '1X',
+                      brokerage: 'As per margin'
+                    }
+                  ].map((item, index) => (
+                    <tr key={index} className={index % 2 === 1 ? 'bg-blue-50' : ''}>
+                      <td className="p-1.5 sm:p-3 border-b font-medium break-words">{item.segment}</td>
+                      <td className="p-1.5 sm:p-3 border-b break-words">{item.cnc}</td>
+                      <td className="p-1.5 sm:p-3 border-b break-words">{item.mis}</td>
+                      <td className="p-1.5 sm:p-3 border-b break-words">{item.cover}</td>
+                      <td className="p-1.5 sm:p-3 border-b break-words">{item.bracket}</td>
+                      <td className="p-1.5 sm:p-3 border-b break-words">{item.brokerage}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
 
           <p className="text-center mt-8 text-2xl font-medium">
-            Bracket Order charges of Rs.4+ 18% GST/Order applicable
+            Bracket Order charges of Rs.4 + 18% GST/Order applicable
           </p>
         </section>
 
@@ -856,6 +911,11 @@ const AliceBlue = () => {
 
           <a href={url} target='_blank' className="w-fit mt-8 mx-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
             Open a Free Account Now
+            <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+              <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </a>
         </section>
 
@@ -911,6 +971,11 @@ const AliceBlue = () => {
           <div className="text-center">
             <a href={url} target='_blank' className="w-fit mx-auto bg-orange-400 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
               Open a Free Account Now
+              <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+                <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
           </div>
         </section>
@@ -1103,6 +1168,11 @@ const AliceBlue = () => {
           </div>
           <a href={url} target='_blank' className="w-fit mx-auto mt-8 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
             Open a Free Account Now
+            <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+              <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </a>
         </section>
 

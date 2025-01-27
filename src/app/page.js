@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { HOST } from "@/config";
+import Head from "next/head";
 
 
 export default function Home() {
@@ -86,7 +87,7 @@ export default function Home() {
               various Stock Brokers
             </p>
             <a
-              href={brokers.length > 0 ? brokers[1].link : ''}
+              href="https://signup.fyers.in/?utm_source=AP-Leads&utm_medium=AP0251"
               target="_blank"
               className={`${styles.openbtn}`}
             >

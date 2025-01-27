@@ -33,7 +33,7 @@ export default function Upstox() {
         <img
           className={styles.logo}
           src="https://upstox.com/app/themes/upstox/dist/img/logo/desktop-logo.svg"
-          alt="Logo"
+          alt="Upstox"
         />
 
         <div className="flex flex-wrap items-center justify-between w-full">
@@ -64,15 +64,15 @@ export default function Upstox() {
           style={{ margin: "20px 0" }}
           className={styles.trn}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img alt="Open Demat Account" src="/upstox_files/btn.svg" />
         </a>
 
-        <img className={styles.hl} src="/zerodha_files/highlights.svg" />
+        <img className={styles.hl} alt="highlights" src="/zerodha_files/highlights.svg" />
 
         <div className={styles.bg_rocket}>
           <div className={styles.el_card}>
             <h2 className={styles.un}>
-              <img className={styles.icon} src="/upstox_files/info.png" />
+              <img className={styles.icon} alt="info" src="/upstox_files/info.png" />
               About Upstox
             </h2>
             <p>
@@ -138,6 +138,7 @@ export default function Upstox() {
             <div className={styles.h3}>Trading :</div>
             <img
               className={styles.icon}
+              alt="trading"
               src="https://static.vecteezy.com/system/resources/previews/036/525/435/original/trading-report-icon-dual-tone-icon-for-your-website-mobile-presentation-and-logo-design-vector.jpg"
             />
           </div>
@@ -151,6 +152,7 @@ export default function Upstox() {
             <div className={styles.h3}>Demat accounts :</div>
             <img
               className={styles.icon}
+              alt="Demat Account"
               src="https://opendemataccount.sbisecurities.in/SBIDIYV1/assets/images/SBINEW/trusticon.webp"
             />
           </div>
@@ -166,7 +168,7 @@ export default function Upstox() {
             <div className={styles.h3}>Mutual Funds :</div>
             <img
               className={styles.icon}
-              src="https://cdn3d.iconscout.com/3d/premium/thumb/mutual-funds-5768776-4833573.png"
+              alt="Mutual funds " src="https://cdn3d.iconscout.com/3d/premium/thumb/mutual-funds-5768776-4833573.png"
             />
           </div>
           Upstox offers online mutual funds (regular and direct) in a lump sum
@@ -175,6 +177,7 @@ export default function Upstox() {
             <div className={styles.h3}>Responsive Customer Support :</div>
             <img
               className={styles.icon}
+              alt="Responsive Customer Support"
               src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
             />
           </div>
@@ -186,7 +189,7 @@ export default function Upstox() {
             style={{ margin: "20px 0", alignSelf: "center" }}
             className={styles.trn}
           >
-            <img src="/upstox_files/btn.svg" />
+            <img alt="Open Demat Account" src="/upstox_files/btn.svg" />
           </a>
           <div className={styles.hr}>
             <div className={`${styles.h1}`}>About Founders</div>
@@ -231,7 +234,7 @@ export default function Upstox() {
         </div>
         <div className={styles.el_card}>
           <div className={styles.h1}>
-            <img width={"40px"} src="/upstox_files/folder.png"></img>
+            <img width="40px" alt="Upstox Documents" src="/upstox_files/folder.png"></img>
             Documents required for a demat account with Upstox
           </div>
           These below documents are required to open account with Upstox, if you
@@ -284,7 +287,7 @@ export default function Upstox() {
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img alt="Open Demat Account" src="/upstox_files/btn.svg" />
         </a>
         <div className={styles.h1}>Brokrage and All Charges</div>
         <table className={styles.tbl}>
@@ -311,7 +314,7 @@ export default function Upstox() {
         </table>
 
         <div className={styles.hr}>
-          <img className={styles.icon} src="/upstox_files/brokrae.png" />
+          <img className={styles.icon} alt="Upstox Brokrage" src="/upstox_files/brokrae.png" />
           <div className={styles.h3}>Brokrage</div>
         </div>
         <table className={styles.tbl}>
@@ -368,6 +371,7 @@ export default function Upstox() {
         <div className={styles.hr}>
           <img
             className={styles.icon}
+            alt="Upstox Statutory Charges"
             src="https://e7.pngegg.com/pngimages/115/795/png-clipart-web-hosting-service-affiliate-marketing-money-save-cash-purple-violet-thumbnail.png "
           />
           <div className={styles.h3}>Statutory Charges</div>
@@ -419,12 +423,13 @@ export default function Upstox() {
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img alt="Upstox Open Demat Account" src="/upstox_files/btn.svg" />
         </a>
 
         <div className={styles.hr}>
           <img
             className={styles.icon}
+            alt="Opstoc exchange Fees"
             src="https://cdn-icons-png.freepik.com/512/10195/10195362.png"
           />
           <div className={styles.h3}>Exchange Fees</div>
@@ -492,7 +497,7 @@ export default function Upstox() {
         </table>
 
         <div className={styles.hr}>
-          <img className={styles.icon} src="/upstox_files/sebi_charges.png" />
+          <img className={styles.icon} alt="Upstox Sebi Charges" src="/upstox_files/sebi_charges.png" />
 
           <div className={styles.h3}>SEBI Charges</div>
         </div>
@@ -519,6 +524,7 @@ export default function Upstox() {
         <div className={styles.hr}>
           <img
             className={styles.icon}
+            alt="Upstoc Margin"
             src="https://cdn-icons-png.flaticon.com/512/3605/3605270.png"
           />
           <div className={styles.h3}>Margin</div>
@@ -561,11 +567,11 @@ export default function Upstox() {
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img src="/upstox_files/btn.svg" alt="Upstox Charges Explain" />
         </a>
         <div className={styles.hr}>
           <div className={styles.h3}>Charges Explanation</div>
-          <img className={styles.icon} src="/upstox_files/coin.png" />
+          <img className={styles.icon} alt="Coin" src="/upstox_files/coin.png" />
         </div>
         <p>
           There are two types of charges are applied on trading or investing
@@ -680,7 +686,7 @@ export default function Upstox() {
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img alt="Open Demat Account" src="/upstox_files/btn.svg" />
         </a>
         <div style={{ alignSelf: "center" }} className={styles.h1}>
           Charges for other services
@@ -817,7 +823,7 @@ export default function Upstox() {
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img alt="Upstox Open Demat Account" src="/upstox_files/btn.svg" />
         </a>
         <div className={styles.h3}>
           Upstox Securities Private Limited Registration Details
@@ -907,17 +913,15 @@ export default function Upstox() {
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img alt="Open Demat Account" src="/upstox_files/btn.svg" />
         </a>
         <div className={styles.attention}>
           <div className="flex justify-center items-center gap-2">
-            <img
-              src="/upstox_files/warning.png"
-            />
+            <img alt="Warning" src="/upstox_files/warning.png" />
             <span>
               Attention: Don’t share login credentials or OTP to anyone even the
               Upstox team also. </span>
-            <img
+            <img alt="warning"
               src="/upstox_files/warning.png"
             />
           </div>
@@ -1008,7 +1012,7 @@ export default function Upstox() {
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
         >
-          <img src="/upstox_files/btn.svg" />
+          <img alt="Open Demat Account" src="/upstox_files/btn.svg" />
         </a>
       </div>
       {/* </div> */}

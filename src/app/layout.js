@@ -53,21 +53,12 @@ export const metadata = {
 
 export default async function RootLayout({ children, params }) {
 
-
-
-  // const headerList =await headers()
-  // const headerEntries = Array.from(headerList.entries())
-  // // console.log('Headers:', headerEntries)
-
-  // let url = headerList.get('referer') ?? 'j/d';
-  // url = url.split('/');
-  // let slug = url[url.length-1] ?? 'null';
-  // console.log(url, slug === "about-metropolitan-stock-exchange-msei");
   const slug = 'hjk'
 
   return (
     <html lang="en">
       <head>
+      <GoogleTagManager gtmId="GTM-MSXSKG58" />
         {slug === "about-metropolitan-stock-exchange-msei" &&
           <script type="application/ld+json" dangerouslySetInnerHTML={{
             __html: `{

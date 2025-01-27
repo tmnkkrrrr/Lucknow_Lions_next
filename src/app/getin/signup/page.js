@@ -86,7 +86,7 @@ export default function Signup() {
             email: '',
             mobileNo: '',
           });
-          router.push('/login');
+          router.push('/getin/login');
         } else {
           alert(`Signup failed: ${result.message}`);
         }

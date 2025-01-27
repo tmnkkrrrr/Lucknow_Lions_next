@@ -1,24 +1,12 @@
+"use client"
+
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import { ClientLink } from './clientFunctions.js';
 import Link from 'next/link';
 import { HOST } from '@/config';
+import {  useEffect, useState } from 'react';
 
 
-export function generateMetadata() {
-    return {
-        title: 'Lucknow Lions - Blogs | Find Educational Blogs',
-        description: "Learn more about Lucknow Lions, a leading platform in the trading world. We are committed to providing innovative solutions, expert insights, and top-notch tools for traders of all levels. Join us to elevate your trading journey.",
-        keywords: 'stock broker in lucknow, best stock broker in lucknow, 0 brokerage on delivery, free demat account',
-        openGraph: {
-            title: 'Lucknow Lions - Blogs | Find Educational Blogs',
-            description: "Learn more about Lucknow Lions, a leading platform in the trading world. We are committed to providing innovative solutions, expert insights, and top-notch tools for traders of all levels. Join us to elevate your trading journey.",
-            images: ['https://www.lucknowlions.com/blogs_files/bull.webp'],
-        },
-        robots: 'index, follow',
-        alternates: { canonical: 'https://www.lucknowlions.com/blogs' }
-    }
-}
 
 
 async function getCategories() {
@@ -28,7 +16,6 @@ async function getCategories() {
         if (!response.ok) throw new Error('Failed to fetch categories');
 
         const data = await response.json();
-
         return data.blogs;
 
     } catch (error) {
@@ -80,10 +67,47 @@ async function getCategories() {
 }
 
 
+async function getBlogsData() {
+    try {
+        const response = await fetch(`${HOST}/api/v1/visitor/blogs_with_url`);
 
-const BlogHomepage = async () => {
+        if (!response.ok) throw new Error('Failed to fetch categories');
 
-    const categories = await getCategories();
+        const data = await response.json();
+        return data.blogsdata;
+
+    } catch (error) {
+        console.error('Error fetching Blogs Data:', error);
+        return [];
+    }
+}
+
+
+
+
+
+const BlogHomepage = () => {
+
+    const [blogsData, setBlogsData] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [results, setResults] = useState([]);
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        getCategories().then((categories) => setCategories(categories))
+        getBlogsData().then((blogsData) => setBlogsData(blogsData))
+    }, [])
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchTerm === "") { setResults([]); return; }
+        const filtered = blogsData.filter(item =>
+            item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            item.pageUrl.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setResults(filtered);
+    };
+
 
     const hotTopics = [
         {
@@ -97,7 +121,7 @@ const BlogHomepage = async () => {
             id: 2,
             title: "How to Transfer shares from Another demat to Fyers Demat Account Online",
             description: "यदि आपके पास में किसी भी स्टॉक ब्रोकर का अकाउंट है और आप उस से फयेर्स में शेयर्स ट्रांसफर करना चाहते हैं तो आप इस आर्टिकल को पढ़ कर शेयर्स आप ट्रांसफर कर सकते हैं।",
-            image: "https://assets.lucknowlions.com/lions_images/article_images/cdsl-easiest/lucknow-lions-share-transfer-from-another-to-fyers-demat-account.webp",
+            image: "https://assets.lucknowlions.com/lions_images/article_images/cdsl-easiest/lucknow-lions-share-transfer-from-another-to-fyers-demat-account-thumbnail.webp",
             url: 'https://www.lucknowlions.com/'
         },
         {
@@ -147,40 +171,7 @@ const BlogHomepage = async () => {
         </Link>
     );
 
-    // Component for Featured Topic
-    const FeaturedTopic = () => (
-        <div>
-            <div className="p-1 bg-gray-100 rounded-lg">
-                <img src='/blogs_files/bull.webp' alt='Hot Topic' className="w-full object-cover" />
-                <div className="mt-4 p-4">
-                    <h3 className="text-2xl font-bold mb-2">What is stock market?</h3>
-                    <p className="text-xl text-gray-600 mb-4">Personalized articles and blogs curated to match your unique preferences.</p>
-                    <ClientLink
-                        href="/featured-topic"
-                        className="text-[#6D4AFF] bg-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm"
-                    >
-                        <span className='text-xl'>View Now</span>
-                        <img className='max-w-8' src='https://i.ibb.co/dWmQNjH/arrow.png' />
-                    </ClientLink>
-                </div>
-            </div>
-        </div>
 
-    );
-
-    // Component for Topic Card
-    const TopicCard = ({ topic }) => (
-        <Link className="flex gap-3 bg-gray-50 border p-2 rounded-lg" href={topic.url}    >
-            <img src={topic.image} alt={topic.title} className="w-40 h-24 r-1 shadow-lg rounded-lg object-cover" />
-            <div>
-                <h3 className="font-semibold">{topic.title}</h3>
-                <p className="text-sm text-gray-600 line-clamp-2 mb-1">{topic.description}</p>
-                <ClientLink href={`/topic/${topic.id}`} className="text-[#6D4AFF] text-sm font-medium">
-                    Learn more →
-                </ClientLink>
-            </div>
-        </Link>
-    );
 
     return (
         <div className="flex flex-col items-center">
@@ -202,18 +193,47 @@ const BlogHomepage = async () => {
                         <p className="text-gray-600 mb-6">
                             Search about the latest, trending & Educational topics related to Stock Market
                         </p>
-                        <form className="relative max-w-2xl mx-auto">
+                        <form onSubmit={handleSearch} onKeyUp={handleSearch} className="relative max-w-2xl mx-auto">
                             <input
                                 type="text"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
                                 placeholder="Search here..."
                                 className="w-full px-6 py-3 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-300"
                             />
-                            <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#6D4AFF] p-2 rounded-full">
-                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            <button
+                                type="submit"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#6D4AFF] p-2 rounded-full"
+                            >
+                                <svg
+                                    className="w-5 h-5 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                    />
                                 </svg>
                             </button>
                         </form>
+
+                        {results.length > 0 && (
+                            <div className="absolute z-1 w-full max-w-6xl">
+                                <div className="w-fit mx-auto px-4 bg-white rounded-lg shadow-lg border border-gray-200">
+                                    {results.map((item, index) => (
+                                        <a key={index} className="p-4 border-b border-red-500"                                        >
+                                            <h3 className="text-lg text-left font-medium">{item.title}</h3>
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+
                     </div>
                 </div>
             </div>
@@ -221,7 +241,7 @@ const BlogHomepage = async () => {
             <div className='max-w-7xl mx-2'>
                 {/* Category Section */}
                 <div className="mt-8">
-                    <h2 className="text-3xl font-bold text-[#3A0FD4] mb-6">Category</h2>
+                    <h1 className="text-3xl font-bold text-[#3A0FD4] mb-6">Category</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {categories.map(category => (
                             <CategoryCard key={category.id} category={category} />
@@ -238,12 +258,35 @@ const BlogHomepage = async () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Featured Post */}
-                        <FeaturedTopic />
+                        <div className="p-1 bg-gray-100 rounded-lg">
+                            <img src='/blogs_files/bull.webp' alt='Hot Topic' className="w-full object-cover" />
+                            <div className="mt-4 p-4">
+                                <h3 className="text-2xl font-bold mb-2">What is stock market?</h3>
+                                <p className="text-xl text-gray-600 mb-4">Personalized articles and blogs curated to match your unique preferences.</p>
+                                <span className="w-fit text-[#6D4AFF] bg-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm"                   >
+                                    <span className='text-xl'>View Now</span>
+                                    <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
+                                        <path d="M39.9727 24.5312L25.0393 39.4646" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M39.9727 35.4859V24.5312H29.018" stroke="white" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
 
                         {/* Side Posts */}
                         <div className="space-y-4">
                             {hotTopics.filter(topic => !topic.isFeatured).map(topic => (
-                                <TopicCard key={topic.id} topic={topic} />
+                                <Link key={topic.id} className="flex gap-3 bg-gray-50 border p-2 rounded-lg" href={topic.url}    >
+                                    <img src={topic.image} alt={topic.title} className="flex-1 h-24 r-1 shadow-lg rounded-lg object-cover" />
+                                    <div>
+                                        <h3 className="font-semibold">{topic.title}</h3>
+                                        <p className="text-sm text-gray-600 line-clamp-2 mb-1">{topic.description}</p>
+                                        <span className="text-[#6D4AFF] text-sm font-medium">
+                                            Learn more →
+                                        </span>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

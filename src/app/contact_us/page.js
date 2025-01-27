@@ -74,6 +74,7 @@ export default function ContactUs() {
                                         <div className={styles.flx_row}>
                                             <img
                                                 className={styles.ic}
+                                                alt="Lucknow Lions Mail"
                                                 src="/contactus_files/message.png"
                                             />
                                             <span>contact@lucknowlions.com</span>
@@ -85,6 +86,7 @@ export default function ContactUs() {
                                         <div className={styles.flx_row}>
                                             <img
                                                 className={styles.ic}
+                                                alt="Lucknow Lions Call"
                                                 src="/contactus_files/call.png"
                                             />
                                             <span> 24X7</span>
@@ -227,6 +229,7 @@ export default function ContactUs() {
                                 </button>
                                 <img
                                     className={styles.gif}
+                                    alt="Lucknow Lions Contact Us"
                                     src="/contactus_files/contactus_4.gif"
                                 />
                             </>
@@ -241,6 +244,7 @@ export default function ContactUs() {
                         <div className={styles.card}>
                             <img
                                 className={styles.card_img}
+                                alt="Lucknow Lions Contact Us"
                                 src="/contactus_files/contactus_1.webp"
                             />
                             <div className={styles.card_hed}>General Information</div>
@@ -249,6 +253,7 @@ export default function ContactUs() {
                         <div className={styles.card}>
                             <img
                                 className={styles.card_img}
+                                alt="Contact Us"
                                 src="/contactus_files/contactus_2.webp"
                             />
                             <div className={styles.card_hed}>CEO</div>
@@ -257,6 +262,7 @@ export default function ContactUs() {
                         <div className={styles.card}>
                             <img
                                 className={styles.card_img}
+                                alt="Lucknow Lions Location"
                                 src="/contactus_files/contactus_3.webp"
                             />
                             <div className={styles.card_hed}>Write Us</div>

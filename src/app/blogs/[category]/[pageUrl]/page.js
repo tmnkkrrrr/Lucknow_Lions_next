@@ -5,31 +5,52 @@ import RelatedBlogsSection from './RelatedBlogs';
 import styles from './page.module.css';
 import Link from 'next/link';
 import { slugToText } from '@/app/utils';
+import { logAPIRequest } from '@/helper/helper';
 
-function getPageData(category, pageUrl) {
-  return fetch(`${HOST}/api/v1/visitor/blogData/${category}/${pageUrl}`)
-    .then(res => {
-      if (!res.ok) throw new Error('Failed to fetch page data');
-      return res.json();
-    })
-    .catch(error => {
-      console.error('Error fetching page data:', error);
-      return null;
-    });
+
+async function getPageData(category, pageUrl) {
+  try {
+    const res = await fetch(`${HOST}/api/v1/visitor/blogData/${category}/${pageUrl}`);
+    if (!res.ok) throw new Error(`Failed to fetch page data at ${errorTime}`);
+    return await res.json();
+  } catch (error) {
+
+    const logEntry = {
+      timestamp: new Date().toISOString(),
+      pageUrl,
+      error: error
+    };
+
+    const errorTime = new Date().toLocaleString();
+    console.error(`Error fetching page data at ${errorTime}:`, error);
+    logAPIRequest(logEntry);
+    return { error: true };
+  }
+}
+
+const Loading = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="space-y-4 text-center">
+        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto" />
+        <p className="text-gray-600 text-lg">Loading...</p>
+      </div>
+    </div>
+  )
 }
 
 async function Page({ params }) {
   const { category, pageUrl } = await params;
 
   const pageData = await getPageData(category, pageUrl);
-  console.log(pageUrl)
-  // console.log(pageData)
-  if (pageData === null) return (<h1>Article does not Exist</h1>)
+
+  if (pageData.error === true) 
+    return (<Loading />)
 
   return (
     <>
-    <head>
-    {pageUrl === "about-metropolitan-stock-exchange-msei" &&
+      {pageUrl === "about-metropolitan-stock-exchange-msei" &&
+        <head>
           <script type="application/ld+json" dangerouslySetInnerHTML={{
             __html: `{
             "@context": "https://schema.org",
@@ -85,7 +106,7 @@ async function Page({ params }) {
               }
             }]
           }`
-          }} /> &&
+          }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{
             __html: `{
   "@context": "https://schema.org",
@@ -113,8 +134,8 @@ async function Page({ params }) {
   "dateModified": "2024-12-29"
 }`
           }} />
-        }
-    </head>
+        </head>
+      }
       <Navbar />
 
       <main className="min-h-screen bg-white mt-[50px]">

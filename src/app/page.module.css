@@ -290,6 +290,7 @@
 .featuredetails ul li {
   font-size: clamp(14px, 1vw, 26px);
   padding-bottom: 10px;
+  list-style-type: disc;
 }
 
 .feature > div > p {

@@ -39,3 +39,9 @@ export const sendContactUsEnquiry = (contactData) => {
             .catch(error => reject(error));
     });
 };
+
+
+export const logAPIRequest = async (response) => {
+    // await fs.appendFile('api-logs.txt', JSON.stringify(response, null, 2) + '\n\n');
+    console.log(response)
+}

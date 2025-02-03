@@ -47,7 +47,7 @@ const AliceBlue = () => {
               Welcome to Alice Blue
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              At Alice Blue, trading should be accessible and affordable for everyone. With
+             Trading should be accessible and affordable for everyone. With
               zero account opening fees, we remove the initial hurdles that stop potential
               traders and investors. So you can start your trading journey without any upfront
               costs and access our advanced trading tools, innovative solutions, and
@@ -202,7 +202,7 @@ const AliceBlue = () => {
           <div className="p-12 max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-5xl font-bold mb-4">How to <span className='text-blue-800'>Open a Demat Account</span> with Alice Blue?</h2>
-              <p className="">Opening a Demat account with Alice Blue is quick and simple. Follow these steps to start trading within 24 hours:</p>
+              <p className="">Opening a Demat account is quick and simple. Follow these steps to start trading within 24 hours:</p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-4 justify-between items-center">
@@ -256,7 +256,7 @@ const AliceBlue = () => {
           <h2 className="text-2xl font-bold mb-4">Required Documents to <span className="text-blue-600">Open a Demat Account</span> with Alice Blue</h2>
 
           <p className="text-gray-600 mb-6">
-            Opening a Demat account with Alice Blue is a simple process. Make sure you have the following documents ready for a smooth registration:
+            Opening a Demat account is a simple process. Make sure you have the following documents ready for a smooth registration:
           </p>
 
           <div className="bg-blue-600 text-white py-3 px-6 rounded-lg mb-6 w-fit">
@@ -346,7 +346,7 @@ const AliceBlue = () => {
                     <div className="w-1/2 h-full bg-indigo-600"></div>
                   </div>
                 </div>
-                <h2 className="text-xl font-bold text-gray-800">Alice Blue Charges & Pricing</h2>
+                <h2 className="text-xl font-bold text-gray-800">Charges & Pricing</h2>
               </div>
 
               <p className="text-gray-600 mb-8">
@@ -470,11 +470,11 @@ const AliceBlue = () => {
         <section className="my-20">
           <h2 className="mb-4">
             <span className="text-blue-500 text-4xl font-bold">Statutory and Other Charges:</span>
-            <span className="text-gray-900 text-4xl font-bold"> Transparent Pricing with Alice Blue</span>
+            <span className="text-gray-900 text-4xl font-bold"> Transparent Pricing</span>
           </h2>
 
           <p className="text-gray-600 mb-8">
-            Alice Blue ensures transparency and affordability by breaking down statutory and additional charges into clear categories. Here's a detailed overview of the costs associated with trading and investing through Alice Blue.
+            We ensure transparency and affordability by breaking down statutory and additional charges into clear categories. Here's a detailed overview of the costs associated with trading and investing through Alice Blue.
           </p>
 
           <div className="flex gap-2 mb-6 justify-center overflow-x-auto text-xs sm:text-sm">
@@ -827,8 +827,8 @@ const AliceBlue = () => {
         <section className="max-w-7xl mx-auto px-4 py-16">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
-              <h2 className="text-4xl font-bold mb-4">
-                Alice Blue <span className="text-blue-500">Features</span>
+              <h2 className="text-4xl font-bold text-blue-500 mb-4">
+               Features
               </h2>
               <p className="text-gray-600 mb-8">
                 Alice Blue has technology and tools to give you the best trading experience. Here's a quick look:
@@ -837,23 +837,23 @@ const AliceBlue = () => {
               <div className="space-y-4">
                 {[
                   {
-                    title: "Alice Blue ANT MOBI 2.0",
+                    title: "ANT MOBI 2.0",
                     description: "Trade on the go."
                   },
                   {
-                    title: "Alice Blue ANT Web",
+                    title: "ANT Web",
                     description: "Trade from browser."
                   },
                   {
-                    title: "Alice Blue ANT API",
+                    title: "ANT API",
                     description: "For algo traders."
                   },
                   {
-                    title: "Alice Blue V2",
+                    title: "V2",
                     description: "For seamless trading."
                   },
                   {
-                    title: "Alice Blue WebSocket",
+                    title: "WebSocket",
                     description: "For real-time data."
                   }
                 ].map((feature, index) => (
@@ -987,7 +987,7 @@ const AliceBlue = () => {
           </h2>
 
           <p className="text-center text-lg mb-12">
-            At Alice Blue, we are proud to have won numerous awards that reflect our operational excellence,
+            We are proud to have won numerous awards that reflect our operational excellence,
             client satisfaction and innovation in the financial services space. Some of the awards are:
           </p>
 

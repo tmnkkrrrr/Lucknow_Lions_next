@@ -18,26 +18,25 @@ export function generateMetadata() {
 }
 
 export default function Zerodha() {
+    // const link = "https://zerodha.com/open-account?c=ZMPIUR";
+    const link = "";
     return (
         <>
             <Navbar />
 
             <div style={{ height: "76px" }} />
             <div className={styles.mainContent}>
-                <img
-                    src="/zerodha_files/aec6c5390ebe1ba2bed78950f8500096.svg"
-                    alt="logo"
-                    className={styles.logo}
-                />
+
+                {/* <img src="/zerodha_files/aec6c5390ebe1ba2bed78950f8500096.svg" alt="logo" className={styles.logo} /> */}
 
                 {/* hero */}
                 <div className={styles.heroMain}>
                     <div className={styles.hero}>
-                        <h1>
-                            Trade <span>Smarter</span>, <br /> Not Harder
-                        </h1>
+
+                        <h1> Trade <span>Smarter</span>, <br /> Not Harder </h1>
+
                         <a
-                            href="https://zerodha.com/open-account?c=ZMPIUR"
+                            href={link}
                             target="_blank"
                             rel="noreferrer"
                             className={`${styles.btn2} ${styles.up_down}`}
@@ -108,7 +107,7 @@ export default function Zerodha() {
                 </div>
 
                 <a
-                    href="https://zerodha.com/open-account?c=ZMPIUR"
+                    href={link}
                     target="_blank"
                     rel="noreferrer"
                     className={`${styles.btns}  ${styles.up_down}`}
@@ -218,7 +217,7 @@ export default function Zerodha() {
                 </div>
 
                 <a
-                    href="https://zerodha.com/open-account?c=ZMPIUR"
+                    href={link}
                     target="_blank"
                     rel="noreferrer"
                     className={`${styles.btns} ${styles.btnss} ${styles.up_down}`}
@@ -442,7 +441,7 @@ export default function Zerodha() {
 
                 <div className={styles.section6}>
                     <a
-                        href="https://zerodha.com/open-account?c=ZMPIUR"
+                        href={link}
                         target="_blank"
                         rel="noreferrer"
                         className={`${styles.btns}  ${styles.up_down}`}
@@ -730,7 +729,7 @@ export default function Zerodha() {
 
                     <center className={`${styles.pt5} ${styles.pb5}`}>
                         <a
-                            href="https://zerodha.com/open-account?c=ZMPIUR"
+                            href={link}
                             target="_blank"
                             rel="noreferrer"
                             className={styles.btns}
@@ -836,7 +835,7 @@ export default function Zerodha() {
 
                     <center className={`${styles.pt5} ${styles.pb5}`}>
                         <a
-                            href="https://zerodha.com/open-account?c=ZMPIUR"
+                            href={link}
                             target="_blank"
                             rel="noreferrer"
                             className={styles.btns}
@@ -940,7 +939,7 @@ export default function Zerodha() {
                 </div>
 
                 <a
-                    href="https://zerodha.com/open-account?c=ZMPIUR"
+                    href={link}
                     target="_blank"
                     rel="noreferrer"
                     className={styles.btns}
@@ -1071,7 +1070,7 @@ export default function Zerodha() {
 
                     <center className={styles.pt5pb5}>
                         <a
-                            href="https://zerodha.com/open-account?c=ZMPIUR"
+                            href={link}
                             target="_blank"
                             rel="noreferrer"
                             className={styles.btns}
@@ -1244,7 +1243,7 @@ export default function Zerodha() {
                 </div>
 
                 <a
-                    href="https://zerodha.com/open-account?c=ZMPIUR"
+                    href={link}
                     target="_blank"
                     rel="noreferrer"
                     className={styles.btns}
@@ -1350,7 +1349,7 @@ export default function Zerodha() {
                     </ul>
                 </div>
                 <a
-                    href="https://zerodha.com/open-account?c=ZMPIUR"
+                    href={link}
                     target="_blank"
                     rel="noreferrer"
                     className={styles.btns}

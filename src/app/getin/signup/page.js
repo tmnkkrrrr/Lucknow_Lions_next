@@ -67,14 +67,12 @@ export default function Signup() {
         alert('Please Fill Captcha First');
         return;
       }
-      
+
       try {
         setLoading(true);
         const response = await fetch(`${HOST}/api/${v}/visitor/signup`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
         });
 
@@ -104,16 +102,16 @@ export default function Signup() {
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-      
+
       <Navbar />
-      
+
       <div className={styles.container}>
         <div className={styles.formContainer}>
           <div className={styles.formContainer}>
             <div className={styles.left}>
-              <img 
-                className={styles.img} 
-                src="/signup_files/signup_gif.gif" 
+              <img
+                className={styles.img}
+                src="/signup_files/signup_gif.gif"
                 alt="Signup animation"
               />
             </div>

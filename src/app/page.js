@@ -14,23 +14,23 @@ export default function Home() {
 
   const fetchBrokersLinks = () => {
     return new Promise((resolve, reject) => {
-        fetch(`${HOST}/api/v1/website/brokersLing`)
-            .then(response => {
-                if (!response.ok) return [];
+      fetch(`${HOST}/api/v1/website/brokersLing`)
+        .then(response => {
+          if (!response.ok) return [];
 
-                return response.json();
-            })
-            .then(data => resolve(data))
-            .catch(error => reject(error));
+          return response.json();
+        })
+        .then(data => resolve(data))
+        .catch(error => reject(error));
     });
-};
+  };
 
   useEffect(() => {
-  fetchBrokersLinks()
+    fetchBrokersLinks()
       .then((result) => {
         Brokers(result);
       })
-      .catch((error) => {});
+      .catch((error) => { });
   }, []);
 
   const testimonials = [
@@ -69,7 +69,7 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
-  
+
 
   return (
     <div className={styles.page}>
@@ -166,7 +166,7 @@ export default function Home() {
           </h2>
 
           <div className={styles.featureslist}>
-            <div className={`${styles.feature} ${styles.cardTn1}`}>
+            {/* <div className={`${styles.feature} ${styles.cardTn1}`}>
               <div>
                 <img
                   className={styles.featureimg}
@@ -212,6 +212,36 @@ export default function Home() {
                     src="/home/arrow.webp"
                     alt="icon"
                   />
+                  Open Now
+                </a>
+              </div>
+            </div> */}
+
+
+
+            <div className={`${styles.feature} ${styles.cardTn1} !bg-gradient-to-br from-red-100 to-blue-3  00`}>
+              <div>
+                <img className={styles.featureimg} src="/home/samco.webp" alt="Samco" />
+                <h4>Samco</h4>
+              </div>
+
+              <div className={styles.featuredetails}>
+                <ul>
+                  <li>2.50% or Rs 20 Brokerage on Equity Delivery</li>
+                  <li>0.25% or ₹20 per executed order for Equity Intraday and Futures</li>
+                  <li>₹20 Flat per order for Options</li>
+                  <li><strong>DP Charges:</strong> ₹15 + 18% GST per script</li>
+                  <li><strong>Account Opening Fees:</strong> Free</li>
+                  <li><strong>AMC:</strong> ₹400 + 18% GST every quarter</li>
+                  <li>Research & Recomendation by SEBI reg. RA</li>
+                  <li><strong>Apps:</strong> Samco, Rank MF</li>
+                </ul>
+              </div>
+              <div>
+                <p>
+                </p>
+                <a href={brokers.length > 3 ? brokers[3].link : ''} target="_blank" className={styles.btn2}                >
+                  <img className={styles.arr} src="/home/arrow.webp" alt="icon" />
                   Open Now
                 </a>
               </div>

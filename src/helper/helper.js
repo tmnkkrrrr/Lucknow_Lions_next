@@ -1,11 +1,9 @@
-// const host = 'http://localhost:8010';
-const host = 'https://lucknowlions_web_back.techharmony.co.in';
-const v = 'v1';
+import { HOST, v } from "@/config";
 
 
 export const fetchBrokersLinks = () => {
     return new Promise((resolve, reject) => {
-        fetch(`${host}/api/${v}/website/brokersLing`)
+        fetch(`${HOST}/api/${v}/website/brokersLing`)
             .then(response => {
                 if (!response.ok) {
                     return [];
@@ -21,7 +19,7 @@ export const fetchBrokersLinks = () => {
 
 export const sendContactUsEnquiry = (contactData) => {
     return new Promise((resolve, reject) => {
-        fetch(`${host}/api/${v}/website/contact_us`, {
+        fetch(`${HOST}/api/${v}/website/contact_us`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(contactData),

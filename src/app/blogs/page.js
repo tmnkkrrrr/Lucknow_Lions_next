@@ -258,7 +258,7 @@ const BlogHomepage = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Featured Post */}
-                        <div className="p-1 bg-gray-100 rounded-lg">
+                        <a href='https://www.lucknowlions.com/blogs/latest/guide-to-stock-market-investing' className="p-1 bg-gray-100 rounded-lg">
                             <img src='/blogs_files/bull.webp' alt='Hot Topic' className="w-full object-cover" />
                             <div className="mt-4 p-4">
                                 <h3 className="text-2xl font-bold mb-2">What is stock market?</h3>
@@ -272,7 +272,7 @@ const BlogHomepage = () => {
                                     </svg>
                                 </span>
                             </div>
-                        </div>
+                        </a>
 
                         {/* Side Posts */}
                         <div className="space-y-4">

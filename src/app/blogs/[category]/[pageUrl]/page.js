@@ -223,7 +223,7 @@ async function Page({ params }) {
                   </div>
                   <div>
                     <span className="font-semibold text-gray-600">Publisher : </span>
-                    <span className="text-green-600 bg-[#DCFCE7] px-2 py-1 rounded-md font-medium">Lucknow Lions</span>
+                    <span className="text-green-900 bg-[#DCFCE7] px-2 py-1 rounded-md font-medium">Lucknow Lions</span>
                   </div>
                   <div >
                     <div className="flex flex-wrap gap-2">

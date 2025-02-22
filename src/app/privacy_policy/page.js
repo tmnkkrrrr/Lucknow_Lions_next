@@ -1,11 +1,18 @@
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 
-export const metadata = {
+export const metadata =  {
   title: "Lucknow Lions - Privacy Policy",
+  description: 'Read the Lucknow Lions Privacy Policy to understand how we collect, use, and protect your personal information. Your trust is our priority.',
+  keywords: 'Lucknow Lions, Lucknow Lions demat account, free demat account,free demat account, lucknowlions, Lucknow Lions Free Demat Account, Lucknow Lions Stock Broker, Lucknow Lions Brokerage Charges, Best Demat Account in Lucknow, लखनऊ लायंस',
+  robots: 'index',
+  openGraph: {
+    title: 'Lucknow Lions - Privacy Policy',
+    description: 'Read the Lucknow Lions Privacy Policy to understand how we collect, use, and protect your personal information. Your trust is our priority.',
+    url: 'https://www.lucknowlions.com/privacy_policy'
+  },
   alternates: { canonical: 'https://www.lucknowlions.com/privacy_policy' },
-  robots: "index",
-};
+}
 
 const Privacy_Policy_Web = () => {
   return (

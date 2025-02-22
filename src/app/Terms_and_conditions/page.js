@@ -2,11 +2,17 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 
 
-export const metadata = {
-  title: "Lucknow Lions - Terms & Conditions",
+export const metadata =  {
+  title: "Terms and Conditions for Lucknow Lions",
+  description: 'Read the Terms and Conditions for Lucknow Lions. Get insights into our policies and rules designed to enhance your experience with our services.',
+  robots: 'index',
+  openGraph: {
+    title: "Terms and Conditions for Lucknow Lions",
+    description: 'Read the Terms and Conditions for Lucknow Lions. Get insights into our policies and rules designed to enhance your experience with our services.',  
+    url: 'https://www.lucknowlions.com/terms_and_conditions'
+  },
   alternates: { canonical: 'https://www.lucknowlions.com/terms_and_conditions' },
-  robots: "index",
-};
+}
 
 const Terms_and_Conditions_Web = () => {
   return (

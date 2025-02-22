@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata = {
   title: 'Lucknow Lions - Zerodha Open Free Demat Account Opening',
   description: 'Our mission is to maximize wealth for our investors and traders through expert guidance and strategic investments in the stock market.',
-  keywords: "Lucknow Lions, Lucknow Lions demat account, free demat account,free demat account, lucknowlions, Lucknow Lions Free Demat Account, Lucknow Lions Stock Broker, Lucknow Lions Brokerage Charges, Best Demat Account in Lucknow, लखनऊ लायंस",
+  keywords: "Lucknow Lions, Lucknow Lions demat account, free demat account, Lucknow Lions Free Demat Account, Lucknow Lions Stock Broker, Lucknow Lions Brokerage Charges, Best Demat Account in Lucknow, Stock market in lucknow, Investment service in lucknow,free demat account in lucknow, लखनऊ लायंस",
 
   openGraph: {
     title: 'Lucknow Lions - Zerodha Open Free Demat Account Opening',

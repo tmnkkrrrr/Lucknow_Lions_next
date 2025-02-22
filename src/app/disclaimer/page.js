@@ -2,11 +2,18 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 
 
-export const metadata = {
+export const metadata =  {
   title: "Lucknow Lions - Disclaimer",
+  description: 'Visit the Lucknow Lions Disclaimer section for essential details about our policies and terms. Your understanding is crucial for a better experience.',
+  robots: 'index',
+  openGraph: {
+    title: "Lucknow Lions - Disclaimer",
+    description: 'Visit the Lucknow Lions Disclaimer section for essential details about our policies and terms. Your understanding is crucial for a better experience.',  
+    url: 'https://www.lucknowlions.com/disclaimer'
+  },
   alternates: { canonical: 'https://www.lucknowlions.com/disclaimer' },
-  robots: "index",
-};
+}
+
 
 const Disclaimer_Web = () => {
   return (

@@ -78,10 +78,10 @@ export default function Login() {
     e.preventDefault();
 
     if (validateForm()) {
-      if (!captchaValid) {
-        alert('Please Fill Captcha First');
-        return;
-      }
+      // if (!captchaValid) {
+      //   alert('Please Fill Captcha First');
+      //   return;
+      // }
 
       try {
         setLoading(true);

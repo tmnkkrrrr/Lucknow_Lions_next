@@ -5,7 +5,6 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { HOST } from "@/config";
-import Head from "next/head";
 
 
 export default function Home() {

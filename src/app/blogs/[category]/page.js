@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { HOST } from '@/config';
 import { ClientLink } from '../clientFunctions';
 import { slugToText } from '@/app/utils';

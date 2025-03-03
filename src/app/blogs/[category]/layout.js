@@ -32,6 +32,11 @@ export async function generateMetadata({ params }) {
     pageDescription = "Enhance your trading decisions with Lucknow Lions' in-depth blogs. Gain expert knowledge on fundamental analysis, financial statements, and company valuations.";
     keywords = "Lucknow Lions Blogs, fundamental analysis with lucknow lions, fundamental-analysis"
   }
+  if (category === "stocks") {
+    pageTitle = "Learn about Stocks Insights & Expert Trading Tips";
+    pageDescription = " Get valuable stock insights and expert trading advice. Empower your investment journey with our resources maximize returns with smart investing.";
+    keywords = "lucknow lions stocks recomendations"
+  }
   
 
   return {

@@ -1,5 +1,8 @@
+import { GoogleTagManager } from '@next/third-parties/google';
 import { headers } from 'next/headers';
 const { HOST } = require("@/config");
+
+let lang = 'en';
 
 async function getPageData(category, pageUrl) {
   try {
@@ -9,7 +12,11 @@ async function getPageData(category, pageUrl) {
 
     if (!res.ok) { throw new Error('Failed to fetch page data') }
 
-    return res.json();
+    const pageData = await res.json();
+    lang = pageData.blogLang;
+    return pageData;
+
+    return
   } catch (error) {
     console.error('Error fetching page data:', error);
     return null;
@@ -51,17 +58,37 @@ export async function generateMetadata({ params }) {
         'max-snippet': -1,
       },
     },
-    htmlLanguage: 'hi',
 
     alternates: {
       canonical: `https://${host}/blogs/${category}/${pageUrl}`,
-      htmlLanguage: 'hi',
       languages: { 'hi-IN': `https://${host}/blogs/${category}/${pageUrl}` }
     },
-    other: { publisher: 'Lucknow Lions' }
+    other: {
+      publisher: 'Lucknow Lions', 'html:lang': 'hi',
+    }
   };
 }
 
-export default function Layout({ children }) {
-  return children;
+
+export function Layout({ children }) { return children; }
+
+
+export default async function RootLayout({ children }) {
+
+  const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+  await sleep(10);
+
+  return (
+    <html lang={lang}>
+
+      <head>
+        <GoogleTagManager gtmId="GTM-MSXSKG58" />
+      </head>
+
+      <body>
+        {children}
+      </body>
+
+    </html>
+  );
 }

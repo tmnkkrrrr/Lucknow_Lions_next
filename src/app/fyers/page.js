@@ -50,6 +50,7 @@ export default function Fyers() {
                             </p>
                             <a
                                 href={link}
+                                target="_blank"
                                 className="flex items-center max-w-[350px] justify-center gap-3 bg-[#436AF5] text-white px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
                             >
                                 <img

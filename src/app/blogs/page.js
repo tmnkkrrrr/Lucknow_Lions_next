@@ -74,14 +74,13 @@ async function getBlogsData() {
         if (!response.ok) throw new Error('Failed to fetch categories');
 
         const data = await response.json();
-        return data.blogsdata;
+        return data;
 
     } catch (error) {
         console.error('Error fetching Blogs Data:', error);
         return [];
     }
 }
-
 
 
 
@@ -94,8 +93,9 @@ const BlogHomepage = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        getCategories().then((categories) => setCategories(categories))
-        getBlogsData().then((blogsData) => setBlogsData(blogsData))
+        getCategories().then((categories) => setCategories(categories));
+        getBlogsData().then((blogsData) => {setBlogsData(blogsData);  console.log('111111111111 ',blogsData)});
+       
     }, [])
 
     const handleSearch = (e) => {
@@ -103,7 +103,7 @@ const BlogHomepage = () => {
         if (searchTerm === "") { setResults([]); return; }
         const filtered = blogsData.filter(item =>
             item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            item.pageUrl.toLowerCase().includes(searchTerm.toLowerCase())
+            item.url.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setResults(filtered);
     };
@@ -122,7 +122,7 @@ const BlogHomepage = () => {
             title: "How to Transfer shares from Another demat to Fyers Demat Account Online",
             description: "यदि आपके पास में किसी भी स्टॉक ब्रोकर का अकाउंट है और आप उस से फयेर्स में शेयर्स ट्रांसफर करना चाहते हैं तो आप इस आर्टिकल को पढ़ कर शेयर्स आप ट्रांसफर कर सकते हैं।",
             image: "https://assets.lucknowlions.com/lions_images/article_images/cdsl-easiest/lucknow-lions-share-transfer-from-another-to-fyers-demat-account-thumbnail.webp",
-            url: 'https://www.lucknowlions.com/'
+            url: 'https://www.lucknowlions.com/blogs/fyers/how-to-transfer-shares-to-fyers-demat-account-online'
         },
         {
             id: 3,
@@ -225,7 +225,7 @@ const BlogHomepage = () => {
                             <div className="absolute z-1 w-full max-w-6xl">
                                 <div className="w-fit mx-auto px-4 bg-white rounded-lg shadow-lg border border-gray-200">
                                     {results.map((item, index) => (
-                                        <a key={index} className="p-4 border-b border-red-500"                                        >
+                                        <a key={index} href={`/blogs/${item.url}`} className="p-4 border-b border-red-500"                                        >
                                             <h3 className="text-lg text-left font-medium">{item.title}</h3>
                                         </a>
                                     ))}
@@ -242,6 +242,8 @@ const BlogHomepage = () => {
                 {/* Category Section */}
                 <div className="mt-8">
                     <h1 className="text-3xl font-bold text-[#3A0FD4] mb-6">Category</h1>
+            <button onClick={()=>console.log(blogsData)}>hi</button>
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {categories.map(category => (
                             <CategoryCard key={category.id} category={category} />

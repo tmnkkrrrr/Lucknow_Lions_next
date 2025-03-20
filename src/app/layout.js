@@ -52,13 +52,13 @@ export const metadata = {
 export default async function RootLayout({ children, params }) {
 
   return (
-    <html lang="en">
+    <html>
 
       <head>
       <GoogleTagManager gtmId="GTM-MSXSKG58" />
       </head>
 
-      <body className={`antialiased`}>
+      <body>
         {children}
       </body>
 

@@ -1,6 +1,6 @@
-import { GoogleTagManager } from '@next/third-parties/google';
 import { headers } from 'next/headers';
-const { HOST } = require("@/config");
+// const { HOST } = require("@/config");
+const HOST = 'http://localhost:8010'
 
 let lang = 'en';
 
@@ -82,7 +82,7 @@ export default async function RootLayout({ children }) {
     <html lang={lang}>
 
       <head>
-        <GoogleTagManager gtmId="GTM-MSXSKG58" />
+        {/* <GoogleTagManager gtmId="GTM-MSXSKG58" /> */}
       </head>
 
       <body>

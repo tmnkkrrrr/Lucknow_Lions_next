@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { ClientLink } from '../../clientFunctions';
-import { HOST } from '@/config';
+// import { HOST } from '@/config';
+const HOST = 'http://localhost:8010'
 import { ArrowRight } from 'lucide-react';
 
 export default function RelatedBlogsSection({ category, pageUrl }) {

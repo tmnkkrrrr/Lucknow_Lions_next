@@ -1,6 +1,5 @@
 import { ClientBlogHomepage } from "./clientFunctions";
 import { HOST } from '@/config';
-// const HOST = 'http://45.129.87.50:8010'
 
 
 async function getCategories() {

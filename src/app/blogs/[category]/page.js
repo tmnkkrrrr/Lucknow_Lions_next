@@ -8,7 +8,6 @@ import { useParams } from 'next/navigation'
 import Navbar from '@/app/components/Navbar/Navbar';
 import Link from 'next/link';
 import { HOST } from '@/config';
-// const HOST = 'http://45.129.87.50:8010'
 
 function BlogCategoryPage() {
     const [blogs, setBlogs] = useState([]);

@@ -5,7 +5,7 @@ import { HOST } from '@/config';
 async function getCategories() {
     try {
         const response = await fetch(`${HOST}/api/v1/visitor/categories`, {
-            next: { revalidate: 180000 } //5hr
+            next: { revalidate: 18000 } //5hr
         });
 
         if (!response.ok) throw new Error('Failed to fetch categories');

@@ -1,5 +1,4 @@
 import { HOST } from '@/config';
-// const HOST = 'http://localhost:8010'
 import Footer from '@/app/components/Footer/Footer';
 import Navbar from '@/app/components/Navbar/Navbar';
 import RelatedBlogsSection from './RelatedBlogs';

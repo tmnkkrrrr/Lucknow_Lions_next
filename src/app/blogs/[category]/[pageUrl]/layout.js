@@ -1,6 +1,5 @@
 import { headers } from 'next/headers';
-// const { HOST } = require("@/config");
-const HOST = 'http://localhost:8010'
+const { HOST } = require("@/config");
 
 let lang = 'en';
 

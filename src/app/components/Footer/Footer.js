@@ -79,10 +79,16 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link href="/samco-demat-account-opening" onClick={scrollToTop}>
+                Samco
+              </Link>
+            </li>
+            <li>
               <Link href="/fyers" onClick={scrollToTop}>
                 Fyers
               </Link>
             </li>
+            
             <li>
               <Link href="/sgx_nifty" onClick={scrollToTop}>
                 SGX Nifty

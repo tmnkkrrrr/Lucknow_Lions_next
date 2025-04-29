@@ -270,7 +270,8 @@ export default function Home() {
                   </ul>
                 </div>
                 <div>
-                  <p>
+                <p>
+                    <Link href="/samco-demat-account-opening">Read More....</Link>
                   </p>
                   <a href={brokers.length > 3 ? brokers[3].link : ''} target="_blank" className={styles.btn2}                >
                     <img className={styles.arr} src="/home/arrow.webp" alt="icon" />

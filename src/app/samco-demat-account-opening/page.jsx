@@ -48,6 +48,171 @@ export default function Samco() {
   return (
     <React.Fragment>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: `{
+  "@context": "https://schema.org",
+  "@type": "FinancialProduct",
+  "name": "Samco Demat Account - Fast & Easy Investing with Lucknow Lions",
+  "description": "Samco Demat ke saath shuruaat karo - stocks, IPOs, mutual funds ka smart combo. Lucknow Lions pe milega support har kadam par.",
+  "url": "https://www.lucknowlions.com/samco-demat-account-opening",
+  "brand": {
+    "@type": "Organization",
+    "name": "SAMCO Securities",
+    "url": "https://www.samco.in/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SAMCO Securities",
+    "url": "https://www.samco.in/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Free account opening with annual maintenance charges of ₹450 for individual accounts.",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "450",
+      "priceCurrency": "INR",
+      "name": "Annual Maintenance Charges (AMC)",
+      "description": "₹450 per annum for individual accounts."
+    }
+  },
+  "feesAndCommissionsSpecification": "Flat ₹20 per executed order across all segments. ₹20 brokerage on stock delivery trades for investments above ₹800.",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Trading Segments",
+      "value": "Equity, Derivatives, Commodities, Currencies"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Leverage",
+      "value": "Up to 4X on equity delivery trades; up to 5X on equity intraday trades"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Digital Account Opening",
+      "value": "100% paperless, quick, and easy process"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Research Tools",
+      "value": "Access to SAMCO’s proprietary Stock Rating Tool and real-time market insights"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Platform Access",
+      "value": "Available on mobile, web, and desktop platforms"
+    }
+  ]
+}`
+      }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Samco Securities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samco Securities is a discount brokerage firm that offers online trading and investment services across Equity, Derivatives (Futures & Options), Commodities, Currency, Mutual Funds, and IPOs. It provides cost-effective brokerage plans with a flat ₹20 per executed order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I open a trading and Demat account with Samco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can open a Samco trading and Demat account online by visiting Samco's website, submitting your KYC documents (PAN, Aadhaar, bank proof), and completing the e-sign process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the brokerage charges at Samco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samco follows a lowest-fee structure where brokerage is ₹20 per executed order across all segments, including intraday, delivery, F&O, commodities, and currency. Mutual fund investments are completely free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Samco charge any Annual Maintenance Charges (AMC)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AMC is worth Rs.400 + 18% GST but Lucknow Lions users can get lifetime free AMC by depositing Rs.2000 + 18% GST once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What segments can I trade in with Samco Securities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can trade in the following segments through Samco: Equity, Derivatives, Commodities, Currency, Mutual Funds, and IPOs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the margin policy at Samco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samco offers up to 4X leverage on equity delivery trades through its Margin Trading Facility (MTF) and 5X leverage on intraday trading. Leverage for F&O, commodities, and currency trading is based on exchange and regulatory norms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I transfer funds to my Samco trading account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can instant deposit funds using Net Banking, UPI, NEFT, RTGS, and IMPS. Withdrawals can be requested through the Samco Star back-office platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Samco offer research and stock recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Samco provides stock ratings and research reports through its proprietary Stock Rating Tool, which evaluates stocks based on fundamental and technical parameters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Samco Stock SIP feature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samco allows investors to systematically invest in stocks through its Stock SIP feature, where you can schedule automatic investments in selected stocks at regular intervals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact Samco customer support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samco offers customer support through phone, email, and live chat. You can reach them via their support page or customer service numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Samco a safe and reliable broker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Samco is a SEBI-registered broker and a member of NSE, BSE, MCX, and CDSL, ensuring a secure and regulated trading environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check my portfolio and trading reports on Samco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can log in to Samco Star, the back-office platform, to view your portfolio, profit & loss (P&L) statements, fund status, contract notes, and capital gains reports."
+      }
+    }
+  ]
+}`
+      }} />
+
       <Navbar />
 
       <main className='mt-12'>

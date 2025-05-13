@@ -54,7 +54,7 @@ export default async function RootLayout({ children }) {
     <html>
 
       <head>
-        <GoogleTagManager gtmId="GTM-MSXSKG58" />
+        {/* <GoogleTagManager gtmId="GTM-MSXSKG58" /> */}
       </head>
 
       <body>

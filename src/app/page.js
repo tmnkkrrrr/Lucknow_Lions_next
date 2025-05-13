@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { HOST } from "@/config";
+import { MessageSquare, Search, Star } from "lucide-react";
 
 
 export default function Home() {
@@ -104,10 +105,11 @@ export default function Home() {
   }
 }`
       }} />
-      
+
       <div className={styles.page}>
         <Navbar />
         <main className={styles.main}>
+
           <section className={`${styles.hero} ${styles.m0} ${styles.section}`}>
             <div className={styles.heroleft}>
               <p className={styles.des}>Let’s start your journy with us!</p>
@@ -129,7 +131,6 @@ export default function Home() {
             </div>
             <img src="/home/hero.webp" alt="hero" className={styles.heroright} />
           </section>
-
 
           <a href="#main" className="hidden lg:block cursor-pointer">
             <img
@@ -270,7 +271,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div>
-                <p>
+                  <p>
                     <Link href="/samco-demat-account-opening">Read More....</Link>
                   </p>
                   <a href={brokers.length > 3 ? brokers[3].link : ''} target="_blank" className={styles.btn2}                >
@@ -432,6 +433,79 @@ export default function Home() {
             </div>
           </section>
 
+          <section className={`${styles.section} py-16 bg-gradient-to-br from-[#c6e0ef] to-gray-100 rounded-md`}>
+            <div className=" mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Us Online</h2>
+                <div className="h-1 w-24 bg-indigo-600 mx-auto"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[
+                  {
+                    id: "google",
+                    name: "Google",
+                   icon: "https://yt3.googleusercontent.com/FJI5Lzbf2dMd32xOqhoKpJArJooZhoX6v2qOcFO-wjSZUvs3H9xqq2gK4DQ47X0KnYgf7X2rpdU=s900-c-k-c0x00ffffff-no-rj",
+                    rating: "4.9/5",
+                    reviews: "20 reviews",
+                    url:'https://g.co/kgs/U3AsuUn'
+                  },
+                  {
+                    id: "justdial",
+                    name: "Just Dial",
+                    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo4nPHkNw6s9YK9Jq3DSNsViOmS09sUqApHg&s",
+                    rating: "4.7/5",
+                    reviews: "27 reviews",
+                    url:"https://jsdl.in/RSL-EAG1746986590"
+                  },
+                  {
+                    id: "trustpilot",
+                    name: "Trustpilot",
+                   icon: "https://img.icons8.com/?size=512&id=68aEVTzfHi6F&format=png",
+                    rating: "5/5",
+                    reviews: "0 reviews",
+                    url:'https://www.trustpilot.com/review/lucknowlions.com'
+                  }
+                ].map((platform) => (
+                  <div key={platform.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="p-6">
+                      <div className="flex items-center mb-4">
+                          <img className="w-12 h-12  mr-4" src={platform.icon} />
+                        <h3 className="text-xl font-semibold text-gray-900">{platform.name}</h3>
+                      </div>
+
+                      <div className="flex items-center mb-3">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                        <span className="ml-2 text-sm font-medium text-gray-600">
+                          {platform.rating}
+                        </span>
+                      </div>
+
+                      <p className="text-sm text-gray-500 mb-4">
+                        {platform.reviews}
+                      </p>
+
+                      <a
+                        href={platform.url}
+                        target="_blank"
+                        className="inline-flex items-center px-4 py-2 bg-[#3a95ca] hover:bg-indigo-700 text-white text-sm font-medium rounded-md transition-colors duration-150"
+                      >
+                        Visit {platform.name}
+                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           <div className={styles.about}>
             <section className={`${styles.section} ${styles.aboutus}`}>
               <div>
@@ -530,6 +604,7 @@ export default function Home() {
               ))}
             </div>
           </section>
+
         </main>
 
         <Footer />

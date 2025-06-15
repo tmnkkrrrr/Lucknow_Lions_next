@@ -2,26 +2,44 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.css';
+import { useState } from 'react';
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
 
+  const [popup, setPopup] = useState(null);
+
   return (
     <div className='w-full'>
+
+      {popup === "ISO" && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={() => setPopup(null)}
+        >
+          <img
+            src="/home/LUCKNOW_LIONS_ISO_9001_2015.webp"
+            alt="ISO Certificate"
+            className="max-h-[90%] max-w-[90%]"
+          />
+        </div>
+      )}
+
+
       <div className={styles.bar} />
       <footer className={styles.footer}>
         <div className={styles.footleft}>
-        <Link className={styles.logo} href="https://www.lucknowlions.com/">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            className='w-full'
-            width={150}
-            height={50}
-          />
-        </Link>
+          <Link className={styles.logo} href="https://www.lucknowlions.com/">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              className='w-full'
+              width={150}
+              height={50}
+            />
+          </Link>
           <p>
             We don't provide any kind of paid tips,<br />advisory nor paid training
             courses.
@@ -60,6 +78,13 @@ const Footer = () => {
             />
           </a>
           <h3>Get the App Today</h3>
+
+
+          <div onClick={() => setPopup("ISO")} className="flex items-center gap-2 mt-3">
+            <img src="/home/iso.png" alt="TÜV SÜD ISO/IEC 27001" width="60" height="60" loading="lazy" />
+            <div>FYERS is ISO 27001:2022 certified</div>
+          </div>
+
         </div>
         <div className={styles.footright}>
           <ul className={styles.footmenu}>
@@ -88,7 +113,7 @@ const Footer = () => {
                 Fyers
               </Link>
             </li>
-            
+
             <li>
               <Link href="/sgx_nifty" onClick={scrollToTop}>
                 SGX Nifty
@@ -121,45 +146,24 @@ const Footer = () => {
           </p>
           <p className={styles.footrtxt}>Points to be remember</p>
           <ul className="list-disc pl-5">
-            <li>
-              Investments in the securities market are subject to market risks;
-              read all the related documents carefully before investing.
-            </li>
-            <li>
-              Update your active mobile numbers and email ID with your stock
-              brokers to prevent unauthorized transactions.
-            </li>
-            <li>
-              Receive information of your transactions directly from the
-              Exchange on your mobile and email at the end of the day.
-            </li>
-            <li>
-              Stock Brokers can only accept securities as margin from clients
-              through pledge in the depository system (w.e.f. September 1,
-              2020).
-            </li>
+            <li>Investments in the securities market are subject to market risks; read all the related documents carefully before investing.</li>
+            <li>Update your active mobile numbers and email ID with your stock brokers to prevent unauthorized transactions.</li>
+            <li>Receive information of your transactions directly from the Exchange on your mobile and email at the end of the day.</li>
+            <li>Stock Brokers can only accept securities as margin from clients through pledge in the depository system (w.e.f. September 1, 2020).</li>
+            <li>Lucknow Lions or any partner stock broker or their emplyees never ask to share your login details, password, OTP.</li>
+            <li>We (They) also do not aceept cash, blank cheque or make payment to personal account.</li>
           </ul>
           <p className={styles.footrtxt}>Capital Gain Tax</p>
           <ul className="list-disc pl-5">
-            <li>
-              LTCG increased to 12.5% (from 10%) with a revised exempt limit of
-              ₹125,000 for holdings over 2 years. Indexation benefits on assets
+            <li>LTCG increased to 12.5% (from 10%) with a revised exempt limit of
+              ₹125,000 for holdings over 1 year. Indexation benefits on assets
               like Real Estate and Gold removed for purchases after July 23,
               2024.
             </li>
-            <li>
-              STCG increased to 20% (from 15%) for holdings under 2 years.
-            </li>
+            <li>STCG increased to 20% (from 15%) for holdings under 1 year.</li>
             <li>F&O STT revised to 0.10% (from 0.02%) per transaction.</li>
-            <li>
-              Make your tax planning before investing due to tax uncertainties
-              in India.
-            </li>
           </ul>
-          <p>
-            Make your tax planning before investing due to tax uncertainties in
-            India.
-          </p>
+          <p>Make your tax planning before investing due to tax uncertainties in India.</p>
           <ul className={styles.footSubMenu}>
             <li>
               <Link href="/privacy_policy" onClick={scrollToTop}>

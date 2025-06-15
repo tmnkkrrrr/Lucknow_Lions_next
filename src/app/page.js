@@ -440,7 +440,7 @@ export default function Home() {
                 <div className="h-1 w-24 bg-indigo-600 mx-auto"></div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   {
                     id: "google",
@@ -465,10 +465,18 @@ export default function Home() {
                     rating: "5/5",
                     reviews: "0 reviews",
                     url:'https://www.trustpilot.com/review/lucknowlions.com'
+                  },
+                  {
+                    id: "bind",
+                    name: "Bing",
+                   icon: "https://images.seeklogo.com/logo-png/42/2/bing-logo-png_seeklogo-427619.png",
+                    rating: "5/5",
+                    reviews: "0 reviews",
+                    url:'https://tinyurl.com/lucknowlions'
                   }
                 ].map((platform) => (
                   <div key={platform.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="p-6">
+                    <div className="p-4 flex flex-col items-center">
                       <div className="flex items-center mb-4">
                           <img className="w-12 h-12  mr-4" src={platform.icon} />
                         <h3 className="text-xl font-semibold text-gray-900">{platform.name}</h3>

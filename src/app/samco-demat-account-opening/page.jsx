@@ -797,7 +797,7 @@ export default function Samco() {
 
         <section className="py-12 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold text-center mb-4">Why Choose Samco Securities?</h1>
+            <h2 className="text-4xl font-bold text-center mb-4">Why Choose Samco Securities?</h2>
             <p className="text-lg text-gray-700 text-center mb-12 max-w-4xl mx-auto">
               Samco Securities is a leading discount brokerage firm in India, offering cost-effective trading solutions, advanced trading tools, and transparent pricing. Whether you are a beginner, an experienced trader, or a long-term investor, Samco provides a robust platform that caters to all your financial needs. Here’s why you should choose Samco Securities for your trading and investment journey:
             </p>
@@ -939,9 +939,9 @@ export default function Samco() {
 
         <section className='py-12 px-4'>
           <div className="max-w-7xl mx-auto py-10 px-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
               How to Open a Trading Account with <span className="text-blue-500">Samco</span>?
-            </h1>
+            </h2>
 
             <p className="text-lg mb-8 text-center">
               Opening an account with Samco Securities is quick, 100% online, and paperless. Follow these simple steps:
@@ -1001,12 +1001,12 @@ export default function Samco() {
 
         <section className="bg-gradient-to-br from-[#eb9595] to-[#CA2424] py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <h1
+            <h2
               className="text-7xl md:text-6xl font-bold mb-6 text-white drop-shadow-md"
               style={{ textShadow: '0px 3px 0px #1EE0E1' }}
             >
               Get Started with Samco Today!
-            </h1>
+            </h2>
 
             <p className="text-[#E3DDDD] text-lg md:text-xl mb-10 max-w-3xl mx-auto">
               Samco Securities is your ultimate partner for trading and investing. With a feature-rich platform, competitive

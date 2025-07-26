@@ -44,15 +44,15 @@ async function Page({ params }) {
 
   const pageData = await getPageData(category, pageUrl);
 
-  if (pageData.error === true) 
+  if (pageData.error === true)
     return (<Loading />)
 
   return (
     <>
-        {pageUrl === "about-metropolitan-stock-exchange-msei" &&
-          <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-              __html: `{
+      {pageUrl === "about-metropolitan-stock-exchange-msei" &&
+        <>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: `{
               "@context": "https://schema.org",
               "@type": "FAQPage", 
               "mainEntity": [{
@@ -106,9 +106,9 @@ async function Page({ params }) {
                 }
               }]
             }`
-            }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-              __html: `{
+          }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: `{
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": {
@@ -133,9 +133,54 @@ async function Page({ params }) {
     "datePublished": "2024-12-27",
     "dateModified": "2024-12-29"
   }`
-            }} />
-          </>
+          }} />
+        </>
+      }
+
+      {pageUrl === "nsdl-ipo-price-band-dates-lot-size" &&
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: `
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the NSDL IPO Price Band?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The IPO price band is set between ₹760 to ₹800 per share."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the NSDL IPO GMP today?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The current Grey Market Premium (GMP) is around ₹145–₹167."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this IPO worth applying for long-term?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if you’re a long-term investor looking for stable, dividend-paying companies with limited downside risk, NSDL is a solid pick."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I have unlisted shares of NSDL can I sell at the time of listing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, You can't sell because it's locking period for 6 months in listed exchange as per SEBI regulation."
+          }
         }
+      ]
+    }
+  `}} />
+      }
+
       <Navbar />
 
       <main className="min-h-screen bg-white mt-[50px]">

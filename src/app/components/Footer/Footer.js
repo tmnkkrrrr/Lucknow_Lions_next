@@ -81,8 +81,8 @@ const Footer = () => {
 
 
           <div onClick={() => setPopup("ISO")} className="flex items-center gap-2 mt-3">
-            <img src="/home/iso.png" alt="TÜV SÜD ISO/IEC 27001" width="60" height="60" loading="lazy" />
-            <div>FYERS is ISO 27001:2022 certified</div>
+            <img src="https://wallpapers.com/images/hd/i-s-o90012015-certified-company-seal-4spw36gqw6q4d7tn.png" alt="TÜV SÜD ISO/IEC 27001" width="60" height="60" loading="lazy" />
+            <div>LUCKNOW LIONS is ISO 9001:2015 certified</div>
           </div>
 
         </div>
@@ -153,6 +153,7 @@ const Footer = () => {
             <li>Lucknow Lions or any partner stock broker or their emplyees never ask to share your login details, password, OTP.</li>
             <li>We (They) also do not aceept cash, blank cheque or make payment to personal account.</li>
           </ul>
+
           <p className={styles.footrtxt}>Capital Gain Tax</p>
           <ul className="list-disc pl-5">
             <li>LTCG increased to 12.5% (from 10%) with a revised exempt limit of
@@ -162,6 +163,7 @@ const Footer = () => {
             </li>
             <li>STCG increased to 20% (from 15%) for holdings under 1 year.</li>
             <li>F&O STT revised to 0.10% (from 0.02%) per transaction.</li>
+            <li>Holding of unlisted shares for less than 2 years will be considered as Short Term Capital Gains.</li>
           </ul>
           <p>Make your tax planning before investing due to tax uncertainties in India.</p>
           <ul className={styles.footSubMenu}>

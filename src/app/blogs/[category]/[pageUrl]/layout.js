@@ -80,10 +80,6 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={lang}>
 
-      <head>
-        {/* <GoogleTagManager gtmId="GTM-MSXSKG58" /> */}
-      </head>
-
       <body>
         {children}
       </body>

@@ -16,7 +16,6 @@ export default function Redirected() {
             This page has been permanently moved to a new location.
           </p>
 
-          
           <Link
             href="/samco-demat-account-opening"
             className="mt-8 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"

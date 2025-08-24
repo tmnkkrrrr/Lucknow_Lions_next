@@ -445,40 +445,40 @@ export default function Home() {
                   {
                     id: "google",
                     name: "Google",
-                   icon: "https://yt3.googleusercontent.com/FJI5Lzbf2dMd32xOqhoKpJArJooZhoX6v2qOcFO-wjSZUvs3H9xqq2gK4DQ47X0KnYgf7X2rpdU=s900-c-k-c0x00ffffff-no-rj",
+                    icon: "/icons/google.png",
                     rating: "4.9/5",
                     reviews: "20 reviews",
-                    url:'https://g.co/kgs/U3AsuUn'
+                    url: 'https://g.co/kgs/U3AsuUn'
                   },
                   {
                     id: "justdial",
                     name: "Just Dial",
-                    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo4nPHkNw6s9YK9Jq3DSNsViOmS09sUqApHg&s",
+                    icon: "/icons/justdial.jpg",
                     rating: "4.7/5",
                     reviews: "27 reviews",
-                    url:"https://jsdl.in/RSL-EAG1746986590"
+                    url: "https://jsdl.in/RSL-EAG1746986590"
                   },
                   {
                     id: "trustpilot",
                     name: "Trustpilot",
-                   icon: "https://img.icons8.com/?size=512&id=68aEVTzfHi6F&format=png",
+                    icon: "/icons/trustpilot.png",
                     rating: "5/5",
                     reviews: "0 reviews",
-                    url:'https://www.trustpilot.com/review/lucknowlions.com'
+                    url: 'https://www.trustpilot.com/review/lucknowlions.com'
                   },
                   {
                     id: "bind",
                     name: "Bing",
-                   icon: "https://images.seeklogo.com/logo-png/42/2/bing-logo-png_seeklogo-427619.png",
+                    icon: "/icons/bing.png",
                     rating: "5/5",
                     reviews: "0 reviews",
-                    url:'https://tinyurl.com/lucknowlions'
+                    url: 'https://tinyurl.com/lucknowlions'
                   }
                 ].map((platform) => (
                   <div key={platform.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="p-4 flex flex-col items-center">
                       <div className="flex items-center mb-4">
-                          <img className="w-12 h-12  mr-4" src={platform.icon} />
+                        <img className="w-12 h-12  mr-4" src={platform.icon} />
                         <h3 className="text-xl font-semibold text-gray-900">{platform.name}</h3>
                       </div>
 
@@ -500,6 +500,7 @@ export default function Home() {
                       <a
                         href={platform.url}
                         target="_blank"
+                        rel="nofollow"
                         className="inline-flex items-center px-4 py-2 bg-[#3a95ca] hover:bg-indigo-700 text-white text-sm font-medium rounded-md transition-colors duration-150"
                       >
                         Visit {platform.name}

@@ -15,7 +15,6 @@ export default function FaqSchema() {
           "text": "SEBI and exchange have confirmed from 01-January-2025 trading will be start on the Metropolitan Stock Exchange of India."
         }
       }
-      // Add other FAQs...
     ]
   }
 

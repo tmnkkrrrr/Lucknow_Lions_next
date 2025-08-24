@@ -83,7 +83,7 @@ const TermsAndConditions = () => {
         <p>
           This Agreement shall begin on the date hereof. Our Terms and
           Conditions were created with the help of the{" "}
-          <a href="https://www.termsandconditionsgenerator.com/">
+          <a href="https://www.termsandconditionsgenerator.com/" rel="nofollow">
             Free Terms and Conditions Generator
           </a>
           .

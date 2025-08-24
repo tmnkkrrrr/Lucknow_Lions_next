@@ -47,7 +47,7 @@ export default function Upstox() {
               leading discount broker.
             </div>
             <a
-              href={link}
+              href={link} rel="nofollow"
               target="blank"
               style={{ margin: "20px 0", alignSelf: "center" }}
               className={styles.trn}
@@ -59,7 +59,7 @@ export default function Upstox() {
         </div>
 
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "20px 0" }}
           className={styles.trn}
@@ -184,7 +184,7 @@ export default function Upstox() {
           Upstox offers customer support through multiple channels, like Chat
           support, email support, customer care number and by ticket creation.
           <a
-            href={link}
+            href={link} rel="nofollow"
             target="blank"
             style={{ margin: "20px 0", alignSelf: "center" }}
             className={styles.trn}
@@ -282,7 +282,7 @@ export default function Upstox() {
           </ul>
         </div>
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
@@ -418,7 +418,7 @@ export default function Upstox() {
           </tbody>
         </table>
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
@@ -562,7 +562,7 @@ export default function Upstox() {
           </tbody>
         </table>
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
@@ -623,7 +623,7 @@ export default function Upstox() {
                   </li>
                   <li>
                     Read more
-                    <a href="https://upstox.com/announcements/demat-account/revision-in-stamp-duty-rates-on-1st-july-2020/">
+                    <a href="https://upstox.com/announcements/demat-account/revision-in-stamp-duty-rates-on-1st-july-2020/" rel="nofollow">
                       https://upstox.com/announcements/demat-account/revision-in-stamp-duty-rates-on-1st-july-2020
                     </a>
                   </li>
@@ -681,7 +681,7 @@ export default function Upstox() {
           </li>
         </ul>
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
@@ -818,7 +818,7 @@ export default function Upstox() {
           </tbody>
         </table>
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}
@@ -909,7 +909,7 @@ export default function Upstox() {
           CTT. It is also not applied to agricultural commodities.
         </div>
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
         >
@@ -1007,7 +1007,7 @@ export default function Upstox() {
           trading account which can be opened post 18-year-old.
         </div>
         <a
-          href={link}
+          href={link} rel="nofollow"
           target="blank"
           style={{ margin: "70px 0", alignSelf: "center" }}
           className={styles.trn}

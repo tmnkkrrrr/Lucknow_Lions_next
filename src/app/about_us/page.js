@@ -25,7 +25,7 @@ export default function AboutUs() {
             <Navbar />
             <section className={`${styles.hero} ${styles.section}`}>
                 <div className={styles.heroleft}>
-                    <h1>
+                    <h1 className="font-bold">
                         Welcome to <span>LUCKNOW LIONS!</span>
                     </h1>
                     <p>
@@ -101,7 +101,11 @@ export default function AboutUs() {
                         <hr />
 
                         <div className={`${styles.memCard2} ${styles.cardTn2}`}>
+
                             <h2>Saurabh Kumar Srivastava</h2>
+                            <a href="https://www.linkedin.com/in/saurabh-kumar-srivastava-lucknowlions" target="_blank" rel="nofollow" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }} >
+                                <img src="/icons/linkedin.png" alt="LinkedIn" className="w-8 h-8 hover:opacity-75" />
+                            </a>
                             <h5>(Founder & CEO)</h5>
                             <div>
                                 <p>

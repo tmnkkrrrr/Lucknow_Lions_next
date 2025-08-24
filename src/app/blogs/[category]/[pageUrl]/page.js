@@ -11,7 +11,8 @@ import { logAPIRequest } from '@/helper/helper';
 async function getPageData(category, pageUrl) {
   try {
     const res = await fetch(`${HOST}/api/v1/visitor/blogData/${category}/${pageUrl}`);
-    if (!res.ok) throw new Error(`Failed to fetch page data at ${errorTime}`);
+    console.log(res.status);
+    // if (!res.ok) throw new Error(`Failed to fetch page data at ${new Date().toLocaleString()}`);
     return await res.json();
   } catch (error) {
 

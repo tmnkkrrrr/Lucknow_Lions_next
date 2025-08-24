@@ -9,7 +9,7 @@ async function getPageData(category, pageUrl) {
       next: { revalidate: 5 /* Cache for 60 seconds */ }
     });
 
-    if (!res.ok) { throw new Error('Failed to fetch page data') }
+    // if (!res.ok) { throw new Error('Fai  led to fetch page data') }
 
     const pageData = await res.json();
     lang = pageData.blogLang;

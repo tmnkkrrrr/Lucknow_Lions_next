@@ -41,9 +41,9 @@ export const metadata = {
     },
   },
 
-  alternates: { canonical: 'https://www.lucknowlions.com' },
+  alternates: { canonical: 'https://www.lucknowlions.com/' },
 
-  other: { publisher: 'https://www.lucknowlions.com' }
+  other: { publisher: 'https://www.lucknowlions.com/' }
 }
 
 

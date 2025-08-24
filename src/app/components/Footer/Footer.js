@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
           </address>
 
-          <a target='_blank' className={styles.play} href="https://play.google.com/store/apps/details?id=com.lucknowlions.lucknowlions">
+          <a target='_blank' rel="nofollow" className={styles.play} href="https://play.google.com/store/apps/details?id=com.lucknowlions.lucknowlions">
             <Image
               src="/home/playstore.webp"
               alt="play store app"
@@ -78,6 +78,26 @@ const Footer = () => {
             />
           </a>
           <h3>Get the App Today</h3>
+
+
+          {/* Social Media Icons */}
+          <div className="flex justify-center gap-4">
+            <a href="https://www.youtube.com/@LucknowLions" target="_blank" rel="nofollow">
+              <img src="/icons/youtube.png" alt="YouTube" className="w-10 h-10 hover:opacity-75" />
+            </a>
+            <a href="https://www.instagram.com/lucknowlions_com" target="_blank" rel="nofollow">
+              <img src="/icons/insta.png" alt="Instagram" className="w-10 h-10 hover:opacity-75" />
+            </a>
+            <a href="https://x.com/LucknowLionsX" target="_blank" rel="nofollow">
+              <img src="/icons/x.png" alt="X (Twitter)" className="w-10 h-10 hover:opacity-75" />
+            </a>
+            <a href="https://www.facebook.com/lucknowlions2" target="_blank" rel="nofollow">
+              <img src="/icons/facebook.png" alt="Facebook" className="w-10 h-10 hover:opacity-75" />
+            </a>
+            <a href="https://www.linkedin.com/company/lucknowlions/" target="_blank" rel="nofollow">
+              <img src="/icons/linkedin.png" alt="LinkedIn" className="w-10 h-10 hover:opacity-75" />
+            </a>
+          </div>
 
 
           <div onClick={() => setPopup("ISO")} className="flex items-center gap-2 mt-3">

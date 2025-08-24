@@ -71,7 +71,7 @@ export default function SGX_Nifty() {
                         </strong>
                     </div>
                     <br /> <br />
-                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                    <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                         <button className={styles.btn}>Open Free Demat Account</button>
                     </a>
                     <div id="english" />
@@ -164,7 +164,7 @@ export default function SGX_Nifty() {
                         </div>
                         <br />
                         <br />
-                        <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                        <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                             <button className={styles.btn}>Open Free Demat Account</button>
                         </a>
                         <div className={`${styles.card} ${styles.bounce_In} ${styles.gift}`}>
@@ -212,7 +212,7 @@ export default function SGX_Nifty() {
                                 </table>
                             </center>
                         </p>
-                        <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                        <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                             <button className={styles.btn}>Open Free Demat Account</button>
                         </a>
                         <p>
@@ -262,7 +262,7 @@ export default function SGX_Nifty() {
                                 </li>
                             </ul>
                         </div>
-                        <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                        <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                             <button className={styles.btn}>Open Free Demat Account</button>
                         </a>
                         <div className={`${styles.card} ${styles.flipIn}`}>
@@ -314,7 +314,7 @@ export default function SGX_Nifty() {
                             </ul>
                         </div>
                         <br />
-                        <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                        <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                             <button className={styles.btn}>Open Free Demat Account</button>
                         </a>
                         <div
@@ -377,7 +377,7 @@ export default function SGX_Nifty() {
                             </ul>
                         </div>
                         <br />
-                        <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                        <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                             <button className={styles.btn}>Open Free Demat Account</button>
                         </a>
                         <br />
@@ -448,7 +448,7 @@ export default function SGX_Nifty() {
                                 एसजीएक्स निफ्टी भारतीय निफ्टी 50 इंडेक्स से अधिक अस्थिर है।
                             </p>
                         </div>
-                        <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                        <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                             <button style={{ maxWidth: "400px" }} className={styles.btn}>
                                 Open Free Demat Account
                             </button>
@@ -536,7 +536,7 @@ export default function SGX_Nifty() {
                             </p>
                         </div>
                         <br />
-                        <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                        <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                             <button style={{ maxWidth: "400px" }} className={styles.btn}>
                                 Open Free Demat Account
                             </button>
@@ -586,7 +586,7 @@ export default function SGX_Nifty() {
                             </p>
                             <br />
                             <a
-                                target="_blank"
+                                target='_blank' rel="nofollow"
                                 href="https://upstox.com/open-account/?f=pzAl"
                             >
                                 <button style={{ maxWidth: "400px" }} className={styles.btn}>
@@ -635,7 +635,7 @@ export default function SGX_Nifty() {
                             </div>
                             <br />
                             <a
-                                target="_blank"
+                                target='_blank' rel="nofollow"
                                 href="https://upstox.com/open-account/?f=pzAl"
                             >
                                 <button style={{ maxWidth: "400px" }} className={styles.btn}>
@@ -694,7 +694,7 @@ export default function SGX_Nifty() {
                             </div>
                             <br />
                             <a
-                                target="_blank"
+                                target='_blank' rel="nofollow"
                                 href="https://upstox.com/open-account/?f=pzAl"
                             >
                                 <button style={{ maxWidth: "400px" }} className={styles.btn}>
@@ -802,7 +802,7 @@ export default function SGX_Nifty() {
                     <br />
                     <br />
                     <br />
-                    <a target="_blank" href="https://upstox.com/open-account/?f=pzAl">
+                    <a target='_blank' rel="nofollow" href="https://upstox.com/open-account/?f=pzAl">
                         <button className={styles.btn}>Open Free Demat Account</button>
                     </a>
                     <div style={{ height: "200px" }} />

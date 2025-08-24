@@ -229,7 +229,7 @@ export default function Samco() {
                   Unique Trading
                 </h2>
 
-                <a href={link} target='_blank' className="bg-white text-[#f78a8a] font-semibold py-4 px-8 rounded-full text-lg mb-4 md:mb-10 hover:bg-opacity-90 transition-all shadow-md">
+                <a href={link} target='_blank' rel="nofollow" className="bg-white text-[#f78a8a] font-semibold py-4 px-8 rounded-full text-lg mb-4 md:mb-10 hover:bg-opacity-90 transition-all shadow-md">
                   Open Demat Account
                 </a>
 
@@ -330,7 +330,7 @@ export default function Samco() {
 
 
         <button className="w-full flex flex-col items-center my-6">
-          <a target='_blank'
+          <a target='_blank' rel="nofollow"
             href={link}
             className="mx-8 w-md py-4 px-6 text-center text-white font-semibold text-lg rounded-lg bg-gradient-to-r from-[#ff1a54] to-[#ffa099] hover:opacity-90 transition-all shadow-md"      >
             Open Demat Account
@@ -451,7 +451,7 @@ export default function Samco() {
         </section>
 
         <button className="w-full flex flex-col items-center my-6">
-          <a target='_blank'
+          <a target='_blank' rel="nofollow"
             href={link}
             className="mx-8 w-md py-4 px-6 text-center text-white font-semibold text-lg rounded-lg bg-gradient-to-r from-[#ff1a54] to-[#ffa099] hover:opacity-90 transition-all shadow-md"      >
             Open Demat Account
@@ -785,7 +785,7 @@ export default function Samco() {
 
 
         <button className="w-full flex flex-col items-center my-6">
-          <a target='_blank'
+          <a target='_blank' rel="nofollow"
             href={link}
             className="mx-8 w-md py-4 px-6 text-center text-white font-semibold text-lg rounded-lg bg-gradient-to-r from-[#ff1a54] to-[#ffa099] hover:opacity-90 transition-all shadow-md"      >
             Open Demat Account
@@ -877,7 +877,7 @@ export default function Samco() {
 
 
         <button className="w-full flex flex-col items-center my-6">
-          <a target='_blank'
+          <a target='_blank' rel="nofollow"
             href={link}
             className="mx-8 w-md py-4 px-6 text-center text-white font-semibold text-lg rounded-lg bg-gradient-to-r from-[#ff1a54] to-[#ffa099] hover:opacity-90 transition-all shadow-md"      >
             Open Demat Account
@@ -1016,7 +1016,7 @@ export default function Samco() {
 
             <a
               href={link}
-              target='_blank'
+              target='_blank' rel="nofollow"
               className="inline-block bg-white text-red-600 text-xl font-bold py-3 px-10 rounded-md ring-1 shadow-2xl hover:bg-transparent hover:text-white transition-colors duration-300 shadow-md"
             >
               Start Trading Now!
@@ -1073,7 +1073,7 @@ export default function Samco() {
 
 
         <button className="w-full flex flex-col items-center my-6">
-          <a target='_blank'
+          <a target='_blank' rel="nofollow"
             href={link}
             className="mx-8 w-md py-4 px-6 text-center text-white font-semibold text-lg rounded-lg bg-gradient-to-r from-[#ff1a54] to-[#ffa099] hover:opacity-90 transition-all shadow-md"      >
             Open Demat Account

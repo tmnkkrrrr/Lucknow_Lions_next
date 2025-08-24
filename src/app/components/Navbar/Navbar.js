@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className={styles.main_nav}>
       <div className={styles.nav}>
-        <Link href='https://www.lucknowlions.com' >
+        <Link href='https://www.lucknowlions.com/' >
           <img
             src="/logo.png"
             className={styles.logo}

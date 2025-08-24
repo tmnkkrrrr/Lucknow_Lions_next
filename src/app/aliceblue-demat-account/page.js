@@ -53,7 +53,7 @@ const AliceBlue = () => {
               costs and access our advanced trading tools, innovative solutions, and
               exceptional support.
             </p>
-            <a href={url} target='_blank' className="w-fit bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
+            <a href={url} target='_blank' rel="nofollow" className="w-fit bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
               Open a Free Account Now
               <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
@@ -113,7 +113,7 @@ const AliceBlue = () => {
           </div>
 
           <p className='w-full text-center text-gray-400 mt-16'>Join Alice Blue today and experience a partnership that is built on trust, innovation and your success!</p>
-          <a href={url} target='_blank' className="mx-auto  mt-8 w-fit  bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
+          <a href={url} target='_blank' rel="nofollow" className="mx-auto  mt-8 w-fit  bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
             Open a Free Account Now
             <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
@@ -240,7 +240,7 @@ const AliceBlue = () => {
             </div>
 
             <div className="text-center mt-12">
-              <a href={url} target='_blank' className="w-fit mx-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
+              <a href={url} target='_blank' rel="nofollow" className="w-fit mx-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
                 Open a Free Account Now
                 <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
@@ -355,7 +355,7 @@ const AliceBlue = () => {
 
               <div className="text-5xl font-bold text-gray-900 mb-8">FREE</div>
 
-              <a href='https://ekyc.aliceblueonline.com/?source=SSP157A' target='_blank' className="w-fit bg-indigo-600 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-indigo-700 transition-colors">
+              <a href='https://ekyc.aliceblueonline.com/?source=SSP157A' target='_blank'rel="nofollow" className="w-fit bg-indigo-600 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-indigo-700 transition-colors">
                 Open a Free Account Now
                 <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
@@ -909,7 +909,7 @@ const AliceBlue = () => {
             </div>
           </div>
 
-          <a href={url} target='_blank' className="w-fit mt-8 mx-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
+          <a href={url} target='_blank' rel="nofollow" className="w-fit mt-8 mx-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
             Open a Free Account Now
             <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
@@ -969,7 +969,7 @@ const AliceBlue = () => {
           </div>
 
           <div className="text-center">
-            <a href={url} target='_blank' className="w-fit mx-auto bg-orange-400 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
+            <a href={url} target='_blank' rel="nofollow" className="w-fit mx-auto bg-orange-400 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
               Open a Free Account Now
               <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="32.5" cy="32" r="32" fill="#704FE6" />
@@ -1166,7 +1166,7 @@ const AliceBlue = () => {
               </div>
             </div>
           </div>
-          <a href={url} target='_blank' className="w-fit mx-auto mt-8 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
+          <a href={url} target='_blank' rel="nofollow" className="w-fit mx-auto mt-8 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center gap-2">
             Open a Free Account Now
             <svg width="30" height="30" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="32.5" cy="32" r="32" fill="#704FE6" />

@@ -29,7 +29,7 @@ export default function Fyers() {
 
                 <main className={styles.mainContent}>
                     <div className="h-16" />
-                    <a href={link} target="_blank" className="mx-auto mt-10">
+                    <a href={link} target='_blank' rel="nofollow" className="mx-auto mt-10">
                         <img
                             className={styles.logo}
                             src="https://assets.fyers.in/images/logo.svg"
@@ -50,7 +50,7 @@ export default function Fyers() {
                             </p>
                             <a
                                 href={link}
-                                target="_blank"
+                                target='_blank' rel="nofollow"
                                 className="flex items-center max-w-[350px] justify-center gap-3 bg-[#436AF5] text-white px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
                             >
                                 <img
@@ -61,7 +61,7 @@ export default function Fyers() {
                                 <span>Open Your Demat Account</span>
                             </a>
                         </div>
-                        <a href={link} target="_blank" className="w-full md:w-1/2">
+                        <a href={link} target='_blank' rel="nofollow" className="w-full md:w-1/2">
                             <img src="/fyers_files/down.webp" alt="Lucknow Lions Fyers" className="w-full" />
                         </a>
                     </section>
@@ -374,7 +374,7 @@ export default function Fyers() {
                                 </p>
                                 <a
                                     href={link}
-                                    target="_blank"
+                                    target='_blank' rel="nofollow"
                                     className="text-center px-4 py-3 md:px-6 md:py-4 
                      w-full md:w-auto 
                      bg-[#ffffff57] text-white 
@@ -1199,7 +1199,7 @@ export default function Fyers() {
 
                     <a
                         href={link}
-                        target="_blank"
+                        target='_blank' rel="nofollow"
                         style={{ alignSelf: "center" }}
                         className={styles.a}
                     >
@@ -1266,7 +1266,7 @@ export default function Fyers() {
                     </section>
                     <a
                         href={link}
-                        target="_blank"
+                        target='_blank' rel="nofollow"
                         style={{ alignSelf: "center" }}
                         className={styles.a}
                     >

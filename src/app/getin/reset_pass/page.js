@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { HOST, v } from '@/config';
+import { HOST, HOST_CLIENT, v } from '@/config';
 
 // Loading component to show while suspense is resolving
 function LoadingFallback() {
@@ -33,7 +33,7 @@ function ResetPasswordContent() {
     async function validateLink() {
       try {
 
-        const response = await fetch(`${HOST}/api/${v}/website/validate_reset_pass_link?link=${link}`);
+        const response = await fetch(`${HOST_CLIENT}/api/${v}/website/validate_reset_pass_link?link=${link}`);
         
         const data = await response.json();
         
@@ -69,7 +69,7 @@ function ResetPasswordContent() {
     
     // Submit new password
     try {
-      const response = await fetch(`${HOST}/api/${v}/website/reset_pass_link`, {
+      const response = await fetch(`${HOST_CLIENT}/api/${v}/website/reset_pass_link`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

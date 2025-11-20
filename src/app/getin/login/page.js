@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from './Login.module.css';
 
-import { HOST, v } from '@/config';
+import { HOST, HOST_CLIENT, v } from '@/config';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
@@ -85,7 +85,7 @@ export default function Login() {
 
       try {
         setLoading(true);
-        const response = await fetch(`${HOST}/api/${v}/visitor/loginS`, {
+        const response = await fetch(`${HOST_CLIENT}/api/${v}/visitor/loginS`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ export default function Login() {
     setResetPassModal(false);
 
     try {
-      const response = await fetch(`${HOST}/api/${v}/website/reset_pass_otp`, {
+      const response = await fetch(`${HOST_CLIENT}/api/${v}/website/reset_pass_otp`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ "email": resetEmail })

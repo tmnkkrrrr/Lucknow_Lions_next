@@ -1,3 +1,4 @@
+import { HOST_SERVER } from '@/config';
 import { headers } from 'next/headers';
 
 
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }) {
     title: pageTitle,
     description: pageDescription,
     keywords,
-    alternates: { canonical: `https://${host}/blogs/${category}` },
+    alternates: { canonical: `https://${HOST_SERVER}/blogs/${category}` },
     other: { publisher: 'Lucknow Lions' }
   };
 }

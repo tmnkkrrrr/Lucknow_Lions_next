@@ -83,19 +83,19 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex justify-center gap-4">
             <a href="https://www.youtube.com/@LucknowLions" target="_blank" rel="nofollow">
-              <img src="/icons/youtube.png" alt="YouTube" className="w-10 h-10 hover:opacity-75" />
+              <img src="/icons/youtube.png" alt="YouTube" className="w-9 h-9 hover:opacity-75" />
             </a>
             <a href="https://www.instagram.com/lucknowlions_com" target="_blank" rel="nofollow">
-              <img src="/icons/insta.png" alt="Instagram" className="w-10 h-10 hover:opacity-75" />
+              <img src="/icons/insta.png" alt="Instagram" className="w-9 h-9 hover:opacity-75" />
             </a>
             <a href="https://x.com/LucknowLionsX" target="_blank" rel="nofollow">
-              <img src="/icons/x.png" alt="X (Twitter)" className="w-10 h-10 hover:opacity-75" />
+              <img src="/icons/x.png" alt="X (Twitter)" className="w-9 h-9 hover:opacity-75" />
             </a>
             <a href="https://www.facebook.com/lucknowlions2" target="_blank" rel="nofollow">
-              <img src="/icons/facebook.png" alt="Facebook" className="w-10 h-10 hover:opacity-75" />
+              <img src="/icons/facebook.png" alt="Facebook" className="w-9 h-9 hover:opacity-75" />
             </a>
             <a href="https://www.linkedin.com/company/lucknowlions/" target="_blank" rel="nofollow">
-              <img src="/icons/linkedin.png" alt="LinkedIn" className="w-10 h-10 hover:opacity-75" />
+              <img src="/icons/linkedin.png" alt="LinkedIn" className="w-9 h-9 hover:opacity-75" />
             </a>
           </div>
 

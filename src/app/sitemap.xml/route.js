@@ -1,7 +1,7 @@
-import { HOST, v } from "@/config";
+import { HOST, HOST_CLIENT, v } from "@/config";
 
 export async function GET() {
-  const response = await fetch(`${HOST}/api/${v}/admin/sitemap`, {
+  const response = await fetch(`${HOST_CLIENT}/api/${v}/admin/sitemap`, {
     cache: "no-store",
     next: { revalidate: 0 }
   });

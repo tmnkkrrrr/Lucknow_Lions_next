@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import styles from './Signup.module.css';
-import { HOST, v } from '@/config';
+import { HOST, HOST_CLIENT, HOST_SERVER, v } from '@/config';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
@@ -73,7 +73,7 @@ export default function Signup() {
 
       try {
         setLoading(true);
-        const response = await fetch(`${HOST}/api/${v}/visitor/signup`, {
+        const response = await fetch(`${HOST_CLIENT}/api/${v}/visitor/signup`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
@@ -106,7 +106,7 @@ export default function Signup() {
     setResetPassModal(false);
 
     try {
-      const response = await fetch(`${HOST}/api/${v}/website/reset_pass_otp`, {
+      const response = await fetch(`${HOST_CLIENT}/api/${v}/website/reset_pass_otp`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ "email": resetEmail })

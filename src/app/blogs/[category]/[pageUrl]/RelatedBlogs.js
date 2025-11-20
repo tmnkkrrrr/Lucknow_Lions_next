@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ClientLink } from '../../clientFunctions';
-import { HOST } from '@/config';
+import { HOST, HOST_CLIENT } from '@/config';
 import { ArrowRight } from 'lucide-react';
 
 export default function RelatedBlogsSection({ category, pageUrl }) {
@@ -20,7 +20,7 @@ export default function RelatedBlogsSection({ category, pageUrl }) {
     }, []);
 
     function fetchRelatedBlogs(category, currentPageUrl, limit = 3) {
-        return fetch(`${HOST}/api/v1/visitor/blogs/related?${new URLSearchParams({
+        return fetch(`${HOST_CLIENT}/api/v1/visitor/blogs/related?${new URLSearchParams({
             category,
             currentPageUrl,
             limit: limit.toString()

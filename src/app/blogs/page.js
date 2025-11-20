@@ -1,10 +1,10 @@
 import { ClientBlogHomepage } from "./clientFunctions";
-import { HOST } from '@/config';
+import { HOST, HOST_SERVER } from '@/config';
 
 
 async function getCategories() {
     try {
-        const response = await fetch(`${HOST}/api/v1/visitor/categories`, {
+        const response = await fetch(`${HOST_SERVER}/api/v1/visitor/categories`, {
             next: { revalidate: 18000 } //5hr
         });
 
@@ -68,7 +68,7 @@ async function getCategories() {
 
 async function getBlogsData() {
     try {
-        const response = await fetch(`${HOST}/api/v1/visitor/blogs_with_url`, {
+        const response = await fetch(`${HOST_SERVER}/api/v1/visitor/blogs_with_url`, {
             next: { revalidate: 3600 }
         });
 

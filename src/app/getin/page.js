@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar/Navbar";
-import { HOST, v } from "@/config";
+import { HOST, HOST_CLIENT, HOST_SERVER, v } from "@/config";
 
 export default function LoginPage() {
 
@@ -15,7 +15,7 @@ export default function LoginPage() {
       alert("If your Account exist with provided Email, you will receive an Email from us")
       setResetPassModal(false);
   
-        const response = await fetch(`${HOST}/api/${v}/website/reset_pass_otp`, {
+        const response = await fetch(`${HOST_CLIENT}/api/${v}/website/reset_pass_otp`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ "email": resetEmail })

@@ -1,5 +1,6 @@
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import LeadCapturePopup from "../components/lead-capture-form";
 import styles from "./fyers.module.css";
 
 export function generateMetadata() {
@@ -18,9 +19,7 @@ export function generateMetadata() {
     }
 }
 
-export default function Fyers() {
-    const link = "https://signup.fyers.in/?utm_source=AP-Leads&utm_medium=AP0251";
-
+export default function Page() {
     return (
         <div>
 
@@ -29,13 +28,17 @@ export default function Fyers() {
 
                 <main className={styles.mainContent}>
                     <div className="h-16" />
-                    <a href={link} target='_blank' rel="nofollow" className="mx-auto mt-10">
-                        <img
-                            className={styles.logo}
-                            src="https://assets.fyers.in/images/logo.svg"
-                            alt="Fyers"
-                        />
-                    </a>
+
+                    <LeadCapturePopup
+                        ClosedComponent={
+                            <img
+                                className={styles.logo}
+                                src="https://assets.fyers.in/images/logo.svg"
+                                alt="Fyers"
+                            />
+                        }
+                    />
+
 
                     {/* section1 */}
                     <section className="w-full flex flex-col md:flex-row justify-between items-center gap-8 my-12">
@@ -48,20 +51,18 @@ export default function Fyers() {
                             <p className="text-lg text-gray-800">
                                 Enjoy hassle free trade along with competitive trading charges.
                             </p>
-                            <a
-                                href={link}
-                                target='_blank' rel="nofollow"
-                                className="flex items-center max-w-[350px] justify-center gap-3 bg-[#436AF5] text-white px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
-                            >
-                                <img
-                                    src="/fyers_files/trade.png"
-                                    alt="trade"
-                                    className="w-6 h-6"
-                                />
-                                <span>Open Your Demat Account</span>
-                            </a>
+
+                            <LeadCapturePopup
+                                ClosedComponent={
+                                    <div className="flex items-center max-w-[350px] justify-center gap-3 bg-[#436AF5] text-white px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+                                        <img src="/fyers_files/trade.png" alt="trade" className="w-6 h-6" />
+                                        <span>Open Your Demat Account</span>
+                                    </div>
+                                }
+                            />
+
                         </div>
-                        <a href={link} target='_blank' rel="nofollow" className="w-full md:w-1/2">
+                        <a className="w-full md:w-1/2">
                             <img src="/fyers_files/down.webp" alt="Lucknow Lions Fyers" className="w-full" />
                         </a>
                     </section>
@@ -372,10 +373,10 @@ export default function Fyers() {
                                     Go insight and manage seamless Backoffice profiles, reports
                                     and P&L etc.
                                 </p>
-                                <a
-                                    href={link}
-                                    target='_blank' rel="nofollow"
-                                    className="text-center px-4 py-3 md:px-6 md:py-4 
+
+                                <LeadCapturePopup
+                                    ClosedComponent={
+                                        <div className="text-center px-4 py-3 md:px-6 md:py-4 
                      w-full md:w-auto 
                      bg-[#ffffff57] text-white 
                      text-base sm:text-lg md:text-2xl 
@@ -383,10 +384,13 @@ export default function Fyers() {
                      rounded-xl transition-all duration-200 
                      hover:bg-[#2390cf] hover:translate-y-[-4px] hover:scale-110
                      whitespace-normal md:whitespace-nowrap
-                     break-words md:break-normal"
-                                >
-                                    Open Your Demat Account Now
-                                </a>
+                     break-words md:break-normal">
+                                            Open Your Demat Account Now
+                                        </div>
+                                    }
+                                />
+
+
                             </div>
                             <div className="w-full md:w-[46%] flex justify-center">
                                 <img
@@ -483,18 +487,22 @@ export default function Fyers() {
                                     Get Free AMC for Life
                                 </h5>
                             </div>
-                            <a
-                                href={link}
-                                className="inline-block px-6 sm:px-8 md:px-[100px] py-3 md:py-4 
+
+                            <LeadCapturePopup
+                                ClosedComponent={
+                                    <div
+                                        className="inline-block px-6 sm:px-8 md:px-[100px] py-3 md:py-4 
                    bg-[#436af5] text-white 
                    text-base sm:text-xl md:text-2xl 
                    font-semibold font-[Afacad Flux] 
                    rounded-xl transition-all duration-200 
                    hover:bg-[#2390cf] hover:translate-y-[-4px] hover:scale-110
                    whitespace-nowrap text-center"
-                            >
-                                Sign Up NOW
-                            </a>
+                                    >
+                                        Sign Up NOW
+                                    </div>
+                                }
+                            />
                         </div>
                     </section>
 
@@ -1197,14 +1205,14 @@ export default function Fyers() {
                         </div>
                     </section>
 
-                    <a
-                        href={link}
-                        target='_blank' rel="nofollow"
-                        style={{ alignSelf: "center" }}
-                        className={styles.a}
-                    >
-                        <img src="/fyers_files/trade.png" alt="icon" /> Open Your DematAccount
-                    </a>
+
+                    <LeadCapturePopup
+                        ClosedComponent={
+                            <div style={{ alignSelf: "center" }} className={`${styles.a} inline `}>
+                                <img src="/fyers_files/trade.png" alt="icon" /> Open Your DematAccount
+                            </div>
+                        }
+                    />
 
                     {/* Warning Section */}
                     <div className="w-full p-6 border-2 border-blue-400 rounded-xl my-8 hover:shadow-lg hover:-translate-y-1 transition-all">
@@ -1264,15 +1272,15 @@ export default function Fyers() {
                             </div>
                         </div>
                     </section>
-                    <a
-                        href={link}
-                        target='_blank' rel="nofollow"
-                        style={{ alignSelf: "center" }}
-                        className={styles.a}
-                    >
-                        <img src="/fyers_files/trade.png" alt="icon" />
-                        Open Your Demat Account
-                    </a>
+
+                    <LeadCapturePopup
+                        ClosedComponent={
+                            <div className={styles.a}>
+                                <img src="/fyers_files/trade.png" alt="icon" />
+                                Open Your Demat Account
+                            </div>
+                        }
+                    />
 
                     {/* Investment Warning */}
                     <p className="text-center text-lg font-medium px-4 my-8 flex items-center justify-center gap-4">

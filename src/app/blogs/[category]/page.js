@@ -7,7 +7,7 @@ import { slugToText } from '@/app/utils';
 import { useParams } from 'next/navigation'
 import Navbar from '@/app/components/Navbar/Navbar';
 import Link from 'next/link';
-import { HOST } from '@/config';
+import { HOST, HOST_CLIENT } from '@/config';
 
 function BlogCategoryPage() {
     const [blogs, setBlogs] = useState([]);
@@ -20,7 +20,7 @@ function BlogCategoryPage() {
         async function fetchBlogs() {
             setIsLoading(true);
             try {
-                const response = await fetch(`${HOST}/api/v1/admin/category_blogs/${category}`);
+                const response = await fetch(`${HOST_CLIENT}/api/v1/admin/category_blogs/${category}`);
                 if (!response.ok) throw new Error('Failed to fetch blogs');
                 const data = await response.json();
                 setBlogs(data.blogs);

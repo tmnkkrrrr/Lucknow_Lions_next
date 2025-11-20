@@ -1,4 +1,4 @@
-import { HOST } from '@/config';
+import { HOST_SERVER } from '@/config';
 import Footer from '@/app/components/Footer/Footer';
 import Navbar from '@/app/components/Navbar/Navbar';
 import RelatedBlogsSection from './RelatedBlogs';
@@ -10,8 +10,8 @@ import { logAPIRequest } from '@/helper/helper';
 
 async function getPageData(category, pageUrl) {
   try {
-    const res = await fetch(`${HOST}/api/v1/visitor/blogData/${category}/${pageUrl}`);
-    console.log(res.status);
+    const res = await fetch(`${HOST_SERVER}/api/v1/visitor/blogData/${category}/${pageUrl}`);
+    console.log('11', res.status);
     // if (!res.ok) throw new Error(`Failed to fetch page data at ${new Date().toLocaleString()}`);
     return await res.json();
   } catch (error) {
@@ -50,7 +50,7 @@ async function Page({ params }) {
 
   return (
     <>
-      {pageUrl === "about-metropolitan-stock-exchange-msei" &&
+      {/* {pageUrl === "about-metropolitan-stock-exchange-msei" &&
         <>
           <script type="application/ld+json" dangerouslySetInnerHTML={{
             __html: `{
@@ -180,7 +180,7 @@ async function Page({ params }) {
       ]
     }
   `}} />
-      }
+      } */}
 
       <Navbar />
 

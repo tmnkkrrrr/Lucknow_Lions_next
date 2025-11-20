@@ -1,11 +1,11 @@
 import { headers } from 'next/headers';
-const { HOST } = require("@/config");
+const {  HOST_SERVER, HOST_CLIENT } = require("@/config");
 
 let lang = 'en';
 
 async function getPageData(category, pageUrl) {
   try {
-    const res = await fetch(`${HOST}/api/v1/visitor/blogData/${category}/${pageUrl}`, {
+    const res = await fetch(`${HOST_SERVER}/api/v1/visitor/blogData/${category}/${pageUrl}`, {
       next: { revalidate: 5 /* Cache for 60 seconds */ }
     });
 
@@ -59,11 +59,11 @@ export async function generateMetadata({ params }) {
     },
 
     alternates: {
-      canonical: `https://${host}/blogs/${category}/${pageUrl}`,
-      languages: { 'hi-IN': `https://${host}/blogs/${category}/${pageUrl}` }
+      canonical: `https://${HOST_CLIENT}/blogs/${category}/${pageUrl}`,
+      languages: { 'hi-IN': `https://${HOST_CLIENT}/blogs/${category}/${pageUrl}` }
     },
     other: {
-      publisher: 'Lucknow Lions', 'html:lang': 'hi',
+      publisher: 'Lucknow Lions',
     }
   };
 }

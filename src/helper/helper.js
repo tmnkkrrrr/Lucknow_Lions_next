@@ -1,25 +1,10 @@
-import { HOST, v } from "@/config";
+import { HOST, HOST_CLIENT, v } from "@/config";
 
-
-export const fetchBrokersLinks = () => {
-    return new Promise((resolve, reject) => {
-        fetch(`${HOST}/api/${v}/website/brokersLing`)
-            .then(response => {
-                if (!response.ok) {
-                    return [];
-                    // throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => resolve(data))
-            .catch(error => reject(error));
-    });
-};
 
 
 export const sendContactUsEnquiry = (contactData) => {
     return new Promise((resolve, reject) => {
-        fetch(`${HOST}/api/${v}/website/contact_us`, {
+        fetch(`${HOST_CLIENT}/api/${v}/website/contact_us`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(contactData),

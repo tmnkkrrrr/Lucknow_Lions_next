@@ -4,8 +4,8 @@ import Link from 'next/link';
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import { HOST } from "@/config";
-import { MessageSquare, Search, Star } from "lucide-react";
+import { HOST, HOST_CLIENT } from "@/config";
+import { Star } from "lucide-react";
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
 
   const fetchBrokersLinks = () => {
     return new Promise((resolve, reject) => {
-      fetch(`${HOST}/api/v1/website/brokersLing`)
+      fetch(`${HOST_CLIENT}/api/v1/website/brokersLing`)
         .then(response => {
           if (!response.ok) return [];
 
@@ -104,6 +104,22 @@ export default function Home() {
     "availableLanguage": ["en", "hi"]
   }
 }`
+      }} />
+
+      <script async type="application/javascript"
+        src="https://news.google.com/swg/js/v1/swg-basic.js" />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: `
+  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+    basicSubscriptions.init({
+      type: "NewsArticle",
+      isPartOfType: ["Product"],
+      isPartOfProductId: "CAowxfzdCw:openaccess",
+      clientOptions: { theme: "light", lang: "en" },
+    });
+  });
+</script>`
       }} />
 
       <div className={styles.page}>

@@ -60,6 +60,13 @@ async function getCategories() {
                 "imageUrl": "https://assets.lucknowlions.com/lions_images/Categories/The-Stock-Market-t.webp",
                 "description": "Empower your investment journey with our resources maximize returns with smart investing.",
                 "id": 8
+            },
+            {
+                "name": "Mutual Funds",
+                "slug": "mutual-funds",
+                "imageUrl": "https://assets.lucknowlions.com/lions_images/Categories/mutual-funds.webp",
+                "description": "Mutual Fund category on Lucknow Lions covers expert reviews, fund analysis, and investment strategies to help you choose the best SIPs and funds for your long-term goals.",
+                "id": 9
             }
         ];
     }

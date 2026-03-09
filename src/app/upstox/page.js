@@ -31,9 +31,8 @@ export default function Upstox() {
 
       <div className={styles.page}>
         <img
-          className={styles.logo}
-          src="https://upstox.com/app/themes/upstox/dist/img/logo/desktop-logo.svg"
-          alt="Upstox"
+          className={styles.logo} alt="Upstox"
+          src="https://assets.upstox.com/website/images/upstox-new-logo.svg"
         />
 
         <div className="flex flex-wrap items-center justify-between w-full">

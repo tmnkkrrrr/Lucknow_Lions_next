@@ -47,8 +47,8 @@ const Navbar = () => {
           <li className={pathname === "/fyers" ? styles.active : ""}>
             <Link href="/fyers">Fyers</Link>
           </li>
-          <li className={pathname === "/aliceblue-demat-account" ? styles.active : ""}>
-            <Link href="/aliceblue-demat-account">Alice Blue</Link>
+          <li className={pathname === "/upstox" ? styles.active : ""}>
+            <Link href="/upstox">Upstox</Link>
           </li>
           <li className={pathname === "/contact_us" ? styles.active : ""}>
             <Link href="/contact_us">Contact Us</Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
           {/* Login/Signup Button - Inside Hamburger menu for mobile */}
           <li
             className={pathname === "/getin" ? styles.disappear : ""}
-            style={{ marginTop: "15px" }} // Added margin for spacing in the mobile menu
+            style={{ marginTop: "15px" }}
           >
             <Link href="/getin">
               <button className={styles.loginButton}>Login / Signup</button>

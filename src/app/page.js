@@ -106,10 +106,9 @@ export default function Home() {
 }`
       }} />
 
-      <script async type="application/javascript"
-        src="https://news.google.com/swg/js/v1/swg-basic.js" />
+      <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js" />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <script type="application/javascript" dangerouslySetInnerHTML={{
         __html: `
   (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
     basicSubscriptions.init({
@@ -145,7 +144,7 @@ export default function Home() {
                 <span> Open Free Demat Account</span>
               </a>
             </div>
-            <img src="/home/hero.webp" alt="hero" className={styles.heroright} />
+            <img src="/home/hero.webp" fetchPriority="high" alt="hero" className={styles.heroright} />
           </section>
 
           <a href="#main" className="hidden lg:block cursor-pointer">
@@ -265,7 +264,6 @@ export default function Home() {
                 </a>
               </div>
             </div> */}
-
 
 
               <div className={`${styles.feature} ${styles.cardTn1} !bg-gradient-to-br from-red-100 to-blue-3  00`}>
@@ -494,7 +492,7 @@ export default function Home() {
                   <div key={platform.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="p-4 flex flex-col items-center">
                       <div className="flex items-center mb-4">
-                        <img className="w-12 h-12  mr-4" src={platform.icon} />
+                        <img className="w-12 h-12  mr-4" alt={platform.name} src={platform.icon} />
                         <h3 className="text-xl font-semibold text-gray-900">{platform.name}</h3>
                       </div>
 

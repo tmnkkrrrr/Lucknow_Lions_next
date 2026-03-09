@@ -101,7 +101,7 @@ const Footer = () => {
 
 
           <div onClick={() => setPopup("ISO")} className="flex items-center gap-2 mt-3">
-            <img src="https://wallpapers.com/images/hd/i-s-o90012015-certified-company-seal-4spw36gqw6q4d7tn.png" alt="TÜV SÜD ISO/IEC 27001" width="60" height="60" loading="lazy" />
+            <img src="/home/iso-certificate.png" alt="TÜV SÜD ISO/IEC 27001" width="60" height="60" loading="lazy" />
             <div>LUCKNOW LIONS is ISO 9001:2015 certified</div>
           </div>
 

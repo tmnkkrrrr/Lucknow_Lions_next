@@ -59,8 +59,8 @@ export async function generateMetadata({ params }) {
     },
 
     alternates: {
-      canonical: `https://${HOST_CLIENT}/blogs/${category}/${pageUrl}`,
-      languages: { 'hi-IN': `https://${HOST_CLIENT}/blogs/${category}/${pageUrl}` }
+      canonical: `https://www.lucknowlions.com/blogs/${category}/${pageUrl}`,
+      languages: { 'hi-IN': `https://www.lucknowlions.com/blogs/${category}/${pageUrl}` }
     },
     other: {
       publisher: 'Lucknow Lions',

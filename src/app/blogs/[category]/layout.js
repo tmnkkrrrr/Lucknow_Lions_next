@@ -35,16 +35,21 @@ export async function generateMetadata({ params }) {
   }
   if (category === "stocks") {
     pageTitle = "Learn about Stocks Insights & Expert Trading Tips";
-    pageDescription = " Get valuable stock insights and expert trading advice. Empower your investment journey with our resources maximize returns with smart investing.";
-    keywords = "lucknow lions stocks recomendations"
+    pageDescription = "Get valuable stock insights and expert trading advice. Empower your investment journey with our resources maximize returns with smart investing.";
+    keywords = "lucknow lions stocks recomendations, share market articles"
   }
-  
+  if (category === "mutual-funds") {
+    pageTitle = "Mutual Funds Blogs & Reviews - SIP, Top Funds & Investment Guides | Lucknow Lions";
+    pageDescription = "Read expert Mutual Fund reviews, SIP guides, risk analysis, tax benefits and top-performing fund recommendations. Explore detailed mutual fund insights with Lucknow Lions.";
+    keywords = "mutual funds, SIP investment, best mutual funds 2025, mutual fund reviews, Lucknow Lions finance"
+  }
+
 
   return {
     title: pageTitle,
     description: pageDescription,
     keywords,
-    alternates: { canonical: `https://${HOST_SERVER}/blogs/${category}` },
+    alternates: { canonical: `https://www.lucknowlions.com/blogs/${category}`, languages: { 'hi-IN': `https://www.lucknowlions.com/blogs/${category}` } },
     other: { publisher: 'Lucknow Lions' }
   };
 }

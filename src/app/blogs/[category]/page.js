@@ -10,6 +10,11 @@ import Link from 'next/link';
 import { HOST, HOST_CLIENT } from '@/config';
 
 function BlogCategoryPage() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const postsPerPage = 30;
+    const startIndex = (currentPage - 1) * postsPerPage;
+    const [totalPages, setTotalPages] = useState(0);
+
     const [blogs, setBlogs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const params = useParams();
@@ -24,6 +29,7 @@ function BlogCategoryPage() {
                 if (!response.ok) throw new Error('Failed to fetch blogs');
                 const data = await response.json();
                 setBlogs(data.blogs);
+                setTotalPages(Math.ceil(data.blogs.length / postsPerPage));
             } catch (error) {
                 console.error('Error fetching blogs:', error);
                 setBlogs([]);
@@ -90,42 +96,76 @@ function BlogCategoryPage() {
                         <p className="text-xl text-gray-600">No articles found in this category.</p>
                     </div>
                 ) : (
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {[...blogs].reverse().map(blog => (
-                            <ClientLink key={blog.id} href={`/blogs/${category}/${blog.pageUrl}`} className="group">
-                                <article className="h-full bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
-                                    <div className="h-1 bg-gradient-to-r from-blue-500 to-indigo-500" />
-                                    <div className="p-6 text-left">
-                                        <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-6">
-                                            {blog.title}
-                                        </h2>
+                    <div className='mb-8'>
 
-                                        <p className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors mb-6">
-                                            {blog.seoDetails.description}
-                                        </p>
+                        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            {[...blogs].reverse().slice(startIndex, startIndex + postsPerPage).map(blog => (
+                                <ClientLink key={blog.id} href={`/blogs/${category}/${blog.pageUrl}`} className="group">
+                                    <article className="h-full bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+                                        <div className="h-1 bg-gradient-to-r from-blue-500 to-indigo-500" />
+                                        <div className="p-6 text-left">
+                                            <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-6">
+                                                {blog.title}
+                                            </h2>
 
-                                        <div className="flex items-center gap-4 text-sm text-gray-500">
-                                            <div className="flex items-center gap-1.5">
-                                                <Calendar className="w-4 h-4" />
-                                                {new Date(blog.createdAt).toLocaleDateString('en-US', {
-                                                    year: 'numeric',
-                                                    month: 'short',
-                                                    day: 'numeric'
-                                                })}
+                                            <p className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors mb-6">
+                                                {blog.seoDetails.description}
+                                            </p>
+
+                                            <div className="flex items-center gap-4 text-sm text-gray-500">
+                                                <div className="flex items-center gap-1.5">
+                                                    <Calendar className="w-4 h-4" />
+                                                    {new Date(blog.createdAt).toLocaleDateString('en-US', {
+                                                        year: 'numeric',
+                                                        month: 'short',
+                                                        day: 'numeric'
+                                                    })}
+                                                </div>
+                                            </div>
+
+                                            <div className="mt-6 pt-6 border-t border-gray-100">
+                                                <span className="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+                                                    Read article
+                                                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+                                                </span>
                                             </div>
                                         </div>
+                                    </article>
+                                </ClientLink>
+                            ))}
+                        </div>
 
-                                        <div className="mt-6 pt-6 border-t border-gray-100">
-                                            <span className="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700">
-                                                Read article
-                                                <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </ClientLink>
-                        ))}
+                        {/* PAGINATION SECTION */}
+                        <div className="flex justify-center items-center gap-3 mt-10">
+                            <button
+                                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                                disabled={currentPage === 1}
+                                className="px-4 py-2 border rounded disabled:opacity-40"
+                            >
+                                Previous
+                            </button>
+
+                            {Array.from({ length: totalPages }).map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setCurrentPage(i + 1)}
+                                    className={`px-4 py-2 border rounded 
+                            ${currentPage === i + 1 ? "bg-blue-600 text-white" : "bg-white"}`}
+                                >
+                                    {i + 1}
+                                </button>
+                            ))}
+
+                            <button
+                                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                                disabled={currentPage === totalPages}
+                                className="px-4 py-2 border rounded disabled:opacity-40"
+                            >
+                                Next
+                            </button>
+                        </div>
                     </div>
+
                 )}
             </main>
         </div>
